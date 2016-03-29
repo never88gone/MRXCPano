@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[MrxcPanoView achievePanoByIDResponse:success:info:]:MrxcPanoView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.panoramaData">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MRXCPanoramaRequest achievePanoByIDResponse:]:MRXCPanoramaRequest.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[dictionary objectForKey:@&quot;GetPanoByIDResult&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
