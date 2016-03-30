@@ -49,12 +49,12 @@
     [request setHTTPMethod:@"GET"];
     return request ;
 }
--(MRXCPanoramaIDData*)getPanoramaDataByDic:(NSDictionary*)response
+-(MRXCPanoramaData*)getPanoramaDataByResponse:(NSString*)response
 {
-    MRXCPanoramaIDData* panoramaData = [MRXCPanoramaIDData createPanoramaIDData:[response objectForKey:@"GetPanoByIDResult"]];
+    MRXCPanoramaData* panoramaData = [MRXCPanoramaData createPanoramaIDData:[response  JSONValue]];
     return panoramaData;
 }
--(PanoramaCubeOrPhere)getParnoramaType
+-(PanoramaCubeOrPhere)getPanoramaType
 {
     return PanoramaEnumCube;
 }

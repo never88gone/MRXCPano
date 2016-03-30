@@ -10,7 +10,7 @@
 #import "MRXCFuncDefine.h"
 #import "PLView.h"
 #import "PLView+Panorama.h"
-#import "MRXCPanoramaIDData.h"
+#import "MRXCPanoramaData.h"
 #import "MRXCPanoramaRequestProtocol.h"
 #import "MRXCPanoramaRequest.h"
 #import "PanoDataSourceBase.h"
@@ -24,7 +24,7 @@ typedef NS_ENUM(NSInteger, ParnoramaType){
     NSString *_panoramaSite;
     NSString *_panoramaID;
     PLView *_plView;
-    MRXCPanoramaIDData *_panoramaData;
+    MRXCPanoramaData *_panoramaData;
     NSArray *_adjacentPano;
 }
 /**
@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, ParnoramaType){
 @property(strong, nonatomic) PanoDataSourceBase* dataSource;
 @property(strong, nonatomic)NSString *panoramaID;
 @property(strong, nonatomic)PLView *plView;
-@property(strong, nonatomic)MRXCPanoramaIDData *panoramaData;
+@property(strong, nonatomic)MRXCPanoramaData *panoramaData;
 @property(strong, nonatomic)NSArray *adjacentPano;
 @property(assign, nonatomic)BOOL isAdjacentStatus;
 @property(assign, nonatomic) ParnoramaType ptype;

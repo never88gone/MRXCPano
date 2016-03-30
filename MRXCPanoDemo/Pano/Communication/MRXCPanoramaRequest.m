@@ -94,22 +94,18 @@ static MRXCPanoramaRequest *request = nil;
     BOOL success = false;
     NSObject *object = nil;
     NSDictionary *errDictionary = nil;
-    NSDictionary *dictionary = nil;
+    [_requests removeObject:connection];
     if([connection.response statusCode] == 200){
         NSString *response = [[NSString alloc]initWithData:connection.resultData encoding:NSUTF8StringEncoding];
-        dictionary = [response JSONValue];
-        object = [dictionary objectForKey:@"GetPanoByIDResult"];
         if([object isKindOfClass:[NSNull class]]){
             success = false;
-            errDictionary = [[NSDictionary alloc]initWithObjectsAndKeys:@"查询无记录!",@"fail",  nil];
         }
         else{
             success = true;
         }
-    }
-    [_requests removeObject:connection];
-    if([connection.delegate respondsToSelector:@selector(achievePanoByIDResponse:success:info:)]){
-        [connection.delegate achievePanoByIDResponse:dictionary success:success info:errDictionary];
+        if([connection.delegate respondsToSelector:@selector(achievePanoByIDResponse:success:info:)]){
+            [connection.delegate achievePanoByIDResponse:response success:success info:errDictionary];
+        }
     }
 }
 - (void)achievePanoThumbnailByIDResponse:(MRXCPanoramaConnection *)connection{

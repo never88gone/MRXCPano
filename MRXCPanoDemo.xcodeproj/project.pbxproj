@@ -24,7 +24,6 @@
 		386985211CA770DD0067D35E /* NSString+DBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984D51CA770DD0067D35E /* NSString+DBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		386985221CA770DD0067D35E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984D81CA770DD0067D35E /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		386985231CA770DD0067D35E /* MRXCAdjacentPanoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984DB1CA770DD0067D35E /* MRXCAdjacentPanoData.m */; };
-		386985241CA770DD0067D35E /* MRXCPanoramaIDData.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984DD1CA770DD0067D35E /* MRXCPanoramaIDData.m */; };
 		386985251CA770DD0067D35E /* MRXCSiteContentJsonData.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984E01CA770DD0067D35E /* MRXCSiteContentJsonData.m */; };
 		386985261CA770DD0067D35E /* MRXCSiteJsonData.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984E21CA770DD0067D35E /* MRXCSiteJsonData.m */; };
 		386985271CA770DD0067D35E /* PLArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984E51CA770DD0067D35E /* PLArrow.m */; };
@@ -54,6 +53,9 @@
 		3874094B1CA7E67B0065C073 /* PanoDataSourceBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 387409421CA7E67B0065C073 /* PanoDataSourceBase.m */; };
 		3874094C1CA7E67B0065C073 /* TXPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 387409451CA7E67B0065C073 /* TXPanoSource.m */; };
 		3874094D1CA7E67B0065C073 /* ZHDPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 387409471CA7E67B0065C073 /* ZHDPanoSource.m */; };
+		38A784381CAC1B150058449B /* MRXCPanoramaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A784371CAC1B150058449B /* MRXCPanoramaData.m */; };
+		38A7843A1CAC1C4E0058449B /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A784391CAC1C4E0058449B /* libxml2.tbd */; };
+		38A7843E1CAC1D280058449B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A7843D1CAC1D280058449B /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		38B11AA61CA2E79C00AF8B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B11AA51CA2E79C00AF8B98 /* main.m */; };
 		38B11AA91CA2E79C00AF8B98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B11AA81CA2E79C00AF8B98 /* AppDelegate.m */; };
 		38B11AAC1CA2E79C00AF8B98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B11AAB1CA2E79C00AF8B98 /* ViewController.m */; };
@@ -100,8 +102,6 @@
 		386984D81CA770DD0067D35E /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		386984DA1CA770DD0067D35E /* MRXCAdjacentPanoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCAdjacentPanoData.h; sourceTree = "<group>"; };
 		386984DB1CA770DD0067D35E /* MRXCAdjacentPanoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCAdjacentPanoData.m; sourceTree = "<group>"; };
-		386984DC1CA770DD0067D35E /* MRXCPanoramaIDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaIDData.h; sourceTree = "<group>"; };
-		386984DD1CA770DD0067D35E /* MRXCPanoramaIDData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaIDData.m; sourceTree = "<group>"; };
 		386984DE1CA770DD0067D35E /* MRXCPanoramaJsonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaJsonData.h; sourceTree = "<group>"; };
 		386984DF1CA770DD0067D35E /* MRXCSiteContentJsonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCSiteContentJsonData.h; sourceTree = "<group>"; };
 		386984E01CA770DD0067D35E /* MRXCSiteContentJsonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCSiteContentJsonData.m; sourceTree = "<group>"; };
@@ -167,6 +167,11 @@
 		387409451CA7E67B0065C073 /* TXPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXPanoSource.m; sourceTree = "<group>"; };
 		387409461CA7E67B0065C073 /* ZHDPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHDPanoSource.h; sourceTree = "<group>"; };
 		387409471CA7E67B0065C073 /* ZHDPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHDPanoSource.m; sourceTree = "<group>"; };
+		38A784361CAC1B150058449B /* MRXCPanoramaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaData.h; sourceTree = "<group>"; };
+		38A784371CAC1B150058449B /* MRXCPanoramaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaData.m; sourceTree = "<group>"; };
+		38A784391CAC1C4E0058449B /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		38A7843C1CAC1D280058449B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		38A7843D1CAC1D280058449B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		38B11AA11CA2E79C00AF8B98 /* MRXCPanoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRXCPanoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B11AA51CA2E79C00AF8B98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		38B11AA71CA2E79C00AF8B98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -184,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38A7843A1CAC1C4E0058449B /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +199,7 @@
 		386984421CA770DD0067D35E /* Pano */ = {
 			isa = PBXGroup;
 			children = (
+				38A7843B1CAC1D280058449B /* Tool */,
 				3874093A1CA7E67B0065C073 /* DataSource */,
 				386984431CA770DD0067D35E /* built */,
 				386984AA1CA770DD0067D35E /* Communication */,
@@ -294,10 +301,10 @@
 		386984D91CA770DD0067D35E /* PanoramaData */ = {
 			isa = PBXGroup;
 			children = (
+				38A784361CAC1B150058449B /* MRXCPanoramaData.h */,
+				38A784371CAC1B150058449B /* MRXCPanoramaData.m */,
 				386984DA1CA770DD0067D35E /* MRXCAdjacentPanoData.h */,
 				386984DB1CA770DD0067D35E /* MRXCAdjacentPanoData.m */,
-				386984DC1CA770DD0067D35E /* MRXCPanoramaIDData.h */,
-				386984DD1CA770DD0067D35E /* MRXCPanoramaIDData.m */,
 				386984DE1CA770DD0067D35E /* MRXCPanoramaJsonData.h */,
 				386984DF1CA770DD0067D35E /* MRXCSiteContentJsonData.h */,
 				386984E01CA770DD0067D35E /* MRXCSiteContentJsonData.m */,
@@ -376,6 +383,15 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
+		38A7843B1CAC1D280058449B /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				38A7843C1CAC1D280058449B /* GDataXMLNode.h */,
+				38A7843D1CAC1D280058449B /* GDataXMLNode.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		38B11A981CA2E79C00AF8B98 = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +431,7 @@
 		38B11AA41CA2E79C00AF8B98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				38A784391CAC1C4E0058449B /* libxml2.tbd */,
 				38B11AA51CA2E79C00AF8B98 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -497,12 +514,12 @@
 				386985151CA770DD0067D35E /* MRXCXmlParser.m in Sources */,
 				386985311CA770DD0067D35E /* PLSphere.m in Sources */,
 				386985471CA778210067D35E /* MRXCPanoramaConnection.m in Sources */,
+				38A7843E1CAC1D280058449B /* GDataXMLNode.m in Sources */,
 				3869851B1CA770DD0067D35E /* glues_registry.c in Sources */,
 				387409491CA7E67B0065C073 /* LDPanoSource.m in Sources */,
 				3869851E1CA770DD0067D35E /* MRXCJsonParser.m in Sources */,
 				38B11AAC1CA2E79C00AF8B98 /* ViewController.m in Sources */,
 				3869852B1CA770DD0067D35E /* PLImage.m in Sources */,
-				386985241CA770DD0067D35E /* MRXCPanoramaIDData.m in Sources */,
 				3869852C1CA770DD0067D35E /* PLMath.m in Sources */,
 				386985161CA770DD0067D35E /* Reachability.m in Sources */,
 				3874094D1CA7E67B0065C073 /* ZHDPanoSource.m in Sources */,
@@ -530,6 +547,7 @@
 				386985211CA770DD0067D35E /* NSString+DBJSON.m in Sources */,
 				3869852D1CA770DD0067D35E /* PLObject.m in Sources */,
 				3869852F1CA770DD0067D35E /* PLScene.m in Sources */,
+				38A784381CAC1B150058449B /* MRXCPanoramaData.m in Sources */,
 				38B11AA61CA2E79C00AF8B98 /* main.m in Sources */,
 				386985181CA770DD0067D35E /* glues_mipmap.c in Sources */,
 				386985171CA770DD0067D35E /* glues_error.c in Sources */,
@@ -653,6 +671,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = MRXCPanoDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -668,6 +687,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = MRXCPanoDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

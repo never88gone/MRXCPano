@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MRXCPanoramaIDData : NSObject{
+@interface MRXCPanoramaData : NSObject{
     NSString *_b;
     NSString *_cameraNo;
     NSString *_gatherTime;
@@ -41,5 +41,5 @@
 @property(strong, nonatomic)NSString *yaw;
 @property(strong, nonatomic)NSString *z;
 
-+(MRXCPanoramaIDData *)createPanoramaIDData:(NSDictionary *)dictionary;
++(MRXCPanoramaData *)createPanoramaIDData:(NSDictionary *)dictionary;
 @end

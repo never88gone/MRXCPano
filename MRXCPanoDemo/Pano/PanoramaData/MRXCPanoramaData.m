@@ -6,9 +6,9 @@
 //  Copyright (c) 2016年 never88gone. All rights reserved.
 //
 
-#import "MRXCPanoramaIDData.h"
+#import "MRXCPanoramaData.h"
 
-@implementation MRXCPanoramaIDData
+@implementation MRXCPanoramaData
 @synthesize b=_b;
 @synthesize cameraNo=_cameraNo;
 @synthesize gatherTime=_gatherTime;
@@ -25,8 +25,8 @@
 @synthesize yaw=_yaw;
 @synthesize z=_z;
 
-+(MRXCPanoramaIDData *)createPanoramaIDData :(NSDictionary *)dictionary{
-    MRXCPanoramaIDData *data = [[MRXCPanoramaIDData alloc]init];
++(MRXCPanoramaData *)createPanoramaIDData :(NSDictionary *)dictionary{
+    MRXCPanoramaData *data = [[MRXCPanoramaData alloc]init];
     data.b = [dictionary objectForKey:@"B"];
     data.cameraNo = [dictionary objectForKey:@"CameraNo"];
     data.gatherTime = [dictionary objectForKey:@"GatherTime"];

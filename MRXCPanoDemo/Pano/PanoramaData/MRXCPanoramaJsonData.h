@@ -7,6 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MRXCPanoramaIDData.h"
+#import "MRXCPanoramaData.h"
 #import "MRXCAdjacentPanoData.h"
 

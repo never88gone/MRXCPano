@@ -20,7 +20,7 @@
     CGRect frame = CGRectMake(0, 0, UI_CURRENT_SCREEN_WIDTH, UI_CURRENT_SCREEN_HEIGHT);
     MrxcPanoView*  mrxcPanoView=[[MrxcPanoView alloc] initWithFrame:frame];
     [self.view addSubview:mrxcPanoView];
-    NSString *panoramaSite=@"";
+//    NSString *panoramaSite=@"";
     NSString *panoramaID=@"10141050150728115613700";
 //    ZHDPanoSource * zhdPanoSource=[[ZHDPanoSource alloc] init];
 //    zhdPanoSource.panoramaUrl=panoramaSite;

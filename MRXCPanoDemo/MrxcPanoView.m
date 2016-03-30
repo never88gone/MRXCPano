@@ -33,7 +33,7 @@
 -(void)initWithDataSource:(PanoDataSourceBase* )dataSourcebase
 {
     self.dataSource=dataSourcebase;
-    [self.plView initWithPanoType:[dataSourcebase getParnoramaType]];
+    [self.plView initWithPanoType:[dataSourcebase getPanoramaType]];
 }
 -(void)locPanoByPanoID:(NSString*)panoID
 {
@@ -82,22 +82,22 @@
 }
 #pragma mark -
 #pragma mark - MRXCPanoramaRequestProtocol
-- (void)achievePanoByLonLatResponse:(NSDictionary *)response success:(BOOL)success info:(NSDictionary *)dict{
+- (void)achievePanoByLonLatResponse:(NSString *)response success:(BOOL)success info:(NSDictionary *)dict{
     if(success == false){
         return;
     }
-    self.panoramaData = [MRXCPanoramaIDData createPanoramaIDData:[response objectForKey:@"GetPanoByLonLatByIDResult"]];
+    self.panoramaData = [MRXCPanoramaData createPanoramaIDData:response];
     self.panoramaID = self.panoramaData.imageID;
     //准备获取缩略图
     [[MRXCPanoramaRequest achievePanoramaRequest]achievePanoThumbnailByID:self DataSource:self.dataSource  PanoID:self.panoramaData.imageID];
     
 }
 
-- (void)achievePanoByIDResponse:(NSDictionary *)response success:(BOOL)success info:(NSDictionary *)dict{
+- (void)achievePanoByIDResponse:(NSString *)response success:(BOOL)success info:(NSDictionary *)dict{
     if(success == false){
         return;
     }
-    self.panoramaData = [self.dataSource getPanoramaDataByDic:response];
+    self.panoramaData = [self.dataSource getPanoramaDataByResponse:response];
     self.panoramaID = self.panoramaData.imageID;
     //准备获取缩略图
     [[MRXCPanoramaRequest achievePanoramaRequest] achievePanoThumbnailByID:self DataSource:self.dataSource  PanoID:self.panoramaData.imageID];
@@ -144,93 +144,100 @@
     UIImage *image = [UIImage imageWithData:response];
     UIImage *rectImage = nil;
     PLTexture *texture = nil;
-    PLCube *cube = (PLCube *)self.plView.sceneElement;
-    if(self.ptype == ParnoramaTemp){
-        cube.panoYaw = [self.panoramaData.yaw doubleValue] + 90.0f;
+    if ([self.dataSource getPanoramaType]==PanoramaEnumCube) {
+        PLCube *cube = (PLCube *)self.plView.sceneElement;
+        if(self.ptype == ParnoramaTemp){
+            cube.panoYaw = [self.panoramaData.yaw doubleValue] + 90.0f;
+        }
+        else{
+            cube.panoYaw = [self.panoramaData.yaw doubleValue] + self.handPanoYaw;
+        }
+        if(cube.panoYaw > 360.0){
+            cube.panoYaw = cube.panoYaw - 360.0;
+        }
+        if(cube.panoYaw < 0.0){
+            cube.panoYaw = cube.panoYaw + 360.0;
+        }
+        if(cube.panoYaw > 180.0f){
+            cube.panoYaw = 360.0f - cube.panoYaw;
+        }
+        else{
+            cube.panoYaw = (-1)*cube.panoYaw;
+        }
+        rectImage = [MRXCPanoramaTool imageInRect:image x:0 y:0 width:_PANORAMA_THUMBNAIL_SIZE_ height:_PANORAMA_THUMBNAIL_SIZE_];
+        texture = [PLTexture textureWithImage:rectImage];
+        [texture setTexturePlace:0 row:0 col:0 face:kCubeBackFaceIndex];
+        [self.plView addTexture:texture];
+        
+        rectImage = [MRXCPanoramaTool imageInRect:image x:128 y:0 width:_PANORAMA_THUMBNAIL_SIZE_ height:_PANORAMA_THUMBNAIL_SIZE_];
+        texture = [PLTexture textureWithImage:rectImage];
+        [texture setTexturePlace:0 row:0 col:0 face:kCubeRightFaceIndex];
+        [self.plView addTexture:texture];
+        
+        rectImage = [MRXCPanoramaTool imageInRect:image x:256 y:0 width:_PANORAMA_THUMBNAIL_SIZE_ height:_PANORAMA_THUMBNAIL_SIZE_];
+        texture = [PLTexture textureWithImage:rectImage];
+        [texture setTexturePlace:0 row:0 col:0 face:kCubeFrontFaceIndex];
+        [self.plView addTexture:texture];
+        
+        rectImage = [MRXCPanoramaTool imageInRect:image x:0 y:128 width:_PANORAMA_THUMBNAIL_SIZE_ height:_PANORAMA_THUMBNAIL_SIZE_];
+        texture = [PLTexture textureWithImage:rectImage];
+        [texture setTexturePlace:0 row:0 col:0 face:kCubeLeftFaceIndex];
+        [self.plView addTexture:texture];
+        
+        rectImage = [MRXCPanoramaTool imageInRect:image x:128 y:128 width:_PANORAMA_THUMBNAIL_SIZE_ height:_PANORAMA_THUMBNAIL_SIZE_];
+        texture = [PLTexture textureWithImage:rectImage];
+        [texture setTexturePlace:0 row:0 col:0 face:kCubeTopFaceIndex];
+        [self.plView addTexture:texture];
+        
+        rectImage = [MRXCPanoramaTool imageInRect:image x:256 y:128 width:_PANORAMA_THUMBNAIL_SIZE_ height:_PANORAMA_THUMBNAIL_SIZE_];
+        texture = [PLTexture textureWithImage:rectImage];
+        [texture setTexturePlace:0 row:0 col:0 face:kCubeBottomFaceIndex];
+        //获取切片
+        //这里稍做优化，通过panoYaw值计算出当前正对的face，优先获取图片
+        int face1 = -1, face2 = -1;
+        if(cube.panoYaw == 0.00){
+            face1 = 3;
+        }
+        if(cube.panoYaw > 0.00 && cube.panoYaw <= 90.0){
+            face1 = 3;
+            face2 = 4;
+        }
+        if(cube.panoYaw > 90.0 && cube.panoYaw <= 180.0f){
+            face1 = 4;
+            face2 = 1;
+        }
+        if(cube.panoYaw >= -90.0 && cube.panoYaw < 0.0){
+            face1 = 3;
+            face2 = 2;
+        }
+        if(cube.panoYaw >= -180.0 && cube.panoYaw < -90.0){
+            face1 = 2;
+            face2 = 1;
+        }
+        if(face1 > 0){
+            [self requestPanoTileByID:face1];
+        }
+        if(face2 > 0){
+            [self requestPanoTileByID:face2];
+        }
+        for(int i = 1; i <= 6; i ++){
+            if(i == face1 || i == face2){
+                continue;
+            }
+            [self requestPanoTileByID:i];
+        }
+    }else if ([self.dataSource getPanoramaType]==PanoramaEnumPhere)
+    {
+        texture = [PLTexture textureWithImage:image];
+        [self.plView addTexture:texture];
     }
-    else{
-        cube.panoYaw = [self.panoramaData.yaw doubleValue] + self.handPanoYaw;
-    }
-    if(cube.panoYaw > 360.0){
-        cube.panoYaw = cube.panoYaw - 360.0;
-    }
-    if(cube.panoYaw < 0.0){
-        cube.panoYaw = cube.panoYaw + 360.0;
-    }
-    if(cube.panoYaw > 180.0f){
-        cube.panoYaw = 360.0f - cube.panoYaw;
-    }
-    else{
-        cube.panoYaw = (-1)*cube.panoYaw;
-    }
-    rectImage = [MRXCPanoramaTool imageInRect:image x:0 y:0 width:_PANORAMA_THUMBNAIL_SIZE_ height:_PANORAMA_THUMBNAIL_SIZE_];
-    texture = [PLTexture textureWithImage:rectImage];
-    [texture setTexturePlace:0 row:0 col:0 face:kCubeBackFaceIndex];
-    [self.plView addTexture:texture];
     
-    rectImage = [MRXCPanoramaTool imageInRect:image x:128 y:0 width:_PANORAMA_THUMBNAIL_SIZE_ height:_PANORAMA_THUMBNAIL_SIZE_];
-    texture = [PLTexture textureWithImage:rectImage];
-    [texture setTexturePlace:0 row:0 col:0 face:kCubeRightFaceIndex];
-    [self.plView addTexture:texture];
-    
-    rectImage = [MRXCPanoramaTool imageInRect:image x:256 y:0 width:_PANORAMA_THUMBNAIL_SIZE_ height:_PANORAMA_THUMBNAIL_SIZE_];
-    texture = [PLTexture textureWithImage:rectImage];
-    [texture setTexturePlace:0 row:0 col:0 face:kCubeFrontFaceIndex];
-    [self.plView addTexture:texture];
-    
-    rectImage = [MRXCPanoramaTool imageInRect:image x:0 y:128 width:_PANORAMA_THUMBNAIL_SIZE_ height:_PANORAMA_THUMBNAIL_SIZE_];
-    texture = [PLTexture textureWithImage:rectImage];
-    [texture setTexturePlace:0 row:0 col:0 face:kCubeLeftFaceIndex];
-    [self.plView addTexture:texture];
-    
-    rectImage = [MRXCPanoramaTool imageInRect:image x:128 y:128 width:_PANORAMA_THUMBNAIL_SIZE_ height:_PANORAMA_THUMBNAIL_SIZE_];
-    texture = [PLTexture textureWithImage:rectImage];
-    [texture setTexturePlace:0 row:0 col:0 face:kCubeTopFaceIndex];
-    [self.plView addTexture:texture];
-    
-    rectImage = [MRXCPanoramaTool imageInRect:image x:256 y:128 width:_PANORAMA_THUMBNAIL_SIZE_ height:_PANORAMA_THUMBNAIL_SIZE_];
-    texture = [PLTexture textureWithImage:rectImage];
-    [texture setTexturePlace:0 row:0 col:0 face:kCubeBottomFaceIndex];
     [self.plView addTexture:texture];
     [self.plView drawView];
     //准备获取临近站点
-    //NSLog(@"achieveAdjacentPano............");
     [[MRXCPanoramaRequest achievePanoramaRequest] achieveAdjacentPano:self DataSource:self.dataSource  PanoID:self.panoramaID];
     
-    //获取切片
-    //这里稍做优化，通过panoYaw值计算出当前正对的face，优先获取图片
-    int face1 = -1, face2 = -1;
-    if(cube.panoYaw == 0.00){
-        face1 = 3;
-    }
-    if(cube.panoYaw > 0.00 && cube.panoYaw <= 90.0){
-        face1 = 3;
-        face2 = 4;
-    }
-    if(cube.panoYaw > 90.0 && cube.panoYaw <= 180.0f){
-        face1 = 4;
-        face2 = 1;
-    }
-    if(cube.panoYaw >= -90.0 && cube.panoYaw < 0.0){
-        face1 = 3;
-        face2 = 2;
-    }
-    if(cube.panoYaw >= -180.0 && cube.panoYaw < -90.0){
-        face1 = 2;
-        face2 = 1;
-    }
-    if(face1 > 0){
-        [self requestPanoTileByID:face1];
-    }
-    if(face2 > 0){
-        [self requestPanoTileByID:face2];
-    }
-    for(int i = 1; i <= 6; i ++){
-        if(i == face1 || i == face2){
-            continue;
-        }
-        [self requestPanoTileByID:i];
-    }
+    
 }
 - (void)achievePanoTileByIDResponse:(NSData *)response success:(BOOL)success info:(NSDictionary *)dict{
     //    NSLog(@"achievePanoTileByIDResponse begin...");

@@ -10,8 +10,8 @@
 
 @protocol MRXCPanoramaRequestProtocol <NSObject>
 @optional
-- (void)achievePanoByLonLatResponse:(NSDictionary *)response success:(BOOL)success info:(NSDictionary *)dict;
-- (void)achievePanoByIDResponse:(NSDictionary *)response success:(BOOL)success info:(NSDictionary *)dict;
+- (void)achievePanoByLonLatResponse:(NSString *)responseStr success:(BOOL)success info:(NSDictionary *)dict;
+- (void)achievePanoByIDResponse:(NSString *)responseStr success:(BOOL)success info:(NSDictionary *)dict;
 - (void)achievePanoThumbnailByIDResponse:(NSData *)response success:(BOOL)success info:(NSDictionary *)dict;
 - (void)achievePanoTileByIDResponse:(NSData *)response success:(BOOL)success info:(NSDictionary *)dict;
 - (void)achieveAdjacentPanoResponse:(NSArray *)response success:(BOOL)success info:(NSDictionary *)dict;

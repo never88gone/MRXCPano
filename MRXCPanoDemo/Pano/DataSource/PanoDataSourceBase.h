@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "MRXCBuildURL.h"
-#import "MRXCPanoramaIDData.h"
+#import "MRXCPanoramaData.h"
+#import "JSON.h"
 typedef NS_ENUM(NSInteger, PanoramaCubeOrPhere){
     PanoramaEnumCube,
     PanoramaEnumPhere
@@ -22,6 +23,6 @@ typedef NS_ENUM(NSInteger, PanoramaCubeOrPhere){
 - (NSURLRequest *)achievePanoThumbnailByID:(NSString *)panoID;
 - (NSURLRequest *)achievePanoTileByID:(NSString *)panoID level:(int)level face:(int)face row:(int)row col:(int)col;
 - (NSURLRequest *)achieveAdjacentPano:(NSString *)panoID;
--(MRXCPanoramaIDData*)getPanoramaDataByDic:(NSDictionary *)response;
--(PanoramaCubeOrPhere)getParnoramaType;
+-(MRXCPanoramaData*)getPanoramaDataByResponse:(NSString *)response;
+-(PanoramaCubeOrPhere)getPanoramaType;
 @end
