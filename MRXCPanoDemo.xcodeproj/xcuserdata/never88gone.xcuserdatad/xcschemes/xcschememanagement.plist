@@ -9,10 +9,25 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MRXCPanoramaLib.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>38B11AA01CA2E79C00AF8B98</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>38D105B81D3D3B670095CE77</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>38ED93031D3FC4A8007CB29C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

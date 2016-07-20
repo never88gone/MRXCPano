@@ -7,171 +7,128 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		386985101CA770DD0067D35E /* MRXCBuildURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984AC1CA770DD0067D35E /* MRXCBuildURL.m */; };
-		386985141CA770DD0067D35E /* MRXCPanoramaRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984B51CA770DD0067D35E /* MRXCPanoramaRequestData.m */; };
-		386985151CA770DD0067D35E /* MRXCXmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984B71CA770DD0067D35E /* MRXCXmlParser.m */; };
-		386985161CA770DD0067D35E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984B91CA770DD0067D35E /* Reachability.m */; };
-		386985171CA770DD0067D35E /* glues_error.c in Sources */ = {isa = PBXBuildFile; fileRef = 386984BD1CA770DD0067D35E /* glues_error.c */; };
-		386985181CA770DD0067D35E /* glues_mipmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 386984BF1CA770DD0067D35E /* glues_mipmap.c */; };
-		386985191CA770DD0067D35E /* glues_project.c in Sources */ = {isa = PBXBuildFile; fileRef = 386984C11CA770DD0067D35E /* glues_project.c */; };
-		3869851A1CA770DD0067D35E /* glues_quad.c in Sources */ = {isa = PBXBuildFile; fileRef = 386984C31CA770DD0067D35E /* glues_quad.c */; };
-		3869851B1CA770DD0067D35E /* glues_registry.c in Sources */ = {isa = PBXBuildFile; fileRef = 386984C51CA770DD0067D35E /* glues_registry.c */; };
-		3869851C1CA770DD0067D35E /* MRXCJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984CB1CA770DD0067D35E /* MRXCJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		3869851D1CA770DD0067D35E /* MRXCJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984CD1CA770DD0067D35E /* MRXCJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		3869851E1CA770DD0067D35E /* MRXCJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984CF1CA770DD0067D35E /* MRXCJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		3869851F1CA770DD0067D35E /* MRXCJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984D11CA770DD0067D35E /* MRXCJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		386985201CA770DD0067D35E /* NSObject+DBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984D31CA770DD0067D35E /* NSObject+DBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		386985211CA770DD0067D35E /* NSString+DBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984D51CA770DD0067D35E /* NSString+DBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		386985221CA770DD0067D35E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984D81CA770DD0067D35E /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		386985231CA770DD0067D35E /* MRXCAdjacentPanoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984DB1CA770DD0067D35E /* MRXCAdjacentPanoData.m */; };
-		386985251CA770DD0067D35E /* MRXCSiteContentJsonData.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984E01CA770DD0067D35E /* MRXCSiteContentJsonData.m */; };
-		386985261CA770DD0067D35E /* MRXCSiteJsonData.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984E21CA770DD0067D35E /* MRXCSiteJsonData.m */; };
-		386985271CA770DD0067D35E /* PLArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984E51CA770DD0067D35E /* PLArrow.m */; };
-		386985281CA770DD0067D35E /* PLCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984E71CA770DD0067D35E /* PLCamera.m */; };
-		386985291CA770DD0067D35E /* PLCube.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984EA1CA770DD0067D35E /* PLCube.m */; };
-		3869852A1CA770DD0067D35E /* PLCylinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984EC1CA770DD0067D35E /* PLCylinder.m */; };
-		3869852B1CA770DD0067D35E /* PLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984EF1CA770DD0067D35E /* PLImage.m */; };
-		3869852C1CA770DD0067D35E /* PLMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984F11CA770DD0067D35E /* PLMath.m */; };
-		3869852D1CA770DD0067D35E /* PLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984F31CA770DD0067D35E /* PLObject.m */; };
-		3869852E1CA770DD0067D35E /* PLRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984F51CA770DD0067D35E /* PLRenderer.m */; };
-		3869852F1CA770DD0067D35E /* PLScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984F71CA770DD0067D35E /* PLScene.m */; };
-		386985301CA770DD0067D35E /* PLSceneElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984F91CA770DD0067D35E /* PLSceneElement.m */; };
-		386985311CA770DD0067D35E /* PLSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984FB1CA770DD0067D35E /* PLSphere.m */; };
-		386985321CA770DD0067D35E /* PLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 386984FE1CA770DD0067D35E /* PLTexture.m */; };
-		386985331CA770DD0067D35E /* PLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 386985001CA770DD0067D35E /* PLUtils.m */; };
-		386985341CA770DD0067D35E /* PLView+Panorama.m in Sources */ = {isa = PBXBuildFile; fileRef = 386985021CA770DD0067D35E /* PLView+Panorama.m */; };
-		386985351CA770DD0067D35E /* PLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 386985041CA770DD0067D35E /* PLView.m */; };
-		386985361CA770DD0067D35E /* PLViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 386985061CA770DD0067D35E /* PLViewBase.m */; };
-		386985471CA778210067D35E /* MRXCPanoramaConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 386985411CA778210067D35E /* MRXCPanoramaConnection.m */; };
-		386985481CA778210067D35E /* MRXCPanoramaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 386985431CA778210067D35E /* MRXCPanoramaRequest.m */; };
-		386985491CA778210067D35E /* MRXCPanoramaTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 386985461CA778210067D35E /* MRXCPanoramaTool.m */; };
-		386985BA1CA77A4F0067D35E /* MrxcPanoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 386985B91CA77A4F0067D35E /* MrxcPanoView.m */; };
-		386985BC1CA77CC90067D35E /* 箭头上.png in Resources */ = {isa = PBXBuildFile; fileRef = 386985BB1CA77CC90067D35E /* 箭头上.png */; };
-		387409481CA7E67B0065C073 /* GDPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874093C1CA7E67B0065C073 /* GDPanoSource.m */; };
-		387409491CA7E67B0065C073 /* LDPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874093E1CA7E67B0065C073 /* LDPanoSource.m */; };
-		3874094A1CA7E67B0065C073 /* MRXCPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 387409401CA7E67B0065C073 /* MRXCPanoSource.m */; };
-		3874094B1CA7E67B0065C073 /* PanoDataSourceBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 387409421CA7E67B0065C073 /* PanoDataSourceBase.m */; };
-		3874094C1CA7E67B0065C073 /* TXPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 387409451CA7E67B0065C073 /* TXPanoSource.m */; };
-		3874094D1CA7E67B0065C073 /* ZHDPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 387409471CA7E67B0065C073 /* ZHDPanoSource.m */; };
-		38A784381CAC1B150058449B /* MRXCPanoramaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A784371CAC1B150058449B /* MRXCPanoramaData.m */; };
-		38A7843A1CAC1C4E0058449B /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A784391CAC1C4E0058449B /* libxml2.tbd */; };
-		38A7843E1CAC1D280058449B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A7843D1CAC1D280058449B /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		00494CF9FE53135438061042 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2C29108E9979F022BFC3AC /* libPods.a */; };
 		38B11AA61CA2E79C00AF8B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B11AA51CA2E79C00AF8B98 /* main.m */; };
 		38B11AA91CA2E79C00AF8B98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B11AA81CA2E79C00AF8B98 /* AppDelegate.m */; };
 		38B11AAC1CA2E79C00AF8B98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B11AAB1CA2E79C00AF8B98 /* ViewController.m */; };
 		38B11AAF1CA2E79C00AF8B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B11AAD1CA2E79C00AF8B98 /* Main.storyboard */; };
 		38B11AB11CA2E79C00AF8B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B11AB01CA2E79C00AF8B98 /* Assets.xcassets */; };
 		38B11AB41CA2E79C00AF8B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B11AB21CA2E79C00AF8B98 /* LaunchScreen.storyboard */; };
+		38DA105E1D3FD07300172BEE /* MRXCValueObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DA105C1D3FD07300172BEE /* MRXCValueObject.h */; };
+		38DA105F1D3FD07300172BEE /* MRXCValueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DA105D1D3FD07300172BEE /* MRXCValueObject.m */; };
+		38ED93071D3FC4A8007CB29C /* MRXCPanoramaLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93061D3FC4A8007CB29C /* MRXCPanoramaLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38ED930B1D3FC4A8007CB29C /* MRXCPanoramaLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */; };
+		38ED930C1D3FC4A8007CB29C /* MRXCPanoramaLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		38ED937E1D3FC50D007CB29C /* MRXCBuildURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93111D3FC50D007CB29C /* MRXCBuildURL.h */; };
+		38ED937F1D3FC50D007CB29C /* MRXCBuildURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93121D3FC50D007CB29C /* MRXCBuildURL.m */; };
+		38ED93801D3FC50D007CB29C /* MRXCPanoramaConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93131D3FC50D007CB29C /* MRXCPanoramaConnection.h */; };
+		38ED93811D3FC50D007CB29C /* MRXCPanoramaConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93141D3FC50D007CB29C /* MRXCPanoramaConnection.m */; };
+		38ED93821D3FC50D007CB29C /* MRXCPanoramaRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93151D3FC50D007CB29C /* MRXCPanoramaRequest.h */; };
+		38ED93831D3FC50D007CB29C /* MRXCPanoramaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93161D3FC50D007CB29C /* MRXCPanoramaRequest.m */; };
+		38ED93841D3FC50D007CB29C /* MRXCPanoramaRequestData.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93171D3FC50D007CB29C /* MRXCPanoramaRequestData.h */; };
+		38ED93851D3FC50D007CB29C /* MRXCPanoramaRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93181D3FC50D007CB29C /* MRXCPanoramaRequestData.m */; };
+		38ED93861D3FC50D007CB29C /* MRXCPanoramaRequestProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93191D3FC50D007CB29C /* MRXCPanoramaRequestProtocol.h */; };
+		38ED93871D3FC50D007CB29C /* MRXCPanoramaTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED931A1D3FC50D007CB29C /* MRXCPanoramaTool.h */; };
+		38ED93881D3FC50D007CB29C /* MRXCPanoramaTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED931B1D3FC50D007CB29C /* MRXCPanoramaTool.m */; };
+		38ED938D1D3FC50D007CB29C /* GDPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93211D3FC50D007CB29C /* GDPanoSource.h */; };
+		38ED938E1D3FC50D007CB29C /* GDPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93221D3FC50D007CB29C /* GDPanoSource.m */; };
+		38ED938F1D3FC50D007CB29C /* LDPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93231D3FC50D007CB29C /* LDPanoSource.h */; };
+		38ED93901D3FC50D007CB29C /* LDPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93241D3FC50D007CB29C /* LDPanoSource.m */; };
+		38ED93911D3FC50D007CB29C /* MRXCPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93251D3FC50D007CB29C /* MRXCPanoSource.h */; };
+		38ED93921D3FC50D007CB29C /* MRXCPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93261D3FC50D007CB29C /* MRXCPanoSource.m */; };
+		38ED93931D3FC50D007CB29C /* PanoDataSourceBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93271D3FC50D007CB29C /* PanoDataSourceBase.h */; };
+		38ED93941D3FC50D007CB29C /* PanoDataSourceBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93281D3FC50D007CB29C /* PanoDataSourceBase.m */; };
+		38ED93951D3FC50D007CB29C /* TXPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93291D3FC50D007CB29C /* TXPanoSource.h */; };
+		38ED93961D3FC50D007CB29C /* TXPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED932A1D3FC50D007CB29C /* TXPanoSource.m */; };
+		38ED93971D3FC50D007CB29C /* ZHDPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED932B1D3FC50D007CB29C /* ZHDPanoSource.h */; };
+		38ED93981D3FC50D007CB29C /* ZHDPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED932C1D3FC50D007CB29C /* ZHDPanoSource.m */; };
+		38ED93991D3FC50D007CB29C /* glu.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED932E1D3FC50D007CB29C /* glu.h */; };
+		38ED939A1D3FC50D007CB29C /* glues.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED932F1D3FC50D007CB29C /* glues.h */; };
+		38ED939B1D3FC50D007CB29C /* glues_error.c in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93301D3FC50D007CB29C /* glues_error.c */; };
+		38ED939C1D3FC50D007CB29C /* glues_error.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93311D3FC50D007CB29C /* glues_error.h */; };
+		38ED939D1D3FC50D007CB29C /* glues_mipmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93321D3FC50D007CB29C /* glues_mipmap.c */; };
+		38ED939E1D3FC50D007CB29C /* glues_mipmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93331D3FC50D007CB29C /* glues_mipmap.h */; };
+		38ED939F1D3FC50D007CB29C /* glues_project.c in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93341D3FC50D007CB29C /* glues_project.c */; };
+		38ED93A01D3FC50D007CB29C /* glues_project.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93351D3FC50D007CB29C /* glues_project.h */; };
+		38ED93A11D3FC50D007CB29C /* glues_quad.c in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93361D3FC50D007CB29C /* glues_quad.c */; };
+		38ED93A21D3FC50D007CB29C /* glues_quad.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93371D3FC50D007CB29C /* glues_quad.h */; };
+		38ED93A31D3FC50D007CB29C /* glues_registry.c in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93381D3FC50D007CB29C /* glues_registry.c */; };
+		38ED93A41D3FC50D007CB29C /* glues_registry.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93391D3FC50D007CB29C /* glues_registry.h */; };
+		38ED93B21D3FC50D007CB29C /* MRXCPanoramaLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED934A1D3FC50D007CB29C /* MRXCPanoramaLib.h */; };
+		38ED93B31D3FC50D007CB29C /* MrxcPanoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED934B1D3FC50D007CB29C /* MrxcPanoView.h */; };
+		38ED93B41D3FC50D007CB29C /* MrxcPanoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED934C1D3FC50D007CB29C /* MrxcPanoView.m */; };
+		38ED93B51D3FC50D007CB29C /* MRXCPanoramaRoadLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED934E1D3FC50D007CB29C /* MRXCPanoramaRoadLink.h */; };
+		38ED93B61D3FC50D007CB29C /* MRXCPanoramaRoadLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED934F1D3FC50D007CB29C /* MRXCPanoramaRoadLink.m */; };
+		38ED93B71D3FC50D007CB29C /* MRXCPanoramaStation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93501D3FC50D007CB29C /* MRXCPanoramaStation.h */; };
+		38ED93B81D3FC50D007CB29C /* MRXCPanoramaStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93511D3FC50D007CB29C /* MRXCPanoramaStation.m */; };
+		38ED93BE1D3FC50D007CB29C /* PLArrow.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93581D3FC50D007CB29C /* PLArrow.h */; };
+		38ED93BF1D3FC50D007CB29C /* PLArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93591D3FC50D007CB29C /* PLArrow.m */; };
+		38ED93C01D3FC50D007CB29C /* PLCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED935A1D3FC50D007CB29C /* PLCamera.h */; };
+		38ED93C11D3FC50D007CB29C /* PLCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED935B1D3FC50D007CB29C /* PLCamera.m */; };
+		38ED93C21D3FC50D007CB29C /* PLConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED935C1D3FC50D007CB29C /* PLConstants.h */; };
+		38ED93C31D3FC50D007CB29C /* PLCube.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED935D1D3FC50D007CB29C /* PLCube.h */; };
+		38ED93C41D3FC50D007CB29C /* PLCube.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED935E1D3FC50D007CB29C /* PLCube.m */; };
+		38ED93C51D3FC50D007CB29C /* PLCylinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED935F1D3FC50D007CB29C /* PLCylinder.h */; };
+		38ED93C61D3FC50D007CB29C /* PLCylinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93601D3FC50D007CB29C /* PLCylinder.m */; };
+		38ED93C71D3FC50D007CB29C /* PLEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93611D3FC50D007CB29C /* PLEnums.h */; };
+		38ED93C81D3FC50D007CB29C /* PLImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93621D3FC50D007CB29C /* PLImage.h */; };
+		38ED93C91D3FC50D007CB29C /* PLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93631D3FC50D007CB29C /* PLImage.m */; };
+		38ED93CA1D3FC50D007CB29C /* PLMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93641D3FC50D007CB29C /* PLMath.h */; };
+		38ED93CB1D3FC50D007CB29C /* PLMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93651D3FC50D007CB29C /* PLMath.m */; };
+		38ED93CC1D3FC50D007CB29C /* PLObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93661D3FC50D007CB29C /* PLObject.h */; };
+		38ED93CD1D3FC50D007CB29C /* PLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93671D3FC50D007CB29C /* PLObject.m */; };
+		38ED93CE1D3FC50D007CB29C /* PLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93681D3FC50D007CB29C /* PLRenderer.h */; };
+		38ED93CF1D3FC50D007CB29C /* PLRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93691D3FC50D007CB29C /* PLRenderer.m */; };
+		38ED93D01D3FC50D007CB29C /* PLScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED936A1D3FC50D007CB29C /* PLScene.h */; };
+		38ED93D11D3FC50D007CB29C /* PLScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED936B1D3FC50D007CB29C /* PLScene.m */; };
+		38ED93D21D3FC50D007CB29C /* PLSceneElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED936C1D3FC50D007CB29C /* PLSceneElement.h */; };
+		38ED93D31D3FC50D007CB29C /* PLSceneElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED936D1D3FC50D007CB29C /* PLSceneElement.m */; };
+		38ED93D41D3FC50D007CB29C /* PLSphere.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED936E1D3FC50D007CB29C /* PLSphere.h */; };
+		38ED93D51D3FC50D007CB29C /* PLSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED936F1D3FC50D007CB29C /* PLSphere.m */; };
+		38ED93D61D3FC50D007CB29C /* PLStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93701D3FC50D007CB29C /* PLStructs.h */; };
+		38ED93D71D3FC50D007CB29C /* PLTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93711D3FC50D007CB29C /* PLTexture.h */; };
+		38ED93D81D3FC50D007CB29C /* PLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93721D3FC50D007CB29C /* PLTexture.m */; };
+		38ED93D91D3FC50D007CB29C /* PLUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93731D3FC50D007CB29C /* PLUtils.h */; };
+		38ED93DA1D3FC50D007CB29C /* PLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93741D3FC50D007CB29C /* PLUtils.m */; };
+		38ED93DB1D3FC50D007CB29C /* PLView+Panorama.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93751D3FC50D007CB29C /* PLView+Panorama.h */; };
+		38ED93DC1D3FC50D007CB29C /* PLView+Panorama.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93761D3FC50D007CB29C /* PLView+Panorama.m */; };
+		38ED93DD1D3FC50D007CB29C /* PLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93771D3FC50D007CB29C /* PLView.h */; };
+		38ED93DE1D3FC50D007CB29C /* PLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93781D3FC50D007CB29C /* PLView.m */; };
+		38ED93DF1D3FC50D007CB29C /* PLViewBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93791D3FC50D007CB29C /* PLViewBase.h */; };
+		38ED93E01D3FC50D007CB29C /* PLViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED937A1D3FC50D007CB29C /* PLViewBase.m */; };
+		38ED93E11D3FC50D007CB29C /* 箭头上.png in Resources */ = {isa = PBXBuildFile; fileRef = 38ED937C1D3FC50D007CB29C /* 箭头上.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		38ED93091D3FC4A8007CB29C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38B11A991CA2E79C00AF8B98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38ED93031D3FC4A8007CB29C;
+			remoteInfo = MRXCPanoramaLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		38D105C51D3D3B670095CE77 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				38ED930C1D3FC4A8007CB29C /* MRXCPanoramaLib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		386984AB1CA770DD0067D35E /* MRXCBuildURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCBuildURL.h; sourceTree = "<group>"; };
-		386984AC1CA770DD0067D35E /* MRXCBuildURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCBuildURL.m; sourceTree = "<group>"; };
-		386984B41CA770DD0067D35E /* MRXCPanoramaRequestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaRequestData.h; sourceTree = "<group>"; };
-		386984B51CA770DD0067D35E /* MRXCPanoramaRequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaRequestData.m; sourceTree = "<group>"; };
-		386984B61CA770DD0067D35E /* MRXCXmlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCXmlParser.h; sourceTree = "<group>"; };
-		386984B71CA770DD0067D35E /* MRXCXmlParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCXmlParser.m; sourceTree = "<group>"; };
-		386984B81CA770DD0067D35E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		386984B91CA770DD0067D35E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		386984BB1CA770DD0067D35E /* glu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glu.h; sourceTree = "<group>"; };
-		386984BC1CA770DD0067D35E /* glues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues.h; sourceTree = "<group>"; };
-		386984BD1CA770DD0067D35E /* glues_error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glues_error.c; sourceTree = "<group>"; };
-		386984BE1CA770DD0067D35E /* glues_error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues_error.h; sourceTree = "<group>"; };
-		386984BF1CA770DD0067D35E /* glues_mipmap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glues_mipmap.c; sourceTree = "<group>"; };
-		386984C01CA770DD0067D35E /* glues_mipmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues_mipmap.h; sourceTree = "<group>"; };
-		386984C11CA770DD0067D35E /* glues_project.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glues_project.c; sourceTree = "<group>"; };
-		386984C21CA770DD0067D35E /* glues_project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues_project.h; sourceTree = "<group>"; };
-		386984C31CA770DD0067D35E /* glues_quad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glues_quad.c; sourceTree = "<group>"; };
-		386984C41CA770DD0067D35E /* glues_quad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues_quad.h; sourceTree = "<group>"; };
-		386984C51CA770DD0067D35E /* glues_registry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glues_registry.c; sourceTree = "<group>"; };
-		386984C61CA770DD0067D35E /* glues_registry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues_registry.h; sourceTree = "<group>"; };
-		386984C91CA770DD0067D35E /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		386984CA1CA770DD0067D35E /* MRXCJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCJSON.h; sourceTree = "<group>"; };
-		386984CB1CA770DD0067D35E /* MRXCJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCJSON.m; sourceTree = "<group>"; };
-		386984CC1CA770DD0067D35E /* MRXCJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCJsonBase.h; sourceTree = "<group>"; };
-		386984CD1CA770DD0067D35E /* MRXCJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCJsonBase.m; sourceTree = "<group>"; };
-		386984CE1CA770DD0067D35E /* MRXCJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCJsonParser.h; sourceTree = "<group>"; };
-		386984CF1CA770DD0067D35E /* MRXCJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCJsonParser.m; sourceTree = "<group>"; };
-		386984D01CA770DD0067D35E /* MRXCJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCJsonWriter.h; sourceTree = "<group>"; };
-		386984D11CA770DD0067D35E /* MRXCJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCJsonWriter.m; sourceTree = "<group>"; };
-		386984D21CA770DD0067D35E /* NSObject+DBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DBJSON.h"; sourceTree = "<group>"; };
-		386984D31CA770DD0067D35E /* NSObject+DBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DBJSON.m"; sourceTree = "<group>"; };
-		386984D41CA770DD0067D35E /* NSString+DBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DBJSON.h"; sourceTree = "<group>"; };
-		386984D51CA770DD0067D35E /* NSString+DBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DBJSON.m"; sourceTree = "<group>"; };
-		386984D71CA770DD0067D35E /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		386984D81CA770DD0067D35E /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		386984DA1CA770DD0067D35E /* MRXCAdjacentPanoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCAdjacentPanoData.h; sourceTree = "<group>"; };
-		386984DB1CA770DD0067D35E /* MRXCAdjacentPanoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCAdjacentPanoData.m; sourceTree = "<group>"; };
-		386984DE1CA770DD0067D35E /* MRXCPanoramaJsonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaJsonData.h; sourceTree = "<group>"; };
-		386984DF1CA770DD0067D35E /* MRXCSiteContentJsonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCSiteContentJsonData.h; sourceTree = "<group>"; };
-		386984E01CA770DD0067D35E /* MRXCSiteContentJsonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCSiteContentJsonData.m; sourceTree = "<group>"; };
-		386984E11CA770DD0067D35E /* MRXCSiteJsonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCSiteJsonData.h; sourceTree = "<group>"; };
-		386984E21CA770DD0067D35E /* MRXCSiteJsonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCSiteJsonData.m; sourceTree = "<group>"; };
-		386984E41CA770DD0067D35E /* PLArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLArrow.h; sourceTree = "<group>"; };
-		386984E51CA770DD0067D35E /* PLArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLArrow.m; sourceTree = "<group>"; };
-		386984E61CA770DD0067D35E /* PLCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCamera.h; sourceTree = "<group>"; };
-		386984E71CA770DD0067D35E /* PLCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLCamera.m; sourceTree = "<group>"; };
-		386984E81CA770DD0067D35E /* PLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLConstants.h; sourceTree = "<group>"; };
-		386984E91CA770DD0067D35E /* PLCube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCube.h; sourceTree = "<group>"; };
-		386984EA1CA770DD0067D35E /* PLCube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLCube.m; sourceTree = "<group>"; };
-		386984EB1CA770DD0067D35E /* PLCylinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCylinder.h; sourceTree = "<group>"; };
-		386984EC1CA770DD0067D35E /* PLCylinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLCylinder.m; sourceTree = "<group>"; };
-		386984ED1CA770DD0067D35E /* PLEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLEnums.h; sourceTree = "<group>"; };
-		386984EE1CA770DD0067D35E /* PLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLImage.h; sourceTree = "<group>"; };
-		386984EF1CA770DD0067D35E /* PLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLImage.m; sourceTree = "<group>"; };
-		386984F01CA770DD0067D35E /* PLMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLMath.h; sourceTree = "<group>"; };
-		386984F11CA770DD0067D35E /* PLMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLMath.m; sourceTree = "<group>"; };
-		386984F21CA770DD0067D35E /* PLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLObject.h; sourceTree = "<group>"; };
-		386984F31CA770DD0067D35E /* PLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLObject.m; sourceTree = "<group>"; };
-		386984F41CA770DD0067D35E /* PLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLRenderer.h; sourceTree = "<group>"; };
-		386984F51CA770DD0067D35E /* PLRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLRenderer.m; sourceTree = "<group>"; };
-		386984F61CA770DD0067D35E /* PLScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLScene.h; sourceTree = "<group>"; };
-		386984F71CA770DD0067D35E /* PLScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLScene.m; sourceTree = "<group>"; };
-		386984F81CA770DD0067D35E /* PLSceneElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLSceneElement.h; sourceTree = "<group>"; };
-		386984F91CA770DD0067D35E /* PLSceneElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLSceneElement.m; sourceTree = "<group>"; };
-		386984FA1CA770DD0067D35E /* PLSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLSphere.h; sourceTree = "<group>"; };
-		386984FB1CA770DD0067D35E /* PLSphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLSphere.m; sourceTree = "<group>"; };
-		386984FC1CA770DD0067D35E /* PLStructs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLStructs.h; sourceTree = "<group>"; };
-		386984FD1CA770DD0067D35E /* PLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLTexture.h; sourceTree = "<group>"; };
-		386984FE1CA770DD0067D35E /* PLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLTexture.m; sourceTree = "<group>"; };
-		386984FF1CA770DD0067D35E /* PLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLUtils.h; sourceTree = "<group>"; };
-		386985001CA770DD0067D35E /* PLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLUtils.m; sourceTree = "<group>"; };
-		386985011CA770DD0067D35E /* PLView+Panorama.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PLView+Panorama.h"; sourceTree = "<group>"; };
-		386985021CA770DD0067D35E /* PLView+Panorama.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PLView+Panorama.m"; sourceTree = "<group>"; };
-		386985031CA770DD0067D35E /* PLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLView.h; sourceTree = "<group>"; };
-		386985041CA770DD0067D35E /* PLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLView.m; sourceTree = "<group>"; };
-		386985051CA770DD0067D35E /* PLViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLViewBase.h; sourceTree = "<group>"; };
-		386985061CA770DD0067D35E /* PLViewBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLViewBase.m; sourceTree = "<group>"; };
+		2E2C29108E9979F022BFC3AC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3869853F1CA773F90067D35E /* MRXCFuncDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCFuncDefine.h; sourceTree = "<group>"; };
-		386985401CA778210067D35E /* MRXCPanoramaConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaConnection.h; sourceTree = "<group>"; };
-		386985411CA778210067D35E /* MRXCPanoramaConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaConnection.m; sourceTree = "<group>"; };
-		386985421CA778210067D35E /* MRXCPanoramaRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaRequest.h; sourceTree = "<group>"; };
-		386985431CA778210067D35E /* MRXCPanoramaRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaRequest.m; sourceTree = "<group>"; };
-		386985441CA778210067D35E /* MRXCPanoramaRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaRequestProtocol.h; sourceTree = "<group>"; };
-		386985451CA778210067D35E /* MRXCPanoramaTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaTool.h; sourceTree = "<group>"; };
-		386985461CA778210067D35E /* MRXCPanoramaTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaTool.m; sourceTree = "<group>"; };
 		3869854A1CA7797F0067D35E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		3869854B1CA7797F0067D35E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		386985B81CA77A4F0067D35E /* MrxcPanoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MrxcPanoView.h; sourceTree = "<group>"; };
-		386985B91CA77A4F0067D35E /* MrxcPanoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MrxcPanoView.m; sourceTree = "<group>"; };
-		386985BB1CA77CC90067D35E /* 箭头上.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "箭头上.png"; sourceTree = "<group>"; };
-		3874093B1CA7E67B0065C073 /* GDPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDPanoSource.h; sourceTree = "<group>"; };
-		3874093C1CA7E67B0065C073 /* GDPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDPanoSource.m; sourceTree = "<group>"; };
-		3874093D1CA7E67B0065C073 /* LDPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDPanoSource.h; sourceTree = "<group>"; };
-		3874093E1CA7E67B0065C073 /* LDPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDPanoSource.m; sourceTree = "<group>"; };
-		3874093F1CA7E67B0065C073 /* MRXCPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoSource.h; sourceTree = "<group>"; };
-		387409401CA7E67B0065C073 /* MRXCPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoSource.m; sourceTree = "<group>"; };
-		387409411CA7E67B0065C073 /* PanoDataSourceBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoDataSourceBase.h; sourceTree = "<group>"; };
-		387409421CA7E67B0065C073 /* PanoDataSourceBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoDataSourceBase.m; sourceTree = "<group>"; };
-		387409441CA7E67B0065C073 /* TXPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXPanoSource.h; sourceTree = "<group>"; };
-		387409451CA7E67B0065C073 /* TXPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXPanoSource.m; sourceTree = "<group>"; };
-		387409461CA7E67B0065C073 /* ZHDPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHDPanoSource.h; sourceTree = "<group>"; };
-		387409471CA7E67B0065C073 /* ZHDPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHDPanoSource.m; sourceTree = "<group>"; };
-		38A784361CAC1B150058449B /* MRXCPanoramaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaData.h; sourceTree = "<group>"; };
-		38A784371CAC1B150058449B /* MRXCPanoramaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaData.m; sourceTree = "<group>"; };
 		38A784391CAC1C4E0058449B /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		38A7843C1CAC1D280058449B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
-		38A7843D1CAC1D280058449B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		38B11AA11CA2E79C00AF8B98 /* MRXCPanoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRXCPanoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B11AA51CA2E79C00AF8B98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		38B11AA71CA2E79C00AF8B98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -182,6 +139,93 @@
 		38B11AB01CA2E79C00AF8B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38B11AB31CA2E79C00AF8B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38B11AB51CA2E79C00AF8B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38D1069A1D3D3C680095CE77 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		38D1069C1D3D3E230095CE77 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		38DA105C1D3FD07300172BEE /* MRXCValueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCValueObject.h; sourceTree = "<group>"; };
+		38DA105D1D3FD07300172BEE /* MRXCValueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCValueObject.m; sourceTree = "<group>"; };
+		38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRXCPanoramaLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38ED93061D3FC4A8007CB29C /* MRXCPanoramaLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaLib.h; sourceTree = "<group>"; };
+		38ED93081D3FC4A8007CB29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38ED93111D3FC50D007CB29C /* MRXCBuildURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCBuildURL.h; sourceTree = "<group>"; };
+		38ED93121D3FC50D007CB29C /* MRXCBuildURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCBuildURL.m; sourceTree = "<group>"; };
+		38ED93131D3FC50D007CB29C /* MRXCPanoramaConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaConnection.h; sourceTree = "<group>"; };
+		38ED93141D3FC50D007CB29C /* MRXCPanoramaConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaConnection.m; sourceTree = "<group>"; };
+		38ED93151D3FC50D007CB29C /* MRXCPanoramaRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaRequest.h; sourceTree = "<group>"; };
+		38ED93161D3FC50D007CB29C /* MRXCPanoramaRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaRequest.m; sourceTree = "<group>"; };
+		38ED93171D3FC50D007CB29C /* MRXCPanoramaRequestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaRequestData.h; sourceTree = "<group>"; };
+		38ED93181D3FC50D007CB29C /* MRXCPanoramaRequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaRequestData.m; sourceTree = "<group>"; };
+		38ED93191D3FC50D007CB29C /* MRXCPanoramaRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaRequestProtocol.h; sourceTree = "<group>"; };
+		38ED931A1D3FC50D007CB29C /* MRXCPanoramaTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaTool.h; sourceTree = "<group>"; };
+		38ED931B1D3FC50D007CB29C /* MRXCPanoramaTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaTool.m; sourceTree = "<group>"; };
+		38ED93211D3FC50D007CB29C /* GDPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDPanoSource.h; sourceTree = "<group>"; };
+		38ED93221D3FC50D007CB29C /* GDPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDPanoSource.m; sourceTree = "<group>"; };
+		38ED93231D3FC50D007CB29C /* LDPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDPanoSource.h; sourceTree = "<group>"; };
+		38ED93241D3FC50D007CB29C /* LDPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDPanoSource.m; sourceTree = "<group>"; };
+		38ED93251D3FC50D007CB29C /* MRXCPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoSource.h; sourceTree = "<group>"; };
+		38ED93261D3FC50D007CB29C /* MRXCPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoSource.m; sourceTree = "<group>"; };
+		38ED93271D3FC50D007CB29C /* PanoDataSourceBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoDataSourceBase.h; sourceTree = "<group>"; };
+		38ED93281D3FC50D007CB29C /* PanoDataSourceBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoDataSourceBase.m; sourceTree = "<group>"; };
+		38ED93291D3FC50D007CB29C /* TXPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXPanoSource.h; sourceTree = "<group>"; };
+		38ED932A1D3FC50D007CB29C /* TXPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXPanoSource.m; sourceTree = "<group>"; };
+		38ED932B1D3FC50D007CB29C /* ZHDPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHDPanoSource.h; sourceTree = "<group>"; };
+		38ED932C1D3FC50D007CB29C /* ZHDPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHDPanoSource.m; sourceTree = "<group>"; };
+		38ED932E1D3FC50D007CB29C /* glu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glu.h; sourceTree = "<group>"; };
+		38ED932F1D3FC50D007CB29C /* glues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues.h; sourceTree = "<group>"; };
+		38ED93301D3FC50D007CB29C /* glues_error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glues_error.c; sourceTree = "<group>"; };
+		38ED93311D3FC50D007CB29C /* glues_error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues_error.h; sourceTree = "<group>"; };
+		38ED93321D3FC50D007CB29C /* glues_mipmap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glues_mipmap.c; sourceTree = "<group>"; };
+		38ED93331D3FC50D007CB29C /* glues_mipmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues_mipmap.h; sourceTree = "<group>"; };
+		38ED93341D3FC50D007CB29C /* glues_project.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glues_project.c; sourceTree = "<group>"; };
+		38ED93351D3FC50D007CB29C /* glues_project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues_project.h; sourceTree = "<group>"; };
+		38ED93361D3FC50D007CB29C /* glues_quad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glues_quad.c; sourceTree = "<group>"; };
+		38ED93371D3FC50D007CB29C /* glues_quad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues_quad.h; sourceTree = "<group>"; };
+		38ED93381D3FC50D007CB29C /* glues_registry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glues_registry.c; sourceTree = "<group>"; };
+		38ED93391D3FC50D007CB29C /* glues_registry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues_registry.h; sourceTree = "<group>"; };
+		38ED934A1D3FC50D007CB29C /* MRXCPanoramaLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaLib.h; sourceTree = "<group>"; };
+		38ED934B1D3FC50D007CB29C /* MrxcPanoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MrxcPanoView.h; sourceTree = "<group>"; };
+		38ED934C1D3FC50D007CB29C /* MrxcPanoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MrxcPanoView.m; sourceTree = "<group>"; };
+		38ED934E1D3FC50D007CB29C /* MRXCPanoramaRoadLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaRoadLink.h; sourceTree = "<group>"; };
+		38ED934F1D3FC50D007CB29C /* MRXCPanoramaRoadLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaRoadLink.m; sourceTree = "<group>"; };
+		38ED93501D3FC50D007CB29C /* MRXCPanoramaStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaStation.h; sourceTree = "<group>"; };
+		38ED93511D3FC50D007CB29C /* MRXCPanoramaStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaStation.m; sourceTree = "<group>"; };
+		38ED93581D3FC50D007CB29C /* PLArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLArrow.h; sourceTree = "<group>"; };
+		38ED93591D3FC50D007CB29C /* PLArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLArrow.m; sourceTree = "<group>"; };
+		38ED935A1D3FC50D007CB29C /* PLCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCamera.h; sourceTree = "<group>"; };
+		38ED935B1D3FC50D007CB29C /* PLCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLCamera.m; sourceTree = "<group>"; };
+		38ED935C1D3FC50D007CB29C /* PLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLConstants.h; sourceTree = "<group>"; };
+		38ED935D1D3FC50D007CB29C /* PLCube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCube.h; sourceTree = "<group>"; };
+		38ED935E1D3FC50D007CB29C /* PLCube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLCube.m; sourceTree = "<group>"; };
+		38ED935F1D3FC50D007CB29C /* PLCylinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCylinder.h; sourceTree = "<group>"; };
+		38ED93601D3FC50D007CB29C /* PLCylinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLCylinder.m; sourceTree = "<group>"; };
+		38ED93611D3FC50D007CB29C /* PLEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLEnums.h; sourceTree = "<group>"; };
+		38ED93621D3FC50D007CB29C /* PLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLImage.h; sourceTree = "<group>"; };
+		38ED93631D3FC50D007CB29C /* PLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLImage.m; sourceTree = "<group>"; };
+		38ED93641D3FC50D007CB29C /* PLMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLMath.h; sourceTree = "<group>"; };
+		38ED93651D3FC50D007CB29C /* PLMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLMath.m; sourceTree = "<group>"; };
+		38ED93661D3FC50D007CB29C /* PLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLObject.h; sourceTree = "<group>"; };
+		38ED93671D3FC50D007CB29C /* PLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLObject.m; sourceTree = "<group>"; };
+		38ED93681D3FC50D007CB29C /* PLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLRenderer.h; sourceTree = "<group>"; };
+		38ED93691D3FC50D007CB29C /* PLRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLRenderer.m; sourceTree = "<group>"; };
+		38ED936A1D3FC50D007CB29C /* PLScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLScene.h; sourceTree = "<group>"; };
+		38ED936B1D3FC50D007CB29C /* PLScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLScene.m; sourceTree = "<group>"; };
+		38ED936C1D3FC50D007CB29C /* PLSceneElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLSceneElement.h; sourceTree = "<group>"; };
+		38ED936D1D3FC50D007CB29C /* PLSceneElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLSceneElement.m; sourceTree = "<group>"; };
+		38ED936E1D3FC50D007CB29C /* PLSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLSphere.h; sourceTree = "<group>"; };
+		38ED936F1D3FC50D007CB29C /* PLSphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLSphere.m; sourceTree = "<group>"; };
+		38ED93701D3FC50D007CB29C /* PLStructs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLStructs.h; sourceTree = "<group>"; };
+		38ED93711D3FC50D007CB29C /* PLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLTexture.h; sourceTree = "<group>"; };
+		38ED93721D3FC50D007CB29C /* PLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLTexture.m; sourceTree = "<group>"; };
+		38ED93731D3FC50D007CB29C /* PLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLUtils.h; sourceTree = "<group>"; };
+		38ED93741D3FC50D007CB29C /* PLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLUtils.m; sourceTree = "<group>"; };
+		38ED93751D3FC50D007CB29C /* PLView+Panorama.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PLView+Panorama.h"; sourceTree = "<group>"; };
+		38ED93761D3FC50D007CB29C /* PLView+Panorama.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PLView+Panorama.m"; sourceTree = "<group>"; };
+		38ED93771D3FC50D007CB29C /* PLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLView.h; sourceTree = "<group>"; };
+		38ED93781D3FC50D007CB29C /* PLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLView.m; sourceTree = "<group>"; };
+		38ED93791D3FC50D007CB29C /* PLViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLViewBase.h; sourceTree = "<group>"; };
+		38ED937A1D3FC50D007CB29C /* PLViewBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLViewBase.m; sourceTree = "<group>"; };
+		38ED937C1D3FC50D007CB29C /* 箭头上.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "箭头上.png"; sourceTree = "<group>"; };
+		845B58FDB374049AE9821604 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DB30F33E8335E3307022014B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,214 +233,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38A7843A1CAC1C4E0058449B /* libxml2.tbd in Frameworks */,
+				38ED930B1D3FC4A8007CB29C /* MRXCPanoramaLib.framework in Frameworks */,
+				00494CF9FE53135438061042 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38ED93001D3FC4A8007CB29C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		386984421CA770DD0067D35E /* Pano */ = {
+		3677EA542D15F8D1D5507C02 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				38A7843B1CAC1D280058449B /* Tool */,
-				3874093A1CA7E67B0065C073 /* DataSource */,
-				386984431CA770DD0067D35E /* built */,
-				386984AA1CA770DD0067D35E /* Communication */,
-				386984BA1CA770DD0067D35E /* glues */,
-				386984C71CA770DD0067D35E /* JSON */,
-				386984D91CA770DD0067D35E /* PanoramaData */,
-				386984E31CA770DD0067D35E /* PanoramaLib */,
-				386985071CA770DD0067D35E /* Resource */,
+				845B58FDB374049AE9821604 /* Pods.debug.xcconfig */,
+				DB30F33E8335E3307022014B /* Pods.release.xcconfig */,
 			);
-			path = Pano;
-			sourceTree = "<group>";
-		};
-		386984431CA770DD0067D35E /* built */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = built;
-			sourceTree = "<group>";
-		};
-		386984AA1CA770DD0067D35E /* Communication */ = {
-			isa = PBXGroup;
-			children = (
-				386984AB1CA770DD0067D35E /* MRXCBuildURL.h */,
-				386984AC1CA770DD0067D35E /* MRXCBuildURL.m */,
-				386985401CA778210067D35E /* MRXCPanoramaConnection.h */,
-				386985411CA778210067D35E /* MRXCPanoramaConnection.m */,
-				386985421CA778210067D35E /* MRXCPanoramaRequest.h */,
-				386985431CA778210067D35E /* MRXCPanoramaRequest.m */,
-				386985441CA778210067D35E /* MRXCPanoramaRequestProtocol.h */,
-				386985451CA778210067D35E /* MRXCPanoramaTool.h */,
-				386985461CA778210067D35E /* MRXCPanoramaTool.m */,
-				386984B41CA770DD0067D35E /* MRXCPanoramaRequestData.h */,
-				386984B51CA770DD0067D35E /* MRXCPanoramaRequestData.m */,
-				386984B61CA770DD0067D35E /* MRXCXmlParser.h */,
-				386984B71CA770DD0067D35E /* MRXCXmlParser.m */,
-				386984B81CA770DD0067D35E /* Reachability.h */,
-				386984B91CA770DD0067D35E /* Reachability.m */,
-			);
-			path = Communication;
-			sourceTree = "<group>";
-		};
-		386984BA1CA770DD0067D35E /* glues */ = {
-			isa = PBXGroup;
-			children = (
-				386984BB1CA770DD0067D35E /* glu.h */,
-				386984BC1CA770DD0067D35E /* glues.h */,
-				386984BD1CA770DD0067D35E /* glues_error.c */,
-				386984BE1CA770DD0067D35E /* glues_error.h */,
-				386984BF1CA770DD0067D35E /* glues_mipmap.c */,
-				386984C01CA770DD0067D35E /* glues_mipmap.h */,
-				386984C11CA770DD0067D35E /* glues_project.c */,
-				386984C21CA770DD0067D35E /* glues_project.h */,
-				386984C31CA770DD0067D35E /* glues_quad.c */,
-				386984C41CA770DD0067D35E /* glues_quad.h */,
-				386984C51CA770DD0067D35E /* glues_registry.c */,
-				386984C61CA770DD0067D35E /* glues_registry.h */,
-			);
-			path = glues;
-			sourceTree = "<group>";
-		};
-		386984C71CA770DD0067D35E /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				386984C81CA770DD0067D35E /* JSON */,
-				386984D61CA770DD0067D35E /* JSONKit */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
-		386984C81CA770DD0067D35E /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				386984C91CA770DD0067D35E /* JSON.h */,
-				386984CA1CA770DD0067D35E /* MRXCJSON.h */,
-				386984CB1CA770DD0067D35E /* MRXCJSON.m */,
-				386984CC1CA770DD0067D35E /* MRXCJsonBase.h */,
-				386984CD1CA770DD0067D35E /* MRXCJsonBase.m */,
-				386984CE1CA770DD0067D35E /* MRXCJsonParser.h */,
-				386984CF1CA770DD0067D35E /* MRXCJsonParser.m */,
-				386984D01CA770DD0067D35E /* MRXCJsonWriter.h */,
-				386984D11CA770DD0067D35E /* MRXCJsonWriter.m */,
-				386984D21CA770DD0067D35E /* NSObject+DBJSON.h */,
-				386984D31CA770DD0067D35E /* NSObject+DBJSON.m */,
-				386984D41CA770DD0067D35E /* NSString+DBJSON.h */,
-				386984D51CA770DD0067D35E /* NSString+DBJSON.m */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
-		386984D61CA770DD0067D35E /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				386984D71CA770DD0067D35E /* JSONKit.h */,
-				386984D81CA770DD0067D35E /* JSONKit.m */,
-			);
-			path = JSONKit;
-			sourceTree = "<group>";
-		};
-		386984D91CA770DD0067D35E /* PanoramaData */ = {
-			isa = PBXGroup;
-			children = (
-				38A784361CAC1B150058449B /* MRXCPanoramaData.h */,
-				38A784371CAC1B150058449B /* MRXCPanoramaData.m */,
-				386984DA1CA770DD0067D35E /* MRXCAdjacentPanoData.h */,
-				386984DB1CA770DD0067D35E /* MRXCAdjacentPanoData.m */,
-				386984DE1CA770DD0067D35E /* MRXCPanoramaJsonData.h */,
-				386984DF1CA770DD0067D35E /* MRXCSiteContentJsonData.h */,
-				386984E01CA770DD0067D35E /* MRXCSiteContentJsonData.m */,
-				386984E11CA770DD0067D35E /* MRXCSiteJsonData.h */,
-				386984E21CA770DD0067D35E /* MRXCSiteJsonData.m */,
-			);
-			path = PanoramaData;
-			sourceTree = "<group>";
-		};
-		386984E31CA770DD0067D35E /* PanoramaLib */ = {
-			isa = PBXGroup;
-			children = (
-				386984E41CA770DD0067D35E /* PLArrow.h */,
-				386984E51CA770DD0067D35E /* PLArrow.m */,
-				386984E61CA770DD0067D35E /* PLCamera.h */,
-				386984E71CA770DD0067D35E /* PLCamera.m */,
-				386984E81CA770DD0067D35E /* PLConstants.h */,
-				386984E91CA770DD0067D35E /* PLCube.h */,
-				386984EA1CA770DD0067D35E /* PLCube.m */,
-				386984EB1CA770DD0067D35E /* PLCylinder.h */,
-				386984EC1CA770DD0067D35E /* PLCylinder.m */,
-				386984ED1CA770DD0067D35E /* PLEnums.h */,
-				386984EE1CA770DD0067D35E /* PLImage.h */,
-				386984EF1CA770DD0067D35E /* PLImage.m */,
-				386984F01CA770DD0067D35E /* PLMath.h */,
-				386984F11CA770DD0067D35E /* PLMath.m */,
-				386984F21CA770DD0067D35E /* PLObject.h */,
-				386984F31CA770DD0067D35E /* PLObject.m */,
-				386984F41CA770DD0067D35E /* PLRenderer.h */,
-				386984F51CA770DD0067D35E /* PLRenderer.m */,
-				386984F61CA770DD0067D35E /* PLScene.h */,
-				386984F71CA770DD0067D35E /* PLScene.m */,
-				386984F81CA770DD0067D35E /* PLSceneElement.h */,
-				386984F91CA770DD0067D35E /* PLSceneElement.m */,
-				386984FA1CA770DD0067D35E /* PLSphere.h */,
-				386984FB1CA770DD0067D35E /* PLSphere.m */,
-				386984FC1CA770DD0067D35E /* PLStructs.h */,
-				386984FD1CA770DD0067D35E /* PLTexture.h */,
-				386984FE1CA770DD0067D35E /* PLTexture.m */,
-				386984FF1CA770DD0067D35E /* PLUtils.h */,
-				386985001CA770DD0067D35E /* PLUtils.m */,
-				386985011CA770DD0067D35E /* PLView+Panorama.h */,
-				386985021CA770DD0067D35E /* PLView+Panorama.m */,
-				386985031CA770DD0067D35E /* PLView.h */,
-				386985041CA770DD0067D35E /* PLView.m */,
-				386985051CA770DD0067D35E /* PLViewBase.h */,
-				386985061CA770DD0067D35E /* PLViewBase.m */,
-			);
-			path = PanoramaLib;
-			sourceTree = "<group>";
-		};
-		386985071CA770DD0067D35E /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				386985BB1CA77CC90067D35E /* 箭头上.png */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		3874093A1CA7E67B0065C073 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				387409411CA7E67B0065C073 /* PanoDataSourceBase.h */,
-				387409421CA7E67B0065C073 /* PanoDataSourceBase.m */,
-				3874093B1CA7E67B0065C073 /* GDPanoSource.h */,
-				3874093C1CA7E67B0065C073 /* GDPanoSource.m */,
-				3874093D1CA7E67B0065C073 /* LDPanoSource.h */,
-				3874093E1CA7E67B0065C073 /* LDPanoSource.m */,
-				3874093F1CA7E67B0065C073 /* MRXCPanoSource.h */,
-				387409401CA7E67B0065C073 /* MRXCPanoSource.m */,
-				387409441CA7E67B0065C073 /* TXPanoSource.h */,
-				387409451CA7E67B0065C073 /* TXPanoSource.m */,
-				387409461CA7E67B0065C073 /* ZHDPanoSource.h */,
-				387409471CA7E67B0065C073 /* ZHDPanoSource.m */,
-			);
-			path = DataSource;
-			sourceTree = "<group>";
-		};
-		38A7843B1CAC1D280058449B /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-				38A7843C1CAC1D280058449B /* GDataXMLNode.h */,
-				38A7843D1CAC1D280058449B /* GDataXMLNode.m */,
-			);
-			path = Tool;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		38B11A981CA2E79C00AF8B98 = {
 			isa = PBXGroup;
 			children = (
 				38B11AA31CA2E79C00AF8B98 /* MRXCPanoDemo */,
+				38ED93051D3FC4A8007CB29C /* MRXCPanoramaLib */,
 				38B11AA21CA2E79C00AF8B98 /* Products */,
+				3677EA542D15F8D1D5507C02 /* Pods */,
+				A7F14A982A2B19E31E775635 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -404,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				38B11AA11CA2E79C00AF8B98 /* MRXCPanoDemo.app */,
+				38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -411,11 +280,9 @@
 		38B11AA31CA2E79C00AF8B98 /* MRXCPanoDemo */ = {
 			isa = PBXGroup;
 			children = (
-				386984421CA770DD0067D35E /* Pano */,
+				3869853F1CA773F90067D35E /* MRXCFuncDefine.h */,
 				38B11AA71CA2E79C00AF8B98 /* AppDelegate.h */,
 				38B11AA81CA2E79C00AF8B98 /* AppDelegate.m */,
-				386985B81CA77A4F0067D35E /* MrxcPanoView.h */,
-				386985B91CA77A4F0067D35E /* MrxcPanoView.m */,
 				38B11AAA1CA2E79C00AF8B98 /* ViewController.h */,
 				38B11AAB1CA2E79C00AF8B98 /* ViewController.m */,
 				38B11AAD1CA2E79C00AF8B98 /* Main.storyboard */,
@@ -423,7 +290,6 @@
 				38B11AB21CA2E79C00AF8B98 /* LaunchScreen.storyboard */,
 				38B11AB51CA2E79C00AF8B98 /* Info.plist */,
 				38B11AA41CA2E79C00AF8B98 /* Supporting Files */,
-				3869853F1CA773F90067D35E /* MRXCFuncDefine.h */,
 			);
 			path = MRXCPanoDemo;
 			sourceTree = "<group>";
@@ -437,25 +303,257 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		38ED93051D3FC4A8007CB29C /* MRXCPanoramaLib */ = {
+			isa = PBXGroup;
+			children = (
+				38ED93101D3FC50D007CB29C /* Communication */,
+				38ED93201D3FC50D007CB29C /* DataSource */,
+				38ED932D1D3FC50D007CB29C /* glues */,
+				38ED934A1D3FC50D007CB29C /* MRXCPanoramaLib.h */,
+				38ED934B1D3FC50D007CB29C /* MrxcPanoView.h */,
+				38ED934C1D3FC50D007CB29C /* MrxcPanoView.m */,
+				38ED934D1D3FC50D007CB29C /* PanoramaData */,
+				38ED93571D3FC50D007CB29C /* PanoramaLib */,
+				38ED937B1D3FC50D007CB29C /* Resource */,
+				38ED937D1D3FC50D007CB29C /* Tool */,
+				38ED93061D3FC4A8007CB29C /* MRXCPanoramaLib.h */,
+				38ED93081D3FC4A8007CB29C /* Info.plist */,
+			);
+			path = MRXCPanoramaLib;
+			sourceTree = "<group>";
+		};
+		38ED93101D3FC50D007CB29C /* Communication */ = {
+			isa = PBXGroup;
+			children = (
+				38ED93111D3FC50D007CB29C /* MRXCBuildURL.h */,
+				38ED93121D3FC50D007CB29C /* MRXCBuildURL.m */,
+				38ED93131D3FC50D007CB29C /* MRXCPanoramaConnection.h */,
+				38ED93141D3FC50D007CB29C /* MRXCPanoramaConnection.m */,
+				38ED93151D3FC50D007CB29C /* MRXCPanoramaRequest.h */,
+				38ED93161D3FC50D007CB29C /* MRXCPanoramaRequest.m */,
+				38ED93171D3FC50D007CB29C /* MRXCPanoramaRequestData.h */,
+				38ED93181D3FC50D007CB29C /* MRXCPanoramaRequestData.m */,
+				38ED93191D3FC50D007CB29C /* MRXCPanoramaRequestProtocol.h */,
+				38ED931A1D3FC50D007CB29C /* MRXCPanoramaTool.h */,
+				38ED931B1D3FC50D007CB29C /* MRXCPanoramaTool.m */,
+			);
+			path = Communication;
+			sourceTree = "<group>";
+		};
+		38ED93201D3FC50D007CB29C /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				38ED93211D3FC50D007CB29C /* GDPanoSource.h */,
+				38ED93221D3FC50D007CB29C /* GDPanoSource.m */,
+				38ED93231D3FC50D007CB29C /* LDPanoSource.h */,
+				38ED93241D3FC50D007CB29C /* LDPanoSource.m */,
+				38ED93251D3FC50D007CB29C /* MRXCPanoSource.h */,
+				38ED93261D3FC50D007CB29C /* MRXCPanoSource.m */,
+				38ED93271D3FC50D007CB29C /* PanoDataSourceBase.h */,
+				38ED93281D3FC50D007CB29C /* PanoDataSourceBase.m */,
+				38ED93291D3FC50D007CB29C /* TXPanoSource.h */,
+				38ED932A1D3FC50D007CB29C /* TXPanoSource.m */,
+				38ED932B1D3FC50D007CB29C /* ZHDPanoSource.h */,
+				38ED932C1D3FC50D007CB29C /* ZHDPanoSource.m */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		38ED932D1D3FC50D007CB29C /* glues */ = {
+			isa = PBXGroup;
+			children = (
+				38ED932E1D3FC50D007CB29C /* glu.h */,
+				38ED932F1D3FC50D007CB29C /* glues.h */,
+				38ED93301D3FC50D007CB29C /* glues_error.c */,
+				38ED93311D3FC50D007CB29C /* glues_error.h */,
+				38ED93321D3FC50D007CB29C /* glues_mipmap.c */,
+				38ED93331D3FC50D007CB29C /* glues_mipmap.h */,
+				38ED93341D3FC50D007CB29C /* glues_project.c */,
+				38ED93351D3FC50D007CB29C /* glues_project.h */,
+				38ED93361D3FC50D007CB29C /* glues_quad.c */,
+				38ED93371D3FC50D007CB29C /* glues_quad.h */,
+				38ED93381D3FC50D007CB29C /* glues_registry.c */,
+				38ED93391D3FC50D007CB29C /* glues_registry.h */,
+			);
+			path = glues;
+			sourceTree = "<group>";
+		};
+		38ED934D1D3FC50D007CB29C /* PanoramaData */ = {
+			isa = PBXGroup;
+			children = (
+				38ED934E1D3FC50D007CB29C /* MRXCPanoramaRoadLink.h */,
+				38ED934F1D3FC50D007CB29C /* MRXCPanoramaRoadLink.m */,
+				38ED93501D3FC50D007CB29C /* MRXCPanoramaStation.h */,
+				38ED93511D3FC50D007CB29C /* MRXCPanoramaStation.m */,
+				38DA105C1D3FD07300172BEE /* MRXCValueObject.h */,
+				38DA105D1D3FD07300172BEE /* MRXCValueObject.m */,
+			);
+			path = PanoramaData;
+			sourceTree = "<group>";
+		};
+		38ED93571D3FC50D007CB29C /* PanoramaLib */ = {
+			isa = PBXGroup;
+			children = (
+				38ED93581D3FC50D007CB29C /* PLArrow.h */,
+				38ED93591D3FC50D007CB29C /* PLArrow.m */,
+				38ED935A1D3FC50D007CB29C /* PLCamera.h */,
+				38ED935B1D3FC50D007CB29C /* PLCamera.m */,
+				38ED935C1D3FC50D007CB29C /* PLConstants.h */,
+				38ED935D1D3FC50D007CB29C /* PLCube.h */,
+				38ED935E1D3FC50D007CB29C /* PLCube.m */,
+				38ED935F1D3FC50D007CB29C /* PLCylinder.h */,
+				38ED93601D3FC50D007CB29C /* PLCylinder.m */,
+				38ED93611D3FC50D007CB29C /* PLEnums.h */,
+				38ED93621D3FC50D007CB29C /* PLImage.h */,
+				38ED93631D3FC50D007CB29C /* PLImage.m */,
+				38ED93641D3FC50D007CB29C /* PLMath.h */,
+				38ED93651D3FC50D007CB29C /* PLMath.m */,
+				38ED93661D3FC50D007CB29C /* PLObject.h */,
+				38ED93671D3FC50D007CB29C /* PLObject.m */,
+				38ED93681D3FC50D007CB29C /* PLRenderer.h */,
+				38ED93691D3FC50D007CB29C /* PLRenderer.m */,
+				38ED936A1D3FC50D007CB29C /* PLScene.h */,
+				38ED936B1D3FC50D007CB29C /* PLScene.m */,
+				38ED936C1D3FC50D007CB29C /* PLSceneElement.h */,
+				38ED936D1D3FC50D007CB29C /* PLSceneElement.m */,
+				38ED936E1D3FC50D007CB29C /* PLSphere.h */,
+				38ED936F1D3FC50D007CB29C /* PLSphere.m */,
+				38ED93701D3FC50D007CB29C /* PLStructs.h */,
+				38ED93711D3FC50D007CB29C /* PLTexture.h */,
+				38ED93721D3FC50D007CB29C /* PLTexture.m */,
+				38ED93731D3FC50D007CB29C /* PLUtils.h */,
+				38ED93741D3FC50D007CB29C /* PLUtils.m */,
+				38ED93751D3FC50D007CB29C /* PLView+Panorama.h */,
+				38ED93761D3FC50D007CB29C /* PLView+Panorama.m */,
+				38ED93771D3FC50D007CB29C /* PLView.h */,
+				38ED93781D3FC50D007CB29C /* PLView.m */,
+				38ED93791D3FC50D007CB29C /* PLViewBase.h */,
+				38ED937A1D3FC50D007CB29C /* PLViewBase.m */,
+			);
+			path = PanoramaLib;
+			sourceTree = "<group>";
+		};
+		38ED937B1D3FC50D007CB29C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				38ED937C1D3FC50D007CB29C /* 箭头上.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		38ED937D1D3FC50D007CB29C /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		A7F14A982A2B19E31E775635 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38D1069C1D3D3E230095CE77 /* libPods.a */,
+				38D1069A1D3D3C680095CE77 /* libxml2.2.tbd */,
+				2E2C29108E9979F022BFC3AC /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		38ED93011D3FC4A8007CB29C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38ED93C01D3FC50D007CB29C /* PLCamera.h in Headers */,
+				38ED93A41D3FC50D007CB29C /* glues_registry.h in Headers */,
+				38ED93D71D3FC50D007CB29C /* PLTexture.h in Headers */,
+				38ED938D1D3FC50D007CB29C /* GDPanoSource.h in Headers */,
+				38ED93CC1D3FC50D007CB29C /* PLObject.h in Headers */,
+				38ED93D61D3FC50D007CB29C /* PLStructs.h in Headers */,
+				38ED939A1D3FC50D007CB29C /* glues.h in Headers */,
+				38ED93CE1D3FC50D007CB29C /* PLRenderer.h in Headers */,
+				38ED93D21D3FC50D007CB29C /* PLSceneElement.h in Headers */,
+				38ED93841D3FC50D007CB29C /* MRXCPanoramaRequestData.h in Headers */,
+				38ED93B51D3FC50D007CB29C /* MRXCPanoramaRoadLink.h in Headers */,
+				38ED93BE1D3FC50D007CB29C /* PLArrow.h in Headers */,
+				38ED93991D3FC50D007CB29C /* glu.h in Headers */,
+				38ED93C81D3FC50D007CB29C /* PLImage.h in Headers */,
+				38ED93911D3FC50D007CB29C /* MRXCPanoSource.h in Headers */,
+				38ED93C51D3FC50D007CB29C /* PLCylinder.h in Headers */,
+				38ED93861D3FC50D007CB29C /* MRXCPanoramaRequestProtocol.h in Headers */,
+				38ED93B21D3FC50D007CB29C /* MRXCPanoramaLib.h in Headers */,
+				38ED93C31D3FC50D007CB29C /* PLCube.h in Headers */,
+				38ED93801D3FC50D007CB29C /* MRXCPanoramaConnection.h in Headers */,
+				38ED93821D3FC50D007CB29C /* MRXCPanoramaRequest.h in Headers */,
+				38ED93A21D3FC50D007CB29C /* glues_quad.h in Headers */,
+				38ED93971D3FC50D007CB29C /* ZHDPanoSource.h in Headers */,
+				38ED93DD1D3FC50D007CB29C /* PLView.h in Headers */,
+				38ED93C71D3FC50D007CB29C /* PLEnums.h in Headers */,
+				38ED93071D3FC4A8007CB29C /* MRXCPanoramaLib.h in Headers */,
+				38ED93C21D3FC50D007CB29C /* PLConstants.h in Headers */,
+				38ED93951D3FC50D007CB29C /* TXPanoSource.h in Headers */,
+				38ED93DF1D3FC50D007CB29C /* PLViewBase.h in Headers */,
+				38ED93D91D3FC50D007CB29C /* PLUtils.h in Headers */,
+				38ED93871D3FC50D007CB29C /* MRXCPanoramaTool.h in Headers */,
+				38ED93DB1D3FC50D007CB29C /* PLView+Panorama.h in Headers */,
+				38ED939C1D3FC50D007CB29C /* glues_error.h in Headers */,
+				38ED93D01D3FC50D007CB29C /* PLScene.h in Headers */,
+				38ED939E1D3FC50D007CB29C /* glues_mipmap.h in Headers */,
+				38ED938F1D3FC50D007CB29C /* LDPanoSource.h in Headers */,
+				38DA105E1D3FD07300172BEE /* MRXCValueObject.h in Headers */,
+				38ED93931D3FC50D007CB29C /* PanoDataSourceBase.h in Headers */,
+				38ED93D41D3FC50D007CB29C /* PLSphere.h in Headers */,
+				38ED93B71D3FC50D007CB29C /* MRXCPanoramaStation.h in Headers */,
+				38ED937E1D3FC50D007CB29C /* MRXCBuildURL.h in Headers */,
+				38ED93CA1D3FC50D007CB29C /* PLMath.h in Headers */,
+				38ED93A01D3FC50D007CB29C /* glues_project.h in Headers */,
+				38ED93B31D3FC50D007CB29C /* MrxcPanoView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		38B11AA01CA2E79C00AF8B98 /* MRXCPanoDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38B11AB81CA2E79C00AF8B98 /* Build configuration list for PBXNativeTarget "MRXCPanoDemo" */;
 			buildPhases = (
+				E304F17250E8CD6D02D2D995 /* Check Pods Manifest.lock */,
 				38B11A9D1CA2E79C00AF8B98 /* Sources */,
 				38B11A9E1CA2E79C00AF8B98 /* Frameworks */,
 				38B11A9F1CA2E79C00AF8B98 /* Resources */,
+				4A816CDD6B0BC4A585FA8A8E /* Embed Pods Frameworks */,
+				E1F81C442FBC0C7E5C75E4BD /* Copy Pods Resources */,
+				38D105C51D3D3B670095CE77 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				38ED930A1D3FC4A8007CB29C /* PBXTargetDependency */,
 			);
 			name = MRXCPanoDemo;
 			productName = MRXCPanoDemo;
 			productReference = 38B11AA11CA2E79C00AF8B98 /* MRXCPanoDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		38ED93031D3FC4A8007CB29C /* MRXCPanoramaLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38ED930D1D3FC4A9007CB29C /* Build configuration list for PBXNativeTarget "MRXCPanoramaLib" */;
+			buildPhases = (
+				38ED92FF1D3FC4A8007CB29C /* Sources */,
+				38ED93001D3FC4A8007CB29C /* Frameworks */,
+				38ED93011D3FC4A8007CB29C /* Headers */,
+				38ED93021D3FC4A8007CB29C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MRXCPanoramaLib;
+			productName = MRXCPanoramaLib;
+			productReference = 38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -468,6 +566,9 @@
 				TargetAttributes = {
 					38B11AA01CA2E79C00AF8B98 = {
 						CreatedOnToolsVersion = 7.2.1;
+					};
+					38ED93031D3FC4A8007CB29C = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
@@ -484,6 +585,7 @@
 			projectRoot = "";
 			targets = (
 				38B11AA01CA2E79C00AF8B98 /* MRXCPanoDemo */,
+				38ED93031D3FC4A8007CB29C /* MRXCPanoramaLib */,
 			);
 		};
 /* End PBXProject section */
@@ -494,73 +596,132 @@
 			buildActionMask = 2147483647;
 			files = (
 				38B11AB41CA2E79C00AF8B98 /* LaunchScreen.storyboard in Resources */,
-				386985BC1CA77CC90067D35E /* 箭头上.png in Resources */,
 				38B11AB11CA2E79C00AF8B98 /* Assets.xcassets in Resources */,
 				38B11AAF1CA2E79C00AF8B98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		38ED93021D3FC4A8007CB29C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38ED93E11D3FC50D007CB29C /* 箭头上.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A816CDD6B0BC4A585FA8A8E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1F81C442FBC0C7E5C75E4BD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E304F17250E8CD6D02D2D995 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		38B11A9D1CA2E79C00AF8B98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				386985491CA778210067D35E /* MRXCPanoramaTool.m in Sources */,
-				386985231CA770DD0067D35E /* MRXCAdjacentPanoData.m in Sources */,
-				386985331CA770DD0067D35E /* PLUtils.m in Sources */,
-				386985141CA770DD0067D35E /* MRXCPanoramaRequestData.m in Sources */,
-				386985151CA770DD0067D35E /* MRXCXmlParser.m in Sources */,
-				386985311CA770DD0067D35E /* PLSphere.m in Sources */,
-				386985471CA778210067D35E /* MRXCPanoramaConnection.m in Sources */,
-				38A7843E1CAC1D280058449B /* GDataXMLNode.m in Sources */,
-				3869851B1CA770DD0067D35E /* glues_registry.c in Sources */,
-				387409491CA7E67B0065C073 /* LDPanoSource.m in Sources */,
-				3869851E1CA770DD0067D35E /* MRXCJsonParser.m in Sources */,
 				38B11AAC1CA2E79C00AF8B98 /* ViewController.m in Sources */,
-				3869852B1CA770DD0067D35E /* PLImage.m in Sources */,
-				3869852C1CA770DD0067D35E /* PLMath.m in Sources */,
-				386985161CA770DD0067D35E /* Reachability.m in Sources */,
-				3874094D1CA7E67B0065C073 /* ZHDPanoSource.m in Sources */,
-				386985201CA770DD0067D35E /* NSObject+DBJSON.m in Sources */,
-				3869852E1CA770DD0067D35E /* PLRenderer.m in Sources */,
-				386985271CA770DD0067D35E /* PLArrow.m in Sources */,
-				3869851D1CA770DD0067D35E /* MRXCJsonBase.m in Sources */,
-				386985221CA770DD0067D35E /* JSONKit.m in Sources */,
-				3874094C1CA7E67B0065C073 /* TXPanoSource.m in Sources */,
-				386985191CA770DD0067D35E /* glues_project.c in Sources */,
-				3869851C1CA770DD0067D35E /* MRXCJSON.m in Sources */,
-				3874094A1CA7E67B0065C073 /* MRXCPanoSource.m in Sources */,
-				386985321CA770DD0067D35E /* PLTexture.m in Sources */,
-				386985291CA770DD0067D35E /* PLCube.m in Sources */,
-				387409481CA7E67B0065C073 /* GDPanoSource.m in Sources */,
 				38B11AA91CA2E79C00AF8B98 /* AppDelegate.m in Sources */,
-				386985481CA778210067D35E /* MRXCPanoramaRequest.m in Sources */,
-				386985251CA770DD0067D35E /* MRXCSiteContentJsonData.m in Sources */,
-				386985301CA770DD0067D35E /* PLSceneElement.m in Sources */,
-				386985261CA770DD0067D35E /* MRXCSiteJsonData.m in Sources */,
-				3869852A1CA770DD0067D35E /* PLCylinder.m in Sources */,
-				386985361CA770DD0067D35E /* PLViewBase.m in Sources */,
-				386985101CA770DD0067D35E /* MRXCBuildURL.m in Sources */,
-				386985BA1CA77A4F0067D35E /* MrxcPanoView.m in Sources */,
-				386985211CA770DD0067D35E /* NSString+DBJSON.m in Sources */,
-				3869852D1CA770DD0067D35E /* PLObject.m in Sources */,
-				3869852F1CA770DD0067D35E /* PLScene.m in Sources */,
-				38A784381CAC1B150058449B /* MRXCPanoramaData.m in Sources */,
 				38B11AA61CA2E79C00AF8B98 /* main.m in Sources */,
-				386985181CA770DD0067D35E /* glues_mipmap.c in Sources */,
-				386985171CA770DD0067D35E /* glues_error.c in Sources */,
-				3869851A1CA770DD0067D35E /* glues_quad.c in Sources */,
-				386985341CA770DD0067D35E /* PLView+Panorama.m in Sources */,
-				3874094B1CA7E67B0065C073 /* PanoDataSourceBase.m in Sources */,
-				386985281CA770DD0067D35E /* PLCamera.m in Sources */,
-				3869851F1CA770DD0067D35E /* MRXCJsonWriter.m in Sources */,
-				386985351CA770DD0067D35E /* PLView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38ED92FF1D3FC4A8007CB29C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38ED93D11D3FC50D007CB29C /* PLScene.m in Sources */,
+				38ED93CF1D3FC50D007CB29C /* PLRenderer.m in Sources */,
+				38ED93B61D3FC50D007CB29C /* MRXCPanoramaRoadLink.m in Sources */,
+				38ED93921D3FC50D007CB29C /* MRXCPanoSource.m in Sources */,
+				38ED939D1D3FC50D007CB29C /* glues_mipmap.c in Sources */,
+				38ED939B1D3FC50D007CB29C /* glues_error.c in Sources */,
+				38ED93A31D3FC50D007CB29C /* glues_registry.c in Sources */,
+				38ED93BF1D3FC50D007CB29C /* PLArrow.m in Sources */,
+				38ED93CD1D3FC50D007CB29C /* PLObject.m in Sources */,
+				38ED93981D3FC50D007CB29C /* ZHDPanoSource.m in Sources */,
+				38ED93D81D3FC50D007CB29C /* PLTexture.m in Sources */,
+				38ED93C91D3FC50D007CB29C /* PLImage.m in Sources */,
+				38ED93881D3FC50D007CB29C /* MRXCPanoramaTool.m in Sources */,
+				38ED93851D3FC50D007CB29C /* MRXCPanoramaRequestData.m in Sources */,
+				38ED939F1D3FC50D007CB29C /* glues_project.c in Sources */,
+				38ED93E01D3FC50D007CB29C /* PLViewBase.m in Sources */,
+				38ED93B41D3FC50D007CB29C /* MrxcPanoView.m in Sources */,
+				38ED93DE1D3FC50D007CB29C /* PLView.m in Sources */,
+				38ED93811D3FC50D007CB29C /* MRXCPanoramaConnection.m in Sources */,
+				38ED93DA1D3FC50D007CB29C /* PLUtils.m in Sources */,
+				38ED93DC1D3FC50D007CB29C /* PLView+Panorama.m in Sources */,
+				38ED938E1D3FC50D007CB29C /* GDPanoSource.m in Sources */,
+				38ED93A11D3FC50D007CB29C /* glues_quad.c in Sources */,
+				38ED93C11D3FC50D007CB29C /* PLCamera.m in Sources */,
+				38ED93C61D3FC50D007CB29C /* PLCylinder.m in Sources */,
+				38DA105F1D3FD07300172BEE /* MRXCValueObject.m in Sources */,
+				38ED93D51D3FC50D007CB29C /* PLSphere.m in Sources */,
+				38ED93D31D3FC50D007CB29C /* PLSceneElement.m in Sources */,
+				38ED93CB1D3FC50D007CB29C /* PLMath.m in Sources */,
+				38ED937F1D3FC50D007CB29C /* MRXCBuildURL.m in Sources */,
+				38ED93B81D3FC50D007CB29C /* MRXCPanoramaStation.m in Sources */,
+				38ED93961D3FC50D007CB29C /* TXPanoSource.m in Sources */,
+				38ED93831D3FC50D007CB29C /* MRXCPanoramaRequest.m in Sources */,
+				38ED93901D3FC50D007CB29C /* LDPanoSource.m in Sources */,
+				38ED93C41D3FC50D007CB29C /* PLCube.m in Sources */,
+				38ED93941D3FC50D007CB29C /* PanoDataSourceBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38ED930A1D3FC4A8007CB29C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38ED93031D3FC4A8007CB29C /* MRXCPanoramaLib */;
+			targetProxy = 38ED93091D3FC4A8007CB29C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		38B11AAD1CA2E79C00AF8B98 /* Main.storyboard */ = {
@@ -620,7 +781,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
@@ -658,7 +819,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
@@ -669,14 +830,61 @@
 		};
 		38B11AB91CA2E79C00AF8B98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 845B58FDB374049AE9821604 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"\"$(SRCROOT)/Pods/Headers\"/**",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = MRXCPanoDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MRXCPanoDemo/Pano/built/universal/lib",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"GDataXML-HTML\"",
+					"-l\"JSONKit\"",
+					"-l\"JSONModel\"",
+					"-l\"JSPatch\"",
+					"-l\"KxMenu\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MagicalRecord\"",
+					"-l\"Masonry\"",
+					"-l\"NSData+Base64\"",
+					"-l\"SDWebImage\"",
+					"-l\"YiRefresh\"",
+					"-l\"xml2\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"JavaScriptCore\"",
+					"-lxml2",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrxc.MRXCPanoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -685,17 +893,251 @@
 		};
 		38B11ABA1CA2E79C00AF8B98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB30F33E8335E3307022014B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"\"$(SRCROOT)/Pods/Headers\"/**",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = MRXCPanoDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MRXCPanoDemo/Pano/built/universal/lib",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"GDataXML-HTML\"",
+					"-l\"JSONKit\"",
+					"-l\"JSONModel\"",
+					"-l\"JSPatch\"",
+					"-l\"KxMenu\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MagicalRecord\"",
+					"-l\"Masonry\"",
+					"-l\"NSData+Base64\"",
+					"-l\"SDWebImage\"",
+					"-l\"YiRefresh\"",
+					"-l\"xml2\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"JavaScriptCore\"",
+					"-lxml2",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrxc.MRXCPanoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		38ED930E1D3FC4A9007CB29C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"\"$(SRCROOT)/Pods/Headers\"/**",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MRXCPanoramaLib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GDataXML-HTML\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JSONKit\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JSONModel\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JSPatch\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/KxMenu\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MagicalRecord\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/NSData+Base64\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/YiRefresh\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"GDataXML-HTML\"",
+					"-l\"JSONKit\"",
+					"-l\"JSONModel\"",
+					"-l\"JSPatch\"",
+					"-l\"KxMenu\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MagicalRecord\"",
+					"-l\"Masonry\"",
+					"-l\"NSData+Base64\"",
+					"-l\"SDWebImage\"",
+					"-l\"YiRefresh\"",
+					"-l\"xml2\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"JavaScriptCore\"",
+					"-lxml2",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrxc.MRXCPanoramaLib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		38ED930F1D3FC4A9007CB29C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"\"$(SRCROOT)/Pods/Headers\"/**",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MRXCPanoramaLib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GDataXML-HTML\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JSONKit\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JSONModel\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JSPatch\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/KxMenu\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MagicalRecord\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/NSData+Base64\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/YiRefresh\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"GDataXML-HTML\"",
+					"-l\"JSONKit\"",
+					"-l\"JSONModel\"",
+					"-l\"JSPatch\"",
+					"-l\"KxMenu\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MagicalRecord\"",
+					"-l\"Masonry\"",
+					"-l\"NSData+Base64\"",
+					"-l\"SDWebImage\"",
+					"-l\"YiRefresh\"",
+					"-l\"xml2\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"JavaScriptCore\"",
+					"-lxml2",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrxc.MRXCPanoramaLib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -716,6 +1158,15 @@
 			buildConfigurations = (
 				38B11AB91CA2E79C00AF8B98 /* Debug */,
 				38B11ABA1CA2E79C00AF8B98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38ED930D1D3FC4A9007CB29C /* Build configuration list for PBXNativeTarget "MRXCPanoramaLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38ED930E1D3FC4A9007CB29C /* Debug */,
+				38ED930F1D3FC4A9007CB29C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

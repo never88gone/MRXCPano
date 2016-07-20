@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MrxcPanoView.h"
+//#import "MrxcPanoView.h"
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UISegmentedControl *panoTypeSegment;
 
 
 @end
