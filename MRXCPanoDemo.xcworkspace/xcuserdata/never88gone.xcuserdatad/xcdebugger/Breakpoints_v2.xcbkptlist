@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MRXCPanoramaLib/DataSource/ZHDPanoSource.m"
-            timestampString = "490723579.830429"
+            filePath = "MRXCPanoramaLib/PanoramaLib/PLViewBase.m"
+            timestampString = "490803428.577093"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "-achievePanoByID:"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
+            landmarkName = "-setAnimationInterval:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MRXCPanoramaLib/DataSource/ZHDPanoSource.m"
-            timestampString = "490723579.830429"
+            filePath = "MRXCPanoramaLib/PanoramaLib/PLViewBase.m"
+            timestampString = "490803428.577093"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "-achievePanoThumbnailByID:"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "-initWithPanoType:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,77 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MRXCPanoramaLib/DataSource/ZHDPanoSource.m"
-            timestampString = "490723579.830429"
+            filePath = "MRXCPanoramaLib/PanoramaLib/PLView+Panorama.m"
+            timestampString = "490803421.192072"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "-achievePanoByLon:Lat:Tolerance:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/JSONModel/JSONModel/JSONModel/JSONModel.m"
-            timestampString = "490723121.892899"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
-            landmarkName = "-initWithDictionary:error:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[JSONModel initWithDictionary:error:]"
-                  moduleName = "MRXCPanoDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/never88gone/Documents/code/MRXC/MRXCPanoDemo/MRXCPanoDemo/Pods/JSONModel/JSONModel/JSONModel/JSONModel.m"
-                  timestampString = "490724196.935664"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[JSONModel initWithDictionary:error:]"
-                  moduleName = "MRXCPanoramaLib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/never88gone/Documents/code/MRXC/MRXCPanoDemo/MRXCPanoDemo/Pods/JSONModel/JSONModel/JSONModel/JSONModel.m"
-                  timestampString = "490724196.935813"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MRXCPanoramaLib/DataSource/ZHDPanoSource.m"
-            timestampString = "490724017.915545"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "-getPanoramaDataByResponse:"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "-panoramaSwitchBegan"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

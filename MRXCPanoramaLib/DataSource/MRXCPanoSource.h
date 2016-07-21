@@ -11,6 +11,6 @@
 /**
  *  铭若星晨的数据源
  */
-@interface MRXCPanoSource : PanoDataSourceBase
+@interface MRXCPanoSource : NSObject  <PanoDataSourceBase>
 
 @end

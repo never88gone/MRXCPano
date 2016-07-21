@@ -11,35 +11,26 @@
 #import "PLView.h"
 #import "PLView+Panorama.h"
 #import "MRXCPanoramaStation.h"
-#import "MRXCPanoramaRequestProtocol.h"
-#import "MRXCPanoramaRequest.h"
 #import "PanoDataSourceBase.h"
 #define  _PANORAMA_THUMBNAIL_SIZE_  128.0
 typedef NS_ENUM(NSInteger, ParnoramaType){
     ParnoramaStreet,
     ParnoramaTemp
 };
-@interface MrxcPanoView : UIView<PLViewBaseTouchEventProtocol,MRXCPanoramaRequestProtocol>
-{
-    NSString *_panoramaSite;
-    NSString *_panoramaID;
-    PLView *_plView;
-    MRXCPanoramaStation *_panoramaData;
-    NSArray *_adjacentPano;
-}
+@interface MrxcPanoView : UIView<PLViewBaseTouchEventProtocol>
 /**
  *  全景的数据源
  */
-@property(strong, nonatomic) PanoDataSourceBase* dataSource;
+@property(strong, nonatomic) id<PanoDataSourceBase> dataSource;
 @property(strong, nonatomic)NSString *panoramaID;
 @property(strong, nonatomic)PLView *plView;
 @property(strong, nonatomic)MRXCPanoramaStation *panoramaData;
-@property(strong, nonatomic)NSArray *adjacentPano;
+@property(strong, nonatomic)NSArray<MRXCPanoramaRoadLink*> *adjacentPano;
 @property(assign, nonatomic)BOOL isAdjacentStatus;
 @property(assign, nonatomic) ParnoramaType ptype;
 @property(assign, nonatomic)double handPanoYaw;
 
--(void)initWithDataSource:(PanoDataSourceBase* )panoramaDataSourceProtocol;
+-(void)initWithDataSource:(id<PanoDataSourceBase> )panoramaDataSourceProtocol;
 /**
  *  根据ID定位全景
  *

@@ -11,6 +11,6 @@
 /**
  *  高德的数据源
  */
-@interface GDPanoSource : PanoDataSourceBase
+@interface GDPanoSource : NSObject  <PanoDataSourceBase>
 
 @end

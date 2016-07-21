@@ -11,6 +11,6 @@
 /**
  *  立得的数据源
  */
-@interface LDPanoSource :PanoDataSourceBase
+@interface LDPanoSource : NSObject  <PanoDataSourceBase>
 
 @end

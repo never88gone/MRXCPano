@@ -11,6 +11,6 @@
 /**
  *  中海达的数据源
  */
-@interface ZHDPanoSource : PanoDataSourceBase
-
+@interface ZHDPanoSource : NSObject  <PanoDataSourceBase>
+@property(nonatomic,strong) NSString* panoramaUrl;
 @end

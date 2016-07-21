@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00494CF9FE53135438061042 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2C29108E9979F022BFC3AC /* libPods.a */; };
+		388CB1941D40FBE600D27CD1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 388CB1931D40FBE600D27CD1 /* libPods.a */; };
+		388CB1961D40FF2100D27CD1 /* 箭头上.png in Resources */ = {isa = PBXBuildFile; fileRef = 38ED937C1D3FC50D007CB29C /* 箭头上.png */; };
 		38B11AA61CA2E79C00AF8B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B11AA51CA2E79C00AF8B98 /* main.m */; };
 		38B11AA91CA2E79C00AF8B98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B11AA81CA2E79C00AF8B98 /* AppDelegate.m */; };
 		38B11AAC1CA2E79C00AF8B98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B11AAB1CA2E79C00AF8B98 /* ViewController.m */; };
@@ -16,18 +18,13 @@
 		38B11AB41CA2E79C00AF8B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B11AB21CA2E79C00AF8B98 /* LaunchScreen.storyboard */; };
 		38DA105E1D3FD07300172BEE /* MRXCValueObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DA105C1D3FD07300172BEE /* MRXCValueObject.h */; };
 		38DA105F1D3FD07300172BEE /* MRXCValueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DA105D1D3FD07300172BEE /* MRXCValueObject.m */; };
+		38DA10801D3FE2AB00172BEE /* MRXCHttpHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DA107E1D3FE2AA00172BEE /* MRXCHttpHelper.h */; };
+		38DA10811D3FE2AB00172BEE /* MRXCHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DA107F1D3FE2AB00172BEE /* MRXCHttpHelper.m */; };
 		38ED93071D3FC4A8007CB29C /* MRXCPanoramaLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93061D3FC4A8007CB29C /* MRXCPanoramaLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38ED930B1D3FC4A8007CB29C /* MRXCPanoramaLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */; };
 		38ED930C1D3FC4A8007CB29C /* MRXCPanoramaLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38ED937E1D3FC50D007CB29C /* MRXCBuildURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93111D3FC50D007CB29C /* MRXCBuildURL.h */; };
 		38ED937F1D3FC50D007CB29C /* MRXCBuildURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93121D3FC50D007CB29C /* MRXCBuildURL.m */; };
-		38ED93801D3FC50D007CB29C /* MRXCPanoramaConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93131D3FC50D007CB29C /* MRXCPanoramaConnection.h */; };
-		38ED93811D3FC50D007CB29C /* MRXCPanoramaConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93141D3FC50D007CB29C /* MRXCPanoramaConnection.m */; };
-		38ED93821D3FC50D007CB29C /* MRXCPanoramaRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93151D3FC50D007CB29C /* MRXCPanoramaRequest.h */; };
-		38ED93831D3FC50D007CB29C /* MRXCPanoramaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93161D3FC50D007CB29C /* MRXCPanoramaRequest.m */; };
-		38ED93841D3FC50D007CB29C /* MRXCPanoramaRequestData.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93171D3FC50D007CB29C /* MRXCPanoramaRequestData.h */; };
-		38ED93851D3FC50D007CB29C /* MRXCPanoramaRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93181D3FC50D007CB29C /* MRXCPanoramaRequestData.m */; };
-		38ED93861D3FC50D007CB29C /* MRXCPanoramaRequestProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93191D3FC50D007CB29C /* MRXCPanoramaRequestProtocol.h */; };
 		38ED93871D3FC50D007CB29C /* MRXCPanoramaTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED931A1D3FC50D007CB29C /* MRXCPanoramaTool.h */; };
 		38ED93881D3FC50D007CB29C /* MRXCPanoramaTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED931B1D3FC50D007CB29C /* MRXCPanoramaTool.m */; };
 		38ED938D1D3FC50D007CB29C /* GDPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93211D3FC50D007CB29C /* GDPanoSource.h */; };
@@ -37,7 +34,6 @@
 		38ED93911D3FC50D007CB29C /* MRXCPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93251D3FC50D007CB29C /* MRXCPanoSource.h */; };
 		38ED93921D3FC50D007CB29C /* MRXCPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93261D3FC50D007CB29C /* MRXCPanoSource.m */; };
 		38ED93931D3FC50D007CB29C /* PanoDataSourceBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93271D3FC50D007CB29C /* PanoDataSourceBase.h */; };
-		38ED93941D3FC50D007CB29C /* PanoDataSourceBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93281D3FC50D007CB29C /* PanoDataSourceBase.m */; };
 		38ED93951D3FC50D007CB29C /* TXPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93291D3FC50D007CB29C /* TXPanoSource.h */; };
 		38ED93961D3FC50D007CB29C /* TXPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED932A1D3FC50D007CB29C /* TXPanoSource.m */; };
 		38ED93971D3FC50D007CB29C /* ZHDPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED932B1D3FC50D007CB29C /* ZHDPanoSource.h */; };
@@ -128,6 +124,8 @@
 		3869853F1CA773F90067D35E /* MRXCFuncDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCFuncDefine.h; sourceTree = "<group>"; };
 		3869854A1CA7797F0067D35E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		3869854B1CA7797F0067D35E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		388CB1931D40FBE600D27CD1 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		388CB1971D41024900D27CD1 /* FuncDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FuncDefine.h; sourceTree = "<group>"; };
 		38A784391CAC1C4E0058449B /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		38B11AA11CA2E79C00AF8B98 /* MRXCPanoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRXCPanoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B11AA51CA2E79C00AF8B98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -143,18 +141,13 @@
 		38D1069C1D3D3E230095CE77 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		38DA105C1D3FD07300172BEE /* MRXCValueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCValueObject.h; sourceTree = "<group>"; };
 		38DA105D1D3FD07300172BEE /* MRXCValueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCValueObject.m; sourceTree = "<group>"; };
+		38DA107E1D3FE2AA00172BEE /* MRXCHttpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCHttpHelper.h; sourceTree = "<group>"; };
+		38DA107F1D3FE2AB00172BEE /* MRXCHttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCHttpHelper.m; sourceTree = "<group>"; };
 		38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRXCPanoramaLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38ED93061D3FC4A8007CB29C /* MRXCPanoramaLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaLib.h; sourceTree = "<group>"; };
 		38ED93081D3FC4A8007CB29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38ED93111D3FC50D007CB29C /* MRXCBuildURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCBuildURL.h; sourceTree = "<group>"; };
 		38ED93121D3FC50D007CB29C /* MRXCBuildURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCBuildURL.m; sourceTree = "<group>"; };
-		38ED93131D3FC50D007CB29C /* MRXCPanoramaConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaConnection.h; sourceTree = "<group>"; };
-		38ED93141D3FC50D007CB29C /* MRXCPanoramaConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaConnection.m; sourceTree = "<group>"; };
-		38ED93151D3FC50D007CB29C /* MRXCPanoramaRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaRequest.h; sourceTree = "<group>"; };
-		38ED93161D3FC50D007CB29C /* MRXCPanoramaRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaRequest.m; sourceTree = "<group>"; };
-		38ED93171D3FC50D007CB29C /* MRXCPanoramaRequestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaRequestData.h; sourceTree = "<group>"; };
-		38ED93181D3FC50D007CB29C /* MRXCPanoramaRequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaRequestData.m; sourceTree = "<group>"; };
-		38ED93191D3FC50D007CB29C /* MRXCPanoramaRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaRequestProtocol.h; sourceTree = "<group>"; };
 		38ED931A1D3FC50D007CB29C /* MRXCPanoramaTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaTool.h; sourceTree = "<group>"; };
 		38ED931B1D3FC50D007CB29C /* MRXCPanoramaTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaTool.m; sourceTree = "<group>"; };
 		38ED93211D3FC50D007CB29C /* GDPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDPanoSource.h; sourceTree = "<group>"; };
@@ -164,7 +157,6 @@
 		38ED93251D3FC50D007CB29C /* MRXCPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoSource.h; sourceTree = "<group>"; };
 		38ED93261D3FC50D007CB29C /* MRXCPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoSource.m; sourceTree = "<group>"; };
 		38ED93271D3FC50D007CB29C /* PanoDataSourceBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoDataSourceBase.h; sourceTree = "<group>"; };
-		38ED93281D3FC50D007CB29C /* PanoDataSourceBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoDataSourceBase.m; sourceTree = "<group>"; };
 		38ED93291D3FC50D007CB29C /* TXPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXPanoSource.h; sourceTree = "<group>"; };
 		38ED932A1D3FC50D007CB29C /* TXPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXPanoSource.m; sourceTree = "<group>"; };
 		38ED932B1D3FC50D007CB29C /* ZHDPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHDPanoSource.h; sourceTree = "<group>"; };
@@ -242,6 +234,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				388CB1941D40FBE600D27CD1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +308,6 @@
 				38ED934D1D3FC50D007CB29C /* PanoramaData */,
 				38ED93571D3FC50D007CB29C /* PanoramaLib */,
 				38ED937B1D3FC50D007CB29C /* Resource */,
-				38ED937D1D3FC50D007CB29C /* Tool */,
 				38ED93061D3FC4A8007CB29C /* MRXCPanoramaLib.h */,
 				38ED93081D3FC4A8007CB29C /* Info.plist */,
 			);
@@ -327,15 +319,11 @@
 			children = (
 				38ED93111D3FC50D007CB29C /* MRXCBuildURL.h */,
 				38ED93121D3FC50D007CB29C /* MRXCBuildURL.m */,
-				38ED93131D3FC50D007CB29C /* MRXCPanoramaConnection.h */,
-				38ED93141D3FC50D007CB29C /* MRXCPanoramaConnection.m */,
-				38ED93151D3FC50D007CB29C /* MRXCPanoramaRequest.h */,
-				38ED93161D3FC50D007CB29C /* MRXCPanoramaRequest.m */,
-				38ED93171D3FC50D007CB29C /* MRXCPanoramaRequestData.h */,
-				38ED93181D3FC50D007CB29C /* MRXCPanoramaRequestData.m */,
-				38ED93191D3FC50D007CB29C /* MRXCPanoramaRequestProtocol.h */,
 				38ED931A1D3FC50D007CB29C /* MRXCPanoramaTool.h */,
 				38ED931B1D3FC50D007CB29C /* MRXCPanoramaTool.m */,
+				38DA107E1D3FE2AA00172BEE /* MRXCHttpHelper.h */,
+				38DA107F1D3FE2AB00172BEE /* MRXCHttpHelper.m */,
+				388CB1971D41024900D27CD1 /* FuncDefine.h */,
 			);
 			path = Communication;
 			sourceTree = "<group>";
@@ -350,7 +338,6 @@
 				38ED93251D3FC50D007CB29C /* MRXCPanoSource.h */,
 				38ED93261D3FC50D007CB29C /* MRXCPanoSource.m */,
 				38ED93271D3FC50D007CB29C /* PanoDataSourceBase.h */,
-				38ED93281D3FC50D007CB29C /* PanoDataSourceBase.m */,
 				38ED93291D3FC50D007CB29C /* TXPanoSource.h */,
 				38ED932A1D3FC50D007CB29C /* TXPanoSource.m */,
 				38ED932B1D3FC50D007CB29C /* ZHDPanoSource.h */,
@@ -441,16 +428,10 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		38ED937D1D3FC50D007CB29C /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
 		A7F14A982A2B19E31E775635 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				388CB1931D40FBE600D27CD1 /* libPods.a */,
 				38D1069C1D3D3E230095CE77 /* libPods.a */,
 				38D1069A1D3D3C680095CE77 /* libxml2.2.tbd */,
 				2E2C29108E9979F022BFC3AC /* libPods.a */,
@@ -474,18 +455,15 @@
 				38ED939A1D3FC50D007CB29C /* glues.h in Headers */,
 				38ED93CE1D3FC50D007CB29C /* PLRenderer.h in Headers */,
 				38ED93D21D3FC50D007CB29C /* PLSceneElement.h in Headers */,
-				38ED93841D3FC50D007CB29C /* MRXCPanoramaRequestData.h in Headers */,
 				38ED93B51D3FC50D007CB29C /* MRXCPanoramaRoadLink.h in Headers */,
 				38ED93BE1D3FC50D007CB29C /* PLArrow.h in Headers */,
 				38ED93991D3FC50D007CB29C /* glu.h in Headers */,
 				38ED93C81D3FC50D007CB29C /* PLImage.h in Headers */,
+				38DA10801D3FE2AB00172BEE /* MRXCHttpHelper.h in Headers */,
 				38ED93911D3FC50D007CB29C /* MRXCPanoSource.h in Headers */,
 				38ED93C51D3FC50D007CB29C /* PLCylinder.h in Headers */,
-				38ED93861D3FC50D007CB29C /* MRXCPanoramaRequestProtocol.h in Headers */,
 				38ED93B21D3FC50D007CB29C /* MRXCPanoramaLib.h in Headers */,
 				38ED93C31D3FC50D007CB29C /* PLCube.h in Headers */,
-				38ED93801D3FC50D007CB29C /* MRXCPanoramaConnection.h in Headers */,
-				38ED93821D3FC50D007CB29C /* MRXCPanoramaRequest.h in Headers */,
 				38ED93A21D3FC50D007CB29C /* glues_quad.h in Headers */,
 				38ED93971D3FC50D007CB29C /* ZHDPanoSource.h in Headers */,
 				38ED93DD1D3FC50D007CB29C /* PLView.h in Headers */,
@@ -596,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38B11AB41CA2E79C00AF8B98 /* LaunchScreen.storyboard in Resources */,
+				388CB1961D40FF2100D27CD1 /* 箭头上.png in Resources */,
 				38B11AB11CA2E79C00AF8B98 /* Assets.xcassets in Resources */,
 				38B11AAF1CA2E79C00AF8B98 /* Main.storyboard in Resources */,
 			);
@@ -683,16 +662,15 @@
 				38ED93A31D3FC50D007CB29C /* glues_registry.c in Sources */,
 				38ED93BF1D3FC50D007CB29C /* PLArrow.m in Sources */,
 				38ED93CD1D3FC50D007CB29C /* PLObject.m in Sources */,
+				38DA10811D3FE2AB00172BEE /* MRXCHttpHelper.m in Sources */,
 				38ED93981D3FC50D007CB29C /* ZHDPanoSource.m in Sources */,
 				38ED93D81D3FC50D007CB29C /* PLTexture.m in Sources */,
 				38ED93C91D3FC50D007CB29C /* PLImage.m in Sources */,
 				38ED93881D3FC50D007CB29C /* MRXCPanoramaTool.m in Sources */,
-				38ED93851D3FC50D007CB29C /* MRXCPanoramaRequestData.m in Sources */,
 				38ED939F1D3FC50D007CB29C /* glues_project.c in Sources */,
 				38ED93E01D3FC50D007CB29C /* PLViewBase.m in Sources */,
 				38ED93B41D3FC50D007CB29C /* MrxcPanoView.m in Sources */,
 				38ED93DE1D3FC50D007CB29C /* PLView.m in Sources */,
-				38ED93811D3FC50D007CB29C /* MRXCPanoramaConnection.m in Sources */,
 				38ED93DA1D3FC50D007CB29C /* PLUtils.m in Sources */,
 				38ED93DC1D3FC50D007CB29C /* PLView+Panorama.m in Sources */,
 				38ED938E1D3FC50D007CB29C /* GDPanoSource.m in Sources */,
@@ -706,10 +684,8 @@
 				38ED937F1D3FC50D007CB29C /* MRXCBuildURL.m in Sources */,
 				38ED93B81D3FC50D007CB29C /* MRXCPanoramaStation.m in Sources */,
 				38ED93961D3FC50D007CB29C /* TXPanoSource.m in Sources */,
-				38ED93831D3FC50D007CB29C /* MRXCPanoramaRequest.m in Sources */,
 				38ED93901D3FC50D007CB29C /* LDPanoSource.m in Sources */,
 				38ED93C41D3FC50D007CB29C /* PLCube.m in Sources */,
-				38ED93941D3FC50D007CB29C /* PanoDataSourceBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,11 +809,11 @@
 			baseConfigurationReference = 845B58FDB374049AE9821604 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"\"$(SRCROOT)/Pods/Headers\"/**",
-					"$(inherited)",
+					"$(inherited)/**",
 				);
 				INFOPLIST_FILE = MRXCPanoDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -845,13 +821,39 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MRXCPanoDemo/Pano/built/universal/lib",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/**",
 				);
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GDataXML-HTML\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JSONKit\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JSONModel\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JSPatch\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/KxMenu\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MagicalRecord\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/NSData+Base64\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/YiRefresh\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-					"-l\"AFNetworking\"",
 					"-l\"GDataXML-HTML\"",
 					"-l\"JSONKit\"",
 					"-l\"JSONModel\"",
@@ -896,11 +898,11 @@
 			baseConfigurationReference = DB30F33E8335E3307022014B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"\"$(SRCROOT)/Pods/Headers\"/**",
-					"$(inherited)",
+					"$(inherited)/**",
 				);
 				INFOPLIST_FILE = MRXCPanoDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -908,13 +910,39 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MRXCPanoDemo/Pano/built/universal/lib",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/**",
 				);
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/GDataXML-HTML\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JSONKit\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JSONModel\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JSPatch\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/KxMenu\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MagicalRecord\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/NSData+Base64\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/YiRefresh\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-					"-l\"AFNetworking\"",
 					"-l\"GDataXML-HTML\"",
 					"-l\"JSONKit\"",
 					"-l\"JSONModel\"",
@@ -972,13 +1000,15 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/GDataXML-HTML\"",
 					"-isystem",
@@ -1005,7 +1035,6 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-					"-l\"AFNetworking\"",
 					"-l\"GDataXML-HTML\"",
 					"-l\"JSONKit\"",
 					"-l\"JSONModel\"",
@@ -1066,12 +1095,15 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/GDataXML-HTML\"",
 					"-isystem",
@@ -1098,7 +1130,6 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-					"-l\"AFNetworking\"",
 					"-l\"GDataXML-HTML\"",
 					"-l\"JSONKit\"",
 					"-l\"JSONModel\"",

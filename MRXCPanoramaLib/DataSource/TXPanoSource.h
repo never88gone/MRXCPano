@@ -11,8 +11,8 @@
 /**
  *  腾讯的数据源
  */
-@interface TXPanoSource : PanoDataSourceBase
+@interface TXPanoSource : NSObject  <PanoDataSourceBase>
 @property(nonatomic,strong) NSString* imageURlStr;
-
+@property(nonatomic,strong) NSString* panoramaUrl;
 
 @end
