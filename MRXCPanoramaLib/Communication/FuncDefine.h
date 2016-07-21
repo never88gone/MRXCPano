@@ -7,6 +7,7 @@
 //
 
 typedef void(^MRXCCompletionBlock)(id aResponseObject, NSError* anError);
+#define CustomErrorDomain @"com.mrxc.pano"
 
 //weak strong self for retain cycle
 #define WEAK_SELF __weak typeof(self)weakSelf = self

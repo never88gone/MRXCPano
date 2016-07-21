@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00494CF9FE53135438061042 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2C29108E9979F022BFC3AC /* libPods.a */; };
+		385F07431D412B6A00244CF0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 385F07421D412B6A00244CF0 /* libsqlite3.0.tbd */; };
+		385F07441D412B8000244CF0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 385F07421D412B6A00244CF0 /* libsqlite3.0.tbd */; };
+		385F07471D412BA200244CF0 /* MRXCDBHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 385F07451D412BA200244CF0 /* MRXCDBHelper.h */; };
+		385F07481D412BA200244CF0 /* MRXCDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 385F07461D412BA200244CF0 /* MRXCDBHelper.m */; };
+		385F074B1D412BB200244CF0 /* LocalCubePanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 385F07491D412BB200244CF0 /* LocalCubePanoSource.h */; };
+		385F074C1D412BB200244CF0 /* LocalCubePanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 385F074A1D412BB200244CF0 /* LocalCubePanoSource.m */; };
 		388CB1941D40FBE600D27CD1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 388CB1931D40FBE600D27CD1 /* libPods.a */; };
 		388CB1961D40FF2100D27CD1 /* 箭头上.png in Resources */ = {isa = PBXBuildFile; fileRef = 38ED937C1D3FC50D007CB29C /* 箭头上.png */; };
 		38B11AA61CA2E79C00AF8B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B11AA51CA2E79C00AF8B98 /* main.m */; };
@@ -119,6 +125,11 @@
 
 /* Begin PBXFileReference section */
 		2E2C29108E9979F022BFC3AC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		385F07421D412B6A00244CF0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		385F07451D412BA200244CF0 /* MRXCDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCDBHelper.h; sourceTree = "<group>"; };
+		385F07461D412BA200244CF0 /* MRXCDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCDBHelper.m; sourceTree = "<group>"; };
+		385F07491D412BB200244CF0 /* LocalCubePanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalCubePanoSource.h; sourceTree = "<group>"; };
+		385F074A1D412BB200244CF0 /* LocalCubePanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalCubePanoSource.m; sourceTree = "<group>"; };
 		3869853F1CA773F90067D35E /* MRXCFuncDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCFuncDefine.h; sourceTree = "<group>"; };
 		3869854A1CA7797F0067D35E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		3869854B1CA7797F0067D35E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -221,6 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				385F07431D412B6A00244CF0 /* libsqlite3.0.tbd in Frameworks */,
 				38ED930B1D3FC4A8007CB29C /* MRXCPanoramaLib.framework in Frameworks */,
 				00494CF9FE53135438061042 /* libPods.a in Frameworks */,
 			);
@@ -230,6 +242,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				385F07441D412B8000244CF0 /* libsqlite3.0.tbd in Frameworks */,
 				388CB1941D40FBE600D27CD1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +326,8 @@
 		38ED93101D3FC50D007CB29C /* Communication */ = {
 			isa = PBXGroup;
 			children = (
+				385F07451D412BA200244CF0 /* MRXCDBHelper.h */,
+				385F07461D412BA200244CF0 /* MRXCDBHelper.m */,
 				38ED931A1D3FC50D007CB29C /* MRXCPanoramaTool.h */,
 				38ED931B1D3FC50D007CB29C /* MRXCPanoramaTool.m */,
 				38DA107E1D3FE2AA00172BEE /* MRXCHttpHelper.h */,
@@ -325,6 +340,8 @@
 		38ED93201D3FC50D007CB29C /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				385F07491D412BB200244CF0 /* LocalCubePanoSource.h */,
+				385F074A1D412BB200244CF0 /* LocalCubePanoSource.m */,
 				38ED93211D3FC50D007CB29C /* GDPanoSource.h */,
 				38ED93221D3FC50D007CB29C /* GDPanoSource.m */,
 				38ED93231D3FC50D007CB29C /* LDPanoSource.h */,
@@ -425,6 +442,7 @@
 		A7F14A982A2B19E31E775635 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				385F07421D412B6A00244CF0 /* libsqlite3.0.tbd */,
 				388CB1931D40FBE600D27CD1 /* libPods.a */,
 				38D1069C1D3D3E230095CE77 /* libPods.a */,
 				38D1069A1D3D3C680095CE77 /* libxml2.2.tbd */,
@@ -460,6 +478,7 @@
 				38ED93C31D3FC50D007CB29C /* PLCube.h in Headers */,
 				38ED93A21D3FC50D007CB29C /* glues_quad.h in Headers */,
 				38ED93971D3FC50D007CB29C /* ZHDPanoSource.h in Headers */,
+				385F074B1D412BB200244CF0 /* LocalCubePanoSource.h in Headers */,
 				38ED93DD1D3FC50D007CB29C /* PLView.h in Headers */,
 				38ED93C71D3FC50D007CB29C /* PLEnums.h in Headers */,
 				38ED93071D3FC4A8007CB29C /* MRXCPanoramaLib.h in Headers */,
@@ -472,6 +491,7 @@
 				38ED939C1D3FC50D007CB29C /* glues_error.h in Headers */,
 				38ED93D01D3FC50D007CB29C /* PLScene.h in Headers */,
 				38ED939E1D3FC50D007CB29C /* glues_mipmap.h in Headers */,
+				385F07471D412BA200244CF0 /* MRXCDBHelper.h in Headers */,
 				38ED938F1D3FC50D007CB29C /* LDPanoSource.h in Headers */,
 				38DA105E1D3FD07300172BEE /* MRXCValueObject.h in Headers */,
 				38ED93931D3FC50D007CB29C /* PanoDataSourceBase.h in Headers */,
@@ -659,10 +679,12 @@
 				38ED93981D3FC50D007CB29C /* ZHDPanoSource.m in Sources */,
 				38ED93D81D3FC50D007CB29C /* PLTexture.m in Sources */,
 				38ED93C91D3FC50D007CB29C /* PLImage.m in Sources */,
+				385F074C1D412BB200244CF0 /* LocalCubePanoSource.m in Sources */,
 				38ED93881D3FC50D007CB29C /* MRXCPanoramaTool.m in Sources */,
 				38ED939F1D3FC50D007CB29C /* glues_project.c in Sources */,
 				38ED93E01D3FC50D007CB29C /* PLViewBase.m in Sources */,
 				38ED93B41D3FC50D007CB29C /* MrxcPanoView.m in Sources */,
+				385F07481D412BA200244CF0 /* MRXCDBHelper.m in Sources */,
 				38ED93DE1D3FC50D007CB29C /* PLView.m in Sources */,
 				38ED93DA1D3FC50D007CB29C /* PLUtils.m in Sources */,
 				38ED93DC1D3FC50D007CB29C /* PLView+Panorama.m in Sources */,
@@ -826,8 +848,6 @@
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/JSONModel\"",
 					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/JSPatch\"",
-					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/KxMenu\"",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
@@ -841,6 +861,8 @@
 					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/YiRefresh\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -848,7 +870,6 @@
 					"-l\"GDataXML-HTML\"",
 					"-l\"JSONKit\"",
 					"-l\"JSONModel\"",
-					"-l\"JSPatch\"",
 					"-l\"KxMenu\"",
 					"-l\"MBProgressHUD\"",
 					"-l\"MagicalRecord\"",
@@ -914,8 +935,6 @@
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/JSONModel\"",
 					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/JSPatch\"",
-					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/KxMenu\"",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
@@ -929,6 +948,8 @@
 					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/YiRefresh\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -936,7 +957,6 @@
 					"-l\"GDataXML-HTML\"",
 					"-l\"JSONKit\"",
 					"-l\"JSONModel\"",
-					"-l\"JSPatch\"",
 					"-l\"KxMenu\"",
 					"-l\"MBProgressHUD\"",
 					"-l\"MagicalRecord\"",
@@ -1028,7 +1048,7 @@
 					"-l\"GDataXML-HTML\"",
 					"-l\"JSONKit\"",
 					"-l\"JSONModel\"",
-					"-l\"JSPatch\"",
+					"-l\"FMDB\"",
 					"-l\"KxMenu\"",
 					"-l\"MBProgressHUD\"",
 					"-l\"MagicalRecord\"",
@@ -1123,7 +1143,7 @@
 					"-l\"GDataXML-HTML\"",
 					"-l\"JSONKit\"",
 					"-l\"JSONModel\"",
-					"-l\"JSPatch\"",
+					"-l\"FMDB\"",
 					"-l\"KxMenu\"",
 					"-l\"MBProgressHUD\"",
 					"-l\"MagicalRecord\"",

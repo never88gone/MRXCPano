@@ -11,7 +11,7 @@
 #import "AFNetworking.h"
 
 #import "JSONKit.h"
-#define CustomErrorDomain @"com.mrxc.pano"
+
 
 @implementation MRXCHttpHelper
 DEF_SINGLETON(MRXCHttpHelper)

@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "FuncDefine.h"
-typedef void(^MRXCCompletionBlock)(id aResponseObject, NSError* anError);
 
 @interface MRXCHttpHelper : NSObject
 AS_SINGLETON(MRXCHttpHelper);

@@ -1,3 +1,8 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+# use_frameworks!
+
 platform:ios ,’8.0’
 
 pod 'AFNetworking'#,'3.1.0'
@@ -24,3 +29,14 @@ pod 'Masonry’#,’1.0.0’
 pod 'GDataXML-HTML'
 
 pod 'JSONKit'
+
+pod 'FMDB'
+
+target 'MRXCPanoDemo' do
+
+end
+
+target 'MRXCPanoramaLib' do
+
+end
+
