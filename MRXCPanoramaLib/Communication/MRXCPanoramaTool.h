@@ -18,6 +18,10 @@
 + (NSString *)supplementSpace:(NSString *)string;
 + (UIColor *)getColorFromHex:(NSString *)hexColor;
 
+
 +(UIImage *)imageInRect:(UIImage *)image x:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height;
 +(id)formatToDicWithJsonStr:(NSString*)jsonStr;
+
++ (NSString *)achieveURLString:(NSString *)string;
++ (NSString *)achieveURLCodeString:(NSString *)string;
 @end

@@ -52,7 +52,7 @@
 }
 - (void)getPanoThumbnailByID:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
-    NSString *baseURL=[NSString stringWithFormat:@"%@/%@?svid=%@&x=0&y=0&level=0&size=0", self.imageURlStr,@"thumb", [MRXCBuildURL achieveURLCodeString:panoID]];
+    NSString *baseURL=[NSString stringWithFormat:@"%@/%@?svid=%@&x=0&y=0&level=0&size=0", self.imageURlStr,@"thumb", [MRXCPanoramaTool achieveURLCodeString:panoID]];
     [[MRXCHttpHelper sharedInstance] GetResponseDataByUrl:baseURL Callback:^(id aResponseObject, NSError *anError) {
         NSData* returnData=(NSData*)aResponseObject;
         if (completionBlock) {
@@ -63,7 +63,7 @@
 }
 - (void)getPanoTileByID:(NSString *)panoID level:(int)level face:(int)face row:(int)row col:(int)col CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
-    NSString *baseURL=[NSString stringWithFormat:@"%@/%@?svid=%@&x=%d&y=%d&level=%d", self.imageURlStr,@"tile", [MRXCBuildURL achieveURLCodeString:panoID],row,col,level];
+    NSString *baseURL=[NSString stringWithFormat:@"%@/%@?svid=%@&x=%d&y=%d&level=%d", self.imageURlStr,@"tile", [MRXCPanoramaTool achieveURLCodeString:panoID],row,col,level];
     [[MRXCHttpHelper sharedInstance] GetResponseDataByUrl:baseURL Callback:^(id aResponseObject, NSError *anError) {
         NSData* returnData=(NSData*)aResponseObject;
         if (completionBlock) {
@@ -73,7 +73,7 @@
 }
 - (void)getLinkStationS:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
-    NSString *baseURL=[NSString stringWithFormat:@"%@/GetAdjacentPano?ImageID=%@", self.panoramaUrl, [MRXCBuildURL achieveURLCodeString:panoID]];
+    NSString *baseURL=[NSString stringWithFormat:@"%@/GetAdjacentPano?ImageID=%@", self.panoramaUrl, [MRXCPanoramaTool achieveURLCodeString:panoID]];
     [[MRXCHttpHelper sharedInstance] GetResponseDataByUrl:baseURL Callback:^(id aResponseObject, NSError *anError) {
         NSData* returnData=(NSData*)aResponseObject;
         NSString* response=[[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];

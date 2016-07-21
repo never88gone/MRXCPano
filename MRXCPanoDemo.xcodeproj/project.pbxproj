@@ -23,8 +23,6 @@
 		38ED93071D3FC4A8007CB29C /* MRXCPanoramaLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93061D3FC4A8007CB29C /* MRXCPanoramaLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38ED930B1D3FC4A8007CB29C /* MRXCPanoramaLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */; };
 		38ED930C1D3FC4A8007CB29C /* MRXCPanoramaLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		38ED937E1D3FC50D007CB29C /* MRXCBuildURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93111D3FC50D007CB29C /* MRXCBuildURL.h */; };
-		38ED937F1D3FC50D007CB29C /* MRXCBuildURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93121D3FC50D007CB29C /* MRXCBuildURL.m */; };
 		38ED93871D3FC50D007CB29C /* MRXCPanoramaTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED931A1D3FC50D007CB29C /* MRXCPanoramaTool.h */; };
 		38ED93881D3FC50D007CB29C /* MRXCPanoramaTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED931B1D3FC50D007CB29C /* MRXCPanoramaTool.m */; };
 		38ED938D1D3FC50D007CB29C /* GDPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93211D3FC50D007CB29C /* GDPanoSource.h */; };
@@ -146,8 +144,6 @@
 		38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRXCPanoramaLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38ED93061D3FC4A8007CB29C /* MRXCPanoramaLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaLib.h; sourceTree = "<group>"; };
 		38ED93081D3FC4A8007CB29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38ED93111D3FC50D007CB29C /* MRXCBuildURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCBuildURL.h; sourceTree = "<group>"; };
-		38ED93121D3FC50D007CB29C /* MRXCBuildURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCBuildURL.m; sourceTree = "<group>"; };
 		38ED931A1D3FC50D007CB29C /* MRXCPanoramaTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaTool.h; sourceTree = "<group>"; };
 		38ED931B1D3FC50D007CB29C /* MRXCPanoramaTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaTool.m; sourceTree = "<group>"; };
 		38ED93211D3FC50D007CB29C /* GDPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDPanoSource.h; sourceTree = "<group>"; };
@@ -317,8 +313,6 @@
 		38ED93101D3FC50D007CB29C /* Communication */ = {
 			isa = PBXGroup;
 			children = (
-				38ED93111D3FC50D007CB29C /* MRXCBuildURL.h */,
-				38ED93121D3FC50D007CB29C /* MRXCBuildURL.m */,
 				38ED931A1D3FC50D007CB29C /* MRXCPanoramaTool.h */,
 				38ED931B1D3FC50D007CB29C /* MRXCPanoramaTool.m */,
 				38DA107E1D3FE2AA00172BEE /* MRXCHttpHelper.h */,
@@ -483,7 +477,6 @@
 				38ED93931D3FC50D007CB29C /* PanoDataSourceBase.h in Headers */,
 				38ED93D41D3FC50D007CB29C /* PLSphere.h in Headers */,
 				38ED93B71D3FC50D007CB29C /* MRXCPanoramaStation.h in Headers */,
-				38ED937E1D3FC50D007CB29C /* MRXCBuildURL.h in Headers */,
 				38ED93CA1D3FC50D007CB29C /* PLMath.h in Headers */,
 				38ED93A01D3FC50D007CB29C /* glues_project.h in Headers */,
 				38ED93B31D3FC50D007CB29C /* MrxcPanoView.h in Headers */,
@@ -681,7 +674,6 @@
 				38ED93D51D3FC50D007CB29C /* PLSphere.m in Sources */,
 				38ED93D31D3FC50D007CB29C /* PLSceneElement.m in Sources */,
 				38ED93CB1D3FC50D007CB29C /* PLMath.m in Sources */,
-				38ED937F1D3FC50D007CB29C /* MRXCBuildURL.m in Sources */,
 				38ED93B81D3FC50D007CB29C /* MRXCPanoramaStation.m in Sources */,
 				38ED93961D3FC50D007CB29C /* TXPanoSource.m in Sources */,
 				38ED93901D3FC50D007CB29C /* LDPanoSource.m in Sources */,
@@ -820,7 +812,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/MRXCPanoDemo/Pano/built/universal/lib",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/**",
 				);
 				ONLY_ACTIVE_ARCH = YES;
@@ -909,7 +900,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/MRXCPanoDemo/Pano/built/universal/lib",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/**",
 				);
 				ONLY_ACTIVE_ARCH = YES;

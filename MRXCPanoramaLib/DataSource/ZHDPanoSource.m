@@ -40,7 +40,7 @@
 }
 - (void)getPanoThumbnailByID:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
-    NSString *baseURL=[NSString stringWithFormat:@"%@/GetPanoTile?TileID=%@%%2D1%%2D0%%2D0%%2D0%%2D0", self.panoramaUrl, [MRXCBuildURL achieveURLCodeString:panoID]];
+    NSString *baseURL=[NSString stringWithFormat:@"%@/GetPanoTile?TileID=%@%%2D1%%2D0%%2D0%%2D0%%2D0", self.panoramaUrl, [MRXCPanoramaTool achieveURLCodeString:panoID]];
     [[MRXCHttpHelper sharedInstance] GetResponseDataByUrl:baseURL Callback:^(id aResponseObject, NSError *anError) {
         NSData* returnData=(NSData*)aResponseObject;
         if (completionBlock) {
@@ -51,7 +51,7 @@
 }
 - (void)getPanoTileByID:(NSString *)panoID level:(int)level face:(int)face row:(int)row col:(int)col CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
-    NSString *baseURL=[NSString stringWithFormat:@"%@/GetPanoTile?TileID=%@%%2D1%%2D%d%%2D%d%%2D%d%%2D%d", self.panoramaUrl, [MRXCBuildURL achieveURLCodeString:panoID], face, level, row, col];
+    NSString *baseURL=[NSString stringWithFormat:@"%@/GetPanoTile?TileID=%@%%2D1%%2D%d%%2D%d%%2D%d%%2D%d", self.panoramaUrl, [MRXCPanoramaTool achieveURLCodeString:panoID], face, level, row, col];
     [[MRXCHttpHelper sharedInstance] GetResponseDataByUrl:baseURL Callback:^(id aResponseObject, NSError *anError) {
         NSData* returnData=(NSData*)aResponseObject;
         if (completionBlock) {
@@ -61,7 +61,7 @@
 }
 - (void)getLinkStationS:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
-    NSString *baseURL=[NSString stringWithFormat:@"%@/GetAdjacentPano?ImageID=%@", self.panoramaUrl, [MRXCBuildURL achieveURLCodeString:panoID]];
+    NSString *baseURL=[NSString stringWithFormat:@"%@/GetAdjacentPano?ImageID=%@", self.panoramaUrl, [MRXCPanoramaTool achieveURLCodeString:panoID]];
     [[MRXCHttpHelper sharedInstance] GetResponseDataByUrl:baseURL Callback:^(id aResponseObject, NSError *anError) {
         NSData* returnData=(NSData*)aResponseObject;
         NSString* response=[[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];

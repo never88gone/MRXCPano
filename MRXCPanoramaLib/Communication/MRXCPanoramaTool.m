@@ -107,4 +107,18 @@
     return jsonDic;
 
 }
+
++ (NSString *)achieveURLString:(NSString *)string{
+    NSString *urlString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)string, NULL,(CFStringRef)@":/?=,!$&'()*+;[]@#",kCFStringEncodingUTF8));
+    return urlString;
+}
++ (NSString *)achieveURLCodeString:(NSString *)string{
+    if(string == nil){
+        return @"";
+    }
+    NSString *urlString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)string, NULL,(CFStringRef)@":/?=,!$&'()*+;[]@#",kCFStringEncodingUTF8));
+    return urlString ;
+}
+
+
 @end
