@@ -27,6 +27,7 @@
 
 - (void)getPanoStationByLon:(float)lon Lat:(float)lat Tolerance:(float)tolerance CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
+    WEAK_SELF;
     NSString *baseURL=[NSString stringWithFormat:@"%@/%@?svid?lon=%f&lat=%f&tolerance=%f", self.panoramaUrl,@"sv",lon,lat,tolerance];
     [[MRXCHttpHelper sharedInstance] GetResponseDataByUrl:baseURL Callback:^(id aResponseObject, NSError *anError) {
         NSData* returnData=(NSData*)aResponseObject;
@@ -39,6 +40,7 @@
 }
 - (void)getPanoStationByID:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
+    WEAK_SELF;
     NSString *baseURL=[NSString stringWithFormat:@"%@/%@?svid=%@", self.panoramaUrl,@"sv",panoID ];
     [[MRXCHttpHelper sharedInstance] GetResponseDataByUrl:baseURL Callback:^(id aResponseObject, NSError *anError) {
         NSData* returnData=(NSData*)aResponseObject;
@@ -52,6 +54,7 @@
 }
 - (void)getPanoThumbnailByID:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
+    WEAK_SELF;
     NSString *baseURL=[NSString stringWithFormat:@"%@/%@?svid=%@&x=0&y=0&level=0&size=0", self.imageURlStr,@"thumb", [MRXCPanoramaTool achieveURLCodeString:panoID]];
     [[MRXCHttpHelper sharedInstance] GetResponseDataByUrl:baseURL Callback:^(id aResponseObject, NSError *anError) {
         NSData* returnData=(NSData*)aResponseObject;
@@ -63,6 +66,7 @@
 }
 - (void)getPanoTileByID:(NSString *)panoID level:(int)level face:(int)face row:(int)row col:(int)col CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
+    WEAK_SELF;
     NSString *baseURL=[NSString stringWithFormat:@"%@/%@?svid=%@&x=%d&y=%d&level=%d", self.imageURlStr,@"tile", [MRXCPanoramaTool achieveURLCodeString:panoID],row,col,level];
     [[MRXCHttpHelper sharedInstance] GetResponseDataByUrl:baseURL Callback:^(id aResponseObject, NSError *anError) {
         NSData* returnData=(NSData*)aResponseObject;
@@ -73,6 +77,7 @@
 }
 - (void)getLinkStationS:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
+    WEAK_SELF;
     NSString *baseURL=[NSString stringWithFormat:@"%@/GetAdjacentPano?ImageID=%@", self.panoramaUrl, [MRXCPanoramaTool achieveURLCodeString:panoID]];
     [[MRXCHttpHelper sharedInstance] GetResponseDataByUrl:baseURL Callback:^(id aResponseObject, NSError *anError) {
         NSData* returnData=(NSData*)aResponseObject;

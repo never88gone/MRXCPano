@@ -19,7 +19,9 @@ DEF_SINGLETON(MRXCHttpHelper)
 {
     //通过url创建网络请求
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
+     WEAK_SELF;
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue new] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        STRONG_SELF;
         dispatch_async(dispatch_get_main_queue(), ^{
             if (connectionError) {
                 callback(nil,connectionError);
@@ -52,7 +54,9 @@ DEF_SINGLETON(MRXCHttpHelper)
     //设置HTTP的格式为JSON的
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     //发送请求
+     WEAK_SELF;
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue new] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        STRONG_SELF;
         dispatch_async(dispatch_get_main_queue(), ^{
             if (connectionError) {
                 callback(nil,connectionError);
@@ -73,7 +77,9 @@ DEF_SINGLETON(MRXCHttpHelper)
     
     NSData* postData= [postStr dataUsingEncoding:NSUTF8StringEncoding];
     [request setHTTPBody:postData];
+     WEAK_SELF;
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue new] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        STRONG_SELF;
         dispatch_async(dispatch_get_main_queue(), ^{
             if (connectionError) {
                 callback(nil,connectionError);

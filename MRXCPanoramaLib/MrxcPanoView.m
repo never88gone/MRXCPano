@@ -72,7 +72,9 @@
 }
 -(void) getRoadLinkStationS
 {
+    WEAK_SELF;
     [self.dataSource getLinkStationS:self.panoramaID  CompletionBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
         if (!anError) {
             NSArray<MRXCPanoramaRoadLink*>* panoramaStationList=aResponseObject;
             self.adjacentPano = panoramaStationList;
@@ -104,7 +106,9 @@
 }
 -(void) getPanoThumbnailDataAndRefresh
 {
+    WEAK_SELF;
     [self.dataSource  getPanoThumbnailByID:self.panoramaID CompletionBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
         if (!anError) {
             NSData* thumbnailData=(NSData*)aResponseObject;
             self.isAdjacentStatus = false;
@@ -201,7 +205,9 @@
 {
     self.panoramaID=panoID;
     self.panoramaData.ImageID=panoID;
+    WEAK_SELF;
     [self.dataSource getPanoStationByID:panoID CompletionBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
         if (!anError) {
             self.panoramaData=aResponseObject;
             self.panoramaID = self.panoramaData.ImageID;
@@ -212,7 +218,9 @@
 
 -(void)locPanoByLon:(float)lon Lat:(float)lat Tolerance:(float)tolerance
 {
+    WEAK_SELF;
     [self.dataSource getPanoStationByLon:lon Lat:lat Tolerance:tolerance CompletionBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
         if (!anError) {
             self.panoramaData=aResponseObject;
             self.panoramaID = self.panoramaData.ImageID;

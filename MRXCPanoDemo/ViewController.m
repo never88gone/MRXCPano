@@ -11,6 +11,7 @@
 #import "TXPanoSource.h"
 #import "MrxcPanoView.h"
 #import "ZHDPanoSource.h"
+#import "LocalCubePanoSource.h"
 @interface ViewController ()
 @property(nonatomic,strong)   MrxcPanoView*  mrxcPanoView;
 @end
@@ -25,10 +26,11 @@
     [self.view addSubview:self.mrxcPanoView];
     self.panoTypeSegment.selectedSegmentIndex=1;
     [self.view bringSubviewToFront:self.panoTypeSegment];
-    NSString *panoramaID=@"B101-20150506000018";
-    ZHDPanoSource * zhdPanoSource=[[ZHDPanoSource alloc] init];
-    zhdPanoSource.panoramaUrl=@"http://www.szmuseum.com/0pano/DigitalMusBaseServices";
-    [self.mrxcPanoView initWithDataSource:zhdPanoSource];
+    NSString* filePath=[self copyDBData];
+    NSString *panoramaID=@"000000001-01-20130702033058609";
+    LocalCubePanoSource* localCubePanoSource=[[LocalCubePanoSource alloc] init];
+    localCubePanoSource.filePath=filePath;
+    [self.mrxcPanoView initWithDataSource:localCubePanoSource];
     [self.mrxcPanoView locPanoByPanoID:panoramaID];
 }
 
@@ -38,7 +40,12 @@
     switch (segmentedControl.selectedSegmentIndex) {
         case 0:
         {
-
+            NSString* filePath=[self copyDBData];
+            NSString *panoramaID=@"000000001-01-20130702033058609";
+            LocalCubePanoSource* localCubePanoSource=[[LocalCubePanoSource alloc] init];
+            localCubePanoSource.filePath=filePath;
+            [self.mrxcPanoView initWithDataSource:localCubePanoSource];
+            [self.mrxcPanoView locPanoByPanoID:panoramaID];
         }
             break;
     case 1:
@@ -60,12 +67,36 @@
         break;
     case 3:
         {
-
+          
         }
         break;
         default:
             break;
     }
     
+}
+
+- (NSString*) copyDBData
+{
+    NSString * docPath = [[NSBundle mainBundle] pathForResource:@"MRXC_IMAGE" ofType:@"db"];
+    NSString * appDir = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *appLib = [appDir stringByAppendingString:@"/Caches"];
+    NSString* dataPath= [self copyMissingFile:docPath toPath:appLib];
+    return dataPath;
+}
+- (NSString*)copyMissingFile:(NSString *)sourcePath toPath:(NSString *)toPath
+
+{
+    BOOL retVal = YES;
+    NSString * finalLocation = [toPath stringByAppendingPathComponent:[sourcePath lastPathComponent]];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:finalLocation])
+    {
+        retVal = [[NSFileManager defaultManager] copyItemAtPath:sourcePath toPath:finalLocation error:NULL];
+    }
+    if (retVal) {
+        return finalLocation;
+    }else{
+        return nil;
+    }
 }
 @end

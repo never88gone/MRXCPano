@@ -13,10 +13,16 @@
 #import "MRXCDBHelper.h"
 
 @implementation LocalCubePanoSource
+-(void)setFilePath:(NSString *)filePath
+{
+    [[MRXCDBHelper sharedInstance] initWithPath:filePath];
+}
 - (void)getPanoStationByLon:(float)lon Lat:(float)lat Tolerance:(float)tolerance CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
     NSString* sqlStr=nil;
+    WEAK_SELF;
     [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
         FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;
         MRXCPanoramaStation* panoramaStation=[self getPanoramaDataByResponse:returnResultSet];
         if (completionBlock) {
@@ -26,8 +32,11 @@
 }
 - (void)getPanoStationByID:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
-    NSString* sqlStr=[NSString stringWithFormat:@"select * from %@ where ImageName=%@",@"HD_STREETVIEW_IMAGEINFO",panoID];
+    
+    NSString* sqlStr=[NSString stringWithFormat:@"select * from %@ where ImageName='%@'",@"MRXC_PANO_IMAGEINFO",panoID];
+    WEAK_SELF;
     [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
         FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;
         MRXCPanoramaStation* panoramaStation=[self getPanoramaDataByResponse:returnResultSet];
         if (completionBlock) {
@@ -38,8 +47,10 @@
 }
 - (void)getPanoThumbnailByID:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
-    NSString* sqlStr=[NSString stringWithFormat:@"select TileData from %@ where TileID=%@-2-%d-%d-%d-%d",@"HD_STREETVIEW_IMAGEINFO",panoID,0,0,0,0];
+    NSString* sqlStr=[NSString stringWithFormat:@"select TileData from %@ where TileID='%@-2-%d-%d-%d-%d'",@"MRXC_PANO_TILEINFO",panoID,0,0,0,0];
+    WEAK_SELF;
     [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
         FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;
         NSData* returnData=nil;
         while ([returnResultSet next]) {
@@ -56,8 +67,10 @@
 }
 - (void)getPanoTileByID:(NSString *)panoID level:(int)level face:(int)face row:(int)row col:(int)col CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
-    NSString* sqlStr=[NSString stringWithFormat:@"select TileData from %@ where TileID=%@-2-%d-%d-%d-%d",@"HD_STREETVIEW_IMAGEINFO",panoID,face,level,row,col];
+    NSString* sqlStr=[NSString stringWithFormat:@"select TileData from %@ where TileID='%@-2-%d-%d-%d-%d'",@"MRXC_PANO_TILEINFO",panoID,face,level,row,col];
+    WEAK_SELF;
     [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
         FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;
         NSData* returnData=nil;
         while ([returnResultSet next]) {
@@ -102,7 +115,7 @@
         panoramaData.Yaw=@([resultSet doubleForColumn:@"Yaw"]);
         panoramaData.Z=@([resultSet doubleForColumn:@"Z"]);
     }
-    
+    [resultSet close];
     return panoramaData;
 }
 
