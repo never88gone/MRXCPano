@@ -24,38 +24,18 @@
 @end
 
 @interface PLViewBase : UIView <UIAccelerometerDelegate> 
-{
-    //NSTimer *animationTimer;
-    NSTimeInterval animationInterval;
-	
-	CGPoint startPoint, endPoint;
-	
-	BOOL isValidForFov;
-	float fovDistance;
-	
-	BOOL isDeviceOrientationEnabled, isValidForOrientation;
-	UIDeviceOrientation deviceOrientation;
-	PLOrientationSupported deviceOrientationSupported;
-	
-	BOOL isAccelerometerEnabled, isAccelerometerLeftRightEnabled, isAccelerometerUpDownEnabled;
-	float accelerometerSensitivity;
-	NSTimeInterval accelerometerInterval;
-	
-	BOOL isScrollingEnabled, isValidForScrolling;
-	NSUInteger minDistanceToEnableScrolling;
-	
-	BOOL isInertiaEnabled, isValidForInertia;
-	NSTimer *inertiaTimer;
-	NSTimeInterval inertiaInterval;
-	float inertiaStepValue;
-	
-	BOOL isResetEnabled;
-	
-	BOOL isValidForTouch;
-	
-	NSInteger tapCount;
-    NSTimer *_panoramaTimer;
-}
+
+@property (nonatomic, assign) NSInteger tapCount;
+@property (nonatomic, assign) BOOL isValidForTouch;
+@property (nonatomic, assign) float inertiaStepValue;
+@property (nonatomic, strong) NSTimer *inertiaTimer;
+@property (nonatomic, assign) BOOL isValidForInertia;
+@property (nonatomic, assign) BOOL isValidForScrolling;
+@property (nonatomic, assign) BOOL isValidForOrientation;
+
+@property (nonatomic, assign) float fovDistance;
+@property (nonatomic, strong) NSTimer *animationTimer;
+
 
 @property(nonatomic) NSTimeInterval animationInterval;
 
@@ -88,10 +68,6 @@
 - (void)reset;
 
 - (void)drawView;
-- (void)drawViewNTimes:(NSUInteger)times;
-
-- (void)startAnimation;
-- (void)stopAnimation;
 + (Class)layerClass;
 
 @end

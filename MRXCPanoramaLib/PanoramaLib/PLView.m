@@ -7,7 +7,7 @@
 //
 
 #import "PLView.h"
-
+#import "NSObject+Block.h"
 @implementation PLView
 @synthesize camera;
 @synthesize scene;
@@ -52,18 +52,18 @@
 #pragma mark draw methods
 
 - (void)drawView 
-{    
-	[super drawView];
+{
+    [super drawView];
     //NSLog(@"PLView drawView!");
 	[self.sceneElement clonePropertiesOf:camera];
 	[scene.currentCamera cloneCameraProperties:camera];
 	scene.currentCamera.rotation = PLRotationMake(0.0f, 0.0f, 0.0f);
 	scene.currentCamera.position = PLPositionMake(0.0f, 0.0f, 0.0f);
 	
-	if(!isValidForFov && !isValidForOrientation){
+	if(!self.isValidForFov && !self.isValidForOrientation){
 		//[self.sceneElement rotateWithStartPoint:startPoint endPoint:endPoint sensitivity:camera.rotateSensitivity];
         for(PLSceneElement *element in self.scene.elements){
-            [element rotateWithStartPoint:startPoint endPoint:endPoint sensitivity:camera.rotateSensitivity];
+            [element rotateWithStartPoint:self.startPoint endPoint:self.endPoint sensitivity:camera.rotateSensitivity];
         }
     }
     //NSLog(@"PLView drawView!render。。。。。。。");
@@ -82,8 +82,8 @@
 {
 	if([super calculateFov:touches])
 	{
-		[camera addFovWithDistance:fovDistance];
-		[scene.currentCamera addFovWithDistance:fovDistance];
+		[camera addFovWithDistance:self.fovDistance];
+		[scene.currentCamera addFovWithDistance:self.fovDistance];
 		return YES;
 	}
 	return NO;

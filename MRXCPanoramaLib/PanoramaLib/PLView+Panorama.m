@@ -12,56 +12,53 @@ static CGFloat refreshSwitch=8.0;
 @implementation PLView(Panorama)
 
 - (void)panoramaSwitchBegan{
-    isValidForFov = YES;
-    startPoint = endPoint = self.center;
+    self.isValidForFov = YES;
+    self.startPoint = self.endPoint = self.self.center;
     //NSLog(@"panoramaSwitchBegan startPoint %f %f endPoint %f %f", startPoint.x, startPoint.y, endPoint.x, endPoint.y);
-    self.panoramaTimer = [NSTimer scheduledTimerWithTimeInterval:animationInterval target:self selector:@selector(refreshLocation) userInfo:nil repeats:YES];
-    [self stopAnimation];
-    [self startAnimation];
+    self.panoramaTimer = [NSTimer scheduledTimerWithTimeInterval:self.animationInterval target:self selector:@selector(refreshLocation) userInfo:nil repeats:YES];
 }
 - (void)panoramaCalculateFov:(CGFloat)deviation{
-    CGPoint point1 = CGPointMake(startPoint.x-deviation, startPoint.y+deviation);
-    CGPoint point2 = CGPointMake(endPoint.x+deviation, endPoint.y-deviation);
+    CGPoint point1 = CGPointMake(self.startPoint.x-deviation, self.startPoint.y+deviation);
+    CGPoint point2 = CGPointMake(self.endPoint.x+deviation, self.endPoint.y-deviation);
     float distance = [PLMath distanceBetweenPoints: point1 : point2];
-    startPoint = point1;
-    endPoint = point2;
-    fovDistance = ABS(fovDistance) <= distance ? distance : -distance;
+    self.startPoint = point1;
+    self.endPoint = point2;
+    self.fovDistance = ABS(self.fovDistance) <= distance ? distance : -distance;
     
-    [camera addFovWithDistance:fovDistance];
-    [scene.currentCamera addFovWithDistance:fovDistance];
+    [camera addFovWithDistance:self.fovDistance];
+    [scene.currentCamera addFovWithDistance:self.fovDistance];
 }
 - (void)panoramaCalculateFov:(CGPoint)point1 point2:(CGPoint)point2{
     float distance = [PLMath distanceBetweenPoints: point1 : point2];
-    startPoint = point1;
-    endPoint = point2;
-    fovDistance = ABS(fovDistance) <= distance ? distance : -distance;
+    self.startPoint = point1;
+    self.endPoint = point2;
+    self.fovDistance = ABS(self.fovDistance) <= distance ? distance : -distance;
     
-    [camera addFovWithDistance:fovDistance];
-    [scene.currentCamera addFovWithDistance:fovDistance];
+    [camera addFovWithDistance:self.fovDistance];
+    [scene.currentCamera addFovWithDistance:self.fovDistance];
 }
 - (void)refreshLocation{
     CGFloat deviation = refreshSwitch;
     if(refreshSwitch < 512.0){
         refreshSwitch = refreshSwitch*2;
     }
-    CGPoint point1 = CGPointMake(startPoint.x-deviation, startPoint.y+deviation);
-    CGPoint point2 = CGPointMake(endPoint.x+deviation, endPoint.y-deviation);
+    CGPoint point1 = CGPointMake(self.startPoint.x-deviation, self.startPoint.y+deviation);
+    CGPoint point2 = CGPointMake(self.endPoint.x+deviation, self.endPoint.y-deviation);
     float distance = [PLMath distanceBetweenPoints: point1 : point2];
-    startPoint = point1;
-    endPoint = point2;
+    self.startPoint = point1;
+    self.endPoint = point2;
     //NSLog(@"startPoint %f %f endPoint %f %f", startPoint.x, startPoint.y, endPoint.x, endPoint.y);
-    fovDistance = ABS(fovDistance) <= distance ? distance : -distance;
-    [camera addFovWithDistance:fovDistance];
-    [scene.currentCamera addFovWithDistance:fovDistance];
+    self.fovDistance = ABS(self.fovDistance) <= distance ? distance : -distance;
+    [camera addFovWithDistance:self.fovDistance];
+    [scene.currentCamera addFovWithDistance:self.fovDistance];
 }
 - (void)panoramaSwitchEnd{
-    [self stopAnimation];
     if(self.panoramaTimer != nil){
         [self.panoramaTimer invalidate];
         self.panoramaTimer = nil;
     }
-    isValidForFov = isValidForTouch = NO;
-    startPoint = endPoint = CGPointMake(0.0f, 0.0f);
+    self.isValidForFov = self.isValidForTouch = NO;
+    self.startPoint =self. endPoint = CGPointMake(0.0f, 0.0f);
     refreshSwitch = 8.0;
 }
 @end

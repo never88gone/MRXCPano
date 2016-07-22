@@ -7,6 +7,7 @@
 //
 
 #import "MRXCDBHelper.h"
+#import "NSObject+Block.h"
 @interface MRXCDBHelper();
 @property(nonatomic,strong) FMDatabaseQueue *queue;
 @end;
@@ -35,22 +36,6 @@ DEF_SINGLETON(MRXCDBHelper)
     }];  
 }
 
-- (void)performInMainThreadBlock:(void(^)())aInMainBlock
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
-        aInMainBlock();
-        
-    });
-}
 
-- (void)performInThreadBlock:(void(^)())aInThreadBlock
-{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        aInThreadBlock();
-        
-    });
-}
 
 @end

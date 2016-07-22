@@ -7,10 +7,8 @@
 //
 
 #import "PLViewBase.h"
-
+#import "NSObject+Block.h"
 @interface PLViewBase ()
-
-@property (nonatomic, assign) NSTimer *animationTimer;
 
 - (BOOL)executeDefaultAction:(NSSet *)touches;
 - (BOOL)executeDefaultAction:(NSSet *)touches isFovCalculated:(BOOL)isFovCalculated;
@@ -32,28 +30,38 @@
 
 @implementation PLViewBase
 
-@synthesize animationTimer;
-@synthesize animationInterval;
+@synthesize  tapCount;
+@synthesize  isValidForTouch;
+@synthesize   inertiaStepValue;
+@synthesize   inertiaTimer;
+@synthesize   isValidForInertia;
+@synthesize   isValidForScrolling;
+@synthesize   isValidForOrientation;
 
-@synthesize isDeviceOrientationEnabled;
-@synthesize deviceOrientation;
-@synthesize deviceOrientationSupported;
+@synthesize   fovDistance;
 
-@synthesize isAccelerometerEnabled, isAccelerometerLeftRightEnabled, isAccelerometerUpDownEnabled;
-@synthesize accelerometerSensitivity;
-@synthesize accelerometerInterval;
 
-@synthesize startPoint, endPoint;
 
-@synthesize isScrollingEnabled;
-@synthesize minDistanceToEnableScrolling;
+@synthesize   isDeviceOrientationEnabled;
+@synthesize   deviceOrientation;
+@synthesize  deviceOrientationSupported;
 
-@synthesize isInertiaEnabled;
-@synthesize inertiaInterval;
+@synthesize  isAccelerometerEnabled, isAccelerometerLeftRightEnabled, isAccelerometerUpDownEnabled;
+@synthesize   accelerometerSensitivity;
+@synthesize   accelerometerInterval;
 
-@synthesize isValidForFov;
-@synthesize isResetEnabled;
-@synthesize panoramaTimer=_panoramaTimer;
+@synthesize   startPoint, endPoint;
+
+@synthesize   isScrollingEnabled;
+@synthesize   minDistanceToEnableScrolling;
+
+@synthesize   isInertiaEnabled;
+@synthesize   inertiaInterval;
+
+@synthesize   isResetEnabled;
+@synthesize   isValidForFov;
+@synthesize   panoramaTimer;
+@synthesize   delegate;
 #pragma mark -
 #pragma mark init methods 
 
@@ -93,7 +101,6 @@
 
 - (void)initializeValues
 {
-	animationInterval = kDefaultAnimationTimerInterval;
 	
 	isAccelerometerEnabled = NO;
 	isAccelerometerLeftRightEnabled = YES;
@@ -121,13 +128,12 @@
 }
 - (void)reset
 {
-	[self stopAnimation];
 	[self stopInertia];
 	isValidForFov = isValidForScrolling = isValidForInertia = isValidForOrientation = NO;
 	startPoint = endPoint = CGPointMake(0.0f, 0.0f);
 	fovDistance = 0.0f;
 	if(isDeviceOrientationEnabled)
-		self.deviceOrientation = [[UIDevice currentDevice] orientation];
+		deviceOrientation = [[UIDevice currentDevice] orientation];
 }
 
 #pragma mark -
@@ -156,51 +162,21 @@
 	[super layoutSubviews];
 	[self activateOrientation];
 	[self activateAccelerometer];
-	[self drawViewNTimes:2];
+	[self drawViewInBack];
 }
 
 #pragma mark -
 #pragma mark animation methods 
 
-- (void)startAnimation 
+-(void)drawViewInBack
 {
-	self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:animationInterval target:self selector:@selector(drawView) userInfo:nil repeats:YES];
-	if(isScrollingEnabled)
-		isValidForScrolling = YES;
-	[self stopInertia];
+    [self performInThreadBlock:^{
+        [self performInMainThreadBlock:^{
+            [self drawView];
+        }];
+    }];
 }
 
-- (void)stopAnimation 
-{
-	if(animationTimer)
-		[animationTimer invalidate];
-    self.animationTimer = nil;
-	
-	if(isScrollingEnabled)
-	{
-		isValidForScrolling = NO;
-		if(!isInertiaEnabled)
-			isValidForTouch = NO;
-	}
-	else
-		isValidForTouch = NO;
-}
-- (void)setAnimationTimer:(NSTimer *)newTimer 
-{
-    if(animationTimer != nil){
-        [animationTimer invalidate];
-    }
-}
-
-- (void)setAnimationInterval:(NSTimeInterval)interval
-{    
-    animationInterval = interval;
-	if (animationTimer) 
-	{
-        [self stopAnimation];
-        [self startAnimation];
-    }
-}
 
 #pragma mark -
 #pragma mark action methods
@@ -268,7 +244,6 @@
 	{
 		if(isValidForScrolling)
 		{
-			[self stopAnimation];
 			return;
 		}
 	}
@@ -281,25 +256,26 @@
 		if(CGRectContainsPoint(self.frame, location))
 		{	
 			startPoint = endPoint = location;
-			[self startAnimation];
 		}
 	}
+    
+    [self drawViewInBack ];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    //NSLog(@"touchesMoved················");
-	if(![self executeDefaultAction:touches])
-	{
-		UITouch *touch = [[event allTouches] anyObject];
-		CGPoint location = [touch locationInView:touch.view];
-		if(CGRectContainsPoint(self.frame, location))
-			endPoint = location;
-	}
+    if(![self executeDefaultAction:touches])
+    {
+        UITouch *touch = [[event allTouches] anyObject];
+        CGPoint location = [touch locationInView:touch.view];
+        if(CGRectContainsPoint(self.frame, location))
+            endPoint = location;
+    }
+[self drawViewInBack ];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{ 	
+{
 	tapCount -= [touches count];
 	if([touches count] == 1){
         UITouch *touch = [[event allTouches] anyObject];
@@ -315,7 +291,6 @@
 	{
 		if(tapCount == 0)
 		{
-			[self stopAnimation];
 			isValidForFov = isValidForTouch = NO;
 			startPoint = endPoint = CGPointMake(0.0f, 0.0f);
 		}
@@ -334,24 +309,20 @@
 					BOOL isValidForMove = ((startPoint.x == endPoint.x && startPoint.y == endPoint.y) || [PLMath distanceBetweenPoints:startPoint :endPoint] <= minDistanceToEnableScrolling);
 					if(isInertiaEnabled)
 					{
-						[self stopAnimation];
 						if(isValidForMove)
 							isValidForTouch = NO;
 						else
 							[self startInertia];
 					}
-					else if (isValidForMove)
-						[self stopAnimation];
 				}
 				else
 				{
 					startPoint = endPoint;
-					[self stopAnimation];
 				}					
 			}
 		}
 	}
-	
+	[self drawViewInBack ];
 }
 
 #pragma mark -
@@ -550,7 +521,6 @@
 }
 - (void)dealloc
 {
-	[self stopAnimation];
 	[self deactiveOrientation];
 	[self deactiveAccelerometer];
 }
