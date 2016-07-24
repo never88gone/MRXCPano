@@ -10,5 +10,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "__35-[MrxcPanoView getRoadLinkStationS]_block_invoke:MrxcPanoView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.adjacentPano">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

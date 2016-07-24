@@ -119,6 +119,45 @@
     NSString *urlString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)string, NULL,(CFStringRef)@":/?=,!$&'()*+;[]@#",kCFStringEncodingUTF8));
     return urlString ;
 }
-
++(double)getYawByStartLon:(float)startLon StartLat:(float)startLat EndLon:(float)endLon EndLat:(float)endLat
+{
+    double yaw=0;
+    double dLon=endLon-startLon;
+    double dLat=endLat-startLat;
+    double dmin=0.00001;
+    if (abs(dLon)<dmin) {
+        if (dLat>dmin) {
+            yaw=0;
+        }else  if (dLat<dmin)
+        {
+             yaw=180;
+        }
+        return yaw;
+    }
+    if (abs(dLat)<dmin) {
+        if (dLon>dmin) {
+            yaw=90;
+        }else  if (dLon<dmin)
+        {
+            yaw=270;
+        }
+    }
+    double kk=dLon/dLat;
+    if (dLon>dmin&&dLat>dmin) {
+        yaw=atan(kk)*180/M_PI;
+    }else if (dLon>dmin&&dLat<dmin)
+    {
+        yaw=atan(kk)*180/M_PI+180;
+    }
+    else if (dLon<dmin&&dLat<dmin)
+    {
+        yaw=atan(kk)*180/M_PI+180;
+    }
+    else if (dLon>dmin&&dLat>dmin)
+    {
+        yaw=atan(kk)*180/M_PI+380;
+    }
+    return yaw;
+}
 
 @end

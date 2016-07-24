@@ -32,7 +32,6 @@
 }
 - (void)getPanoStationByID:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
-    
     NSString* sqlStr=[NSString stringWithFormat:@"select * from %@ where ImageName='%@'",@"MRXC_PANO_IMAGEINFO",panoID];
     WEAK_SELF;
     [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
@@ -86,47 +85,116 @@
 }
 - (void)getLinkStationS:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
-    
-//    NSString* sqlStr=nil;
-//    [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
-//        FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;
-//         NSArray<MRXCPanoramaRoadLink*> * panoramaDataList=[self getPanoramaDataByResponse:returnResultSet];
-//        if (completionBlock) {
-//            completionBlock(panoramaDataList,anError);
-//        }
-//    }];
+    NSString* sqlStr=[NSString stringWithFormat:@"select * from %@ where ImageName='%@'",@"MRXC_PANO_IMAGEINFO",panoID];
+    WEAK_SELF;
+    [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;
+        MRXCPanoramaStation* panoramaStation=[self getPanoramaDataByResponse:returnResultSet];
+         WEAK_SELF;
+        [self getLinkStationSByStation:panoramaStation CompletionBlock:^(id aResponseObject, NSError *anError) {
+             STRONG_SELF;
+            NSMutableArray<MRXCPanoramaRoadLink*> * panoramaDataList =  [[NSMutableArray<MRXCPanoramaRoadLink*> alloc] init];
+             [panoramaDataList addObjectsFromArray:[aResponseObject copy]];
+             WEAK_SELF;
+            [self getLinkStationLinkByStation:panoramaStation CompletionBlock:^(id aResponseObject, NSError *anError) {
+                STRONG_SELF;
+                [panoramaDataList addObjectsFromArray:[aResponseObject copy]];
+                if (completionBlock) {
+                    completionBlock(panoramaDataList,anError);
+                }
+            }];
+
+        }];
+    }];
+}
+
+- (void)getLinkStationSByStation:(MRXCPanoramaStation *)panoramaStation CompletionBlock:(MRXCCompletionBlock)completionBlock
+{
+    NSString* sqlStr=[NSString stringWithFormat:@"select * from %@ where SegmentID='%@' and SegmentIndex= %d or SegmentIndex= %d ",@"MRXC_PANO_IMAGEINFO",panoramaStation.SegmentID,panoramaStation.SegmentIndex.intValue-1,panoramaStation.SegmentIndex.intValue+1];
+    WEAK_SELF;
+    [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
+        NSMutableArray<MRXCPanoramaRoadLink*> * panoramaDataList = [[ NSMutableArray<MRXCPanoramaRoadLink*>  alloc] init];
+        FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;
+        while ([returnResultSet next]) {
+            MRXCPanoramaStation* onePanoramaData=[self getPanoramaByResultSet:returnResultSet];
+            MRXCPanoramaRoadLink* oneRoadLink=[[MRXCPanoramaRoadLink alloc] init];
+            oneRoadLink.SrcImageID=panoramaStation.ImageID;
+            oneRoadLink.DstImageID=onePanoramaData.ImageID;
+            
+            oneRoadLink.Angle=@([MRXCPanoramaTool getYawByStartLon:panoramaStation.X.floatValue StartLat:panoramaStation.Y.floatValue EndLon:onePanoramaData.X.floatValue EndLat:onePanoramaData.Y.floatValue]);
+            [panoramaDataList addObject:oneRoadLink];
+        }
+        if (completionBlock) {
+            completionBlock(panoramaDataList,anError);
+        }
+    }];
+}
+
+
+- (void)getLinkStationLinkByStation:(MRXCPanoramaStation *)panoramaStation CompletionBlock:(MRXCCompletionBlock)completionBlock
+{
+    NSString* sqlStr=[NSString stringWithFormat:@"select * from %@ where SrcImageName='%@' or DstImageName= '%@'",@"MRXC_PANO_LINK", panoramaStation.ImageID,panoramaStation.ImageID];
+    WEAK_SELF;
+    [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
+        NSMutableArray<MRXCPanoramaRoadLink*> * panoramaDataList = [[ NSMutableArray<MRXCPanoramaRoadLink*>  alloc] init];
+        FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;
+        while ([returnResultSet next]) {
+             panoramaDataList=[self getPanoramaListDataByLinkResponse:returnResultSet Station:panoramaStation];
+
+        }
+        if (completionBlock) {
+            completionBlock(panoramaDataList,anError);
+        }
+    }];
+}
+
+
+-(MRXCPanoramaStation*)getPanoramaByResultSet:(FMResultSet*)resultSet
+{
+    MRXCPanoramaStation* panoramaData =[[MRXCPanoramaStation alloc] init];
+    panoramaData.B=@([resultSet doubleForColumn:@"B"]);
+    panoramaData.CameraNo=[resultSet stringForColumn:@"CameraNo"];
+    panoramaData.GatherTime=[resultSet stringForColumn:@"GatherTime"];
+    panoramaData.ImageID=[resultSet stringForColumn:@"ImageName"];
+    panoramaData.L=@([resultSet doubleForColumn:@"L"]);
+    panoramaData.Pitch=@([resultSet doubleForColumn:@"Pitch"]);
+    panoramaData.Roll=@([resultSet doubleForColumn:@"Roll"]);
+    panoramaData.SegmentID=[resultSet stringForColumn:@"SegmentID"];
+    panoramaData.SegmentIndex=@([resultSet intForColumn:@"SegmentIndex"]);
+    panoramaData.X=@([resultSet doubleForColumn:@"X"]);
+    panoramaData.Y=@([resultSet doubleForColumn:@"Y"]);
+    panoramaData.Yaw=@([resultSet doubleForColumn:@"Yaw"]);
+    panoramaData.Z=@([resultSet doubleForColumn:@"Z"]);
+    return panoramaData;
 }
 
 -(MRXCPanoramaStation*)getPanoramaDataByResponse:(FMResultSet*)resultSet
 {
-    MRXCPanoramaStation* panoramaData =[[MRXCPanoramaStation alloc] init];
+    MRXCPanoramaStation* panoramaData =nil;
     while ([resultSet next]) {
-        panoramaData.B=@([resultSet doubleForColumn:@"B"]);
-        panoramaData.CameraNo=[resultSet stringForColumn:@"CameraNo"];
-        panoramaData.GatherTime=[resultSet stringForColumn:@"GatherTime"];
-        panoramaData.ImageID=[resultSet stringForColumn:@"ImageName"];
-        panoramaData.L=@([resultSet doubleForColumn:@"L"]);
-        panoramaData.Pitch=@([resultSet doubleForColumn:@"Pitch"]);
-        panoramaData.Roll=@([resultSet doubleForColumn:@"Roll"]);
-        panoramaData.SegmentID=[resultSet stringForColumn:@"SegmentID"];
-        panoramaData.SegmentIndex=@([resultSet intForColumn:@"SegmentIndex"]);
-        panoramaData.X=@([resultSet doubleForColumn:@"X"]);
-        panoramaData.Y=@([resultSet doubleForColumn:@"Y"]);
-        panoramaData.Yaw=@([resultSet doubleForColumn:@"Yaw"]);
-        panoramaData.Z=@([resultSet doubleForColumn:@"Z"]);
+        panoramaData=[self getPanoramaByResultSet:resultSet];
+        break;
     }
     [resultSet close];
     return panoramaData;
 }
 
--(NSArray<MRXCPanoramaRoadLink*>*)getPanoramaListDataByResponse:(FMResultSet*)resultSet
+-(NSArray<MRXCPanoramaRoadLink*>*)getPanoramaListDataByLinkResponse:(FMResultSet*)resultSet Station:(MRXCPanoramaStation *)panoramaStation
 {
-//    NSDictionary* jsonDic = [MRXCPanoramaTool formatToDicWithJsonStr:response];
-//    NSArray* panoArray= jsonDic[@"GetAdjacentPanoResult"];
-//    NSError* error=nil;
-//    NSArray<MRXCPanoramaRoadLink*> * panoramaDataList =[MRXCPanoramaRoadLink arrayOfModelsFromDictionaries:panoArray error:&error];
-    return nil;
+    NSMutableArray<MRXCPanoramaRoadLink*> * panoramaDataList = [[ NSMutableArray<MRXCPanoramaRoadLink*>  alloc] init];
+    while ([resultSet next]) {
+        MRXCPanoramaRoadLink* oneRoadLink=[[MRXCPanoramaRoadLink alloc] init];
+        oneRoadLink.SrcImageID=[resultSet stringForColumn:@"SrcImageName"];
+        oneRoadLink.DstImageID=[resultSet stringForColumn:@"DstImageName"];
+        oneRoadLink.Angle=@([resultSet doubleForColumn:@"Direction"]);
+        [panoramaDataList addObject:oneRoadLink];
+    }
+    [resultSet close];
+    return panoramaDataList;
 }
+
+
 -(PanoramaCubeOrPhere)getPanoramaType
 {
     return PanoramaEnumCube;
