@@ -12,5 +12,5 @@
  *  铭若星晨的数据源
  */
 @interface MRXCPanoSource : NSObject  <PanoDataSourceBase>
-
+@property(nonatomic,strong) NSString* panoramaUrl;
 @end
