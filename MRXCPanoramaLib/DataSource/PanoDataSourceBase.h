@@ -10,6 +10,7 @@
 #import "MRXCPanoramaStation.h"
 #import "MRXCPanoramaRoadLink.h"
 #import "MRXCHttpHelper.h"
+#import "MRXCPanoramaTool.h"
 
 typedef NS_ENUM(NSInteger, PanoramaCubeOrPhere){
     PanoramaEnumCube,

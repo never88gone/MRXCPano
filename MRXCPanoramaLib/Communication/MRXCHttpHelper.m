@@ -19,9 +19,7 @@ DEF_SINGLETON(MRXCHttpHelper)
 {
     //通过url创建网络请求
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
-     WEAK_SELF;
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue new] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        STRONG_SELF;
         dispatch_async(dispatch_get_main_queue(), ^{
             if (connectionError) {
                 callback(nil,connectionError);

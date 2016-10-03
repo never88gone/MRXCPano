@@ -1,18 +1,14 @@
 //
-//  ZHDPanoSource.m
+//  GOOGLEPanoSource.m
 //  MRXCPanoDemo
 //
-//  Created by never88gone on 16/3/27.
+//  Created by never88gone on 2016/10/3.
 //  Copyright © 2016年 never88gone. All rights reserved.
 //
 
-#import "ZHDPanoSource.h"
+#import "GOOGLEPanoSource.h"
 
-#import "MRXCHttpHelper.h"
-#import "MRXCPanoramaRoadLink.h"
-
-@implementation ZHDPanoSource
-
+@implementation GOOGLEPanoSource
 - (void)getPanoStationByLon:(float)lon Lat:(float)lat Tolerance:(float)tolerance CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
     NSString *baseURL=[NSString stringWithFormat:@"%@/GetPanoByLonLat?lon=%f&lat=%f&tolerance=%f", self.panoramaUrl,lon,lat,tolerance];
@@ -40,7 +36,7 @@
             completionBlock(panoramaStation,anError);
         }
     }];
-
+    
 }
 - (void)getPanoThumbnailByID:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {

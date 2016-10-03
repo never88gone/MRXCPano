@@ -8,9 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		00494CF9FE53135438061042 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2C29108E9979F022BFC3AC /* libPods.a */; };
+		380E6F791DA2946E009F8F38 /* MRXCTXPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 380E6F771DA2946E009F8F38 /* MRXCTXPanoSource.h */; };
+		380E6F7A1DA2946E009F8F38 /* MRXCTXPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 380E6F781DA2946E009F8F38 /* MRXCTXPanoSource.m */; };
+		380E6F7D1DA294C0009F8F38 /* GOOGLEPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 380E6F7B1DA294C0009F8F38 /* GOOGLEPanoSource.h */; };
+		380E6F7E1DA294C0009F8F38 /* GOOGLEPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 380E6F7C1DA294C0009F8F38 /* GOOGLEPanoSource.m */; };
+		380E6FB51DA29975009F8F38 /* MRXCAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 380E6FB31DA29975009F8F38 /* MRXCAboutVC.m */; };
+		380E6FB61DA29975009F8F38 /* MRXCAboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380E6FB41DA29975009F8F38 /* MRXCAboutVC.xib */; };
+		380E6FC41DA29F69009F8F38 /* BaseNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 380E6FC01DA29F69009F8F38 /* BaseNC.m */; };
+		380E6FC51DA29F69009F8F38 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 380E6FC21DA29F69009F8F38 /* BaseVC.m */; };
+		380E6FC81DA29FB6009F8F38 /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 380E6FC71DA29FB6009F8F38 /* Toast.m */; };
+		380E6FCB1DA29FEF009F8F38 /* ShareColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 380E6FCA1DA29FEF009F8F38 /* ShareColor.m */; };
+		380E6FCD1DA2A4BD009F8F38 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380E6FCC1DA2A4BD009F8F38 /* Launch Screen.storyboard */; };
 		383C004B1D425BAC007086E0 /* NSObject+Block.h in Headers */ = {isa = PBXBuildFile; fileRef = 383C00491D425BAC007086E0 /* NSObject+Block.h */; };
 		383C004C1D425BAC007086E0 /* NSObject+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 383C004A1D425BAC007086E0 /* NSObject+Block.m */; };
-		3843D7E81D44EEA400DF48A4 /* MRXC_IMAGE.db in Resources */ = {isa = PBXBuildFile; fileRef = 3843D7E71D44EEA400DF48A4 /* MRXC_IMAGE.db */; };
 		385F07431D412B6A00244CF0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 385F07421D412B6A00244CF0 /* libsqlite3.0.tbd */; };
 		385F07441D412B8000244CF0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 385F07421D412B6A00244CF0 /* libsqlite3.0.tbd */; };
 		385F07471D412BA200244CF0 /* MRXCDBHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 385F07451D412BA200244CF0 /* MRXCDBHelper.h */; };
@@ -24,18 +34,14 @@
 		38B11AAC1CA2E79C00AF8B98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B11AAB1CA2E79C00AF8B98 /* ViewController.m */; };
 		38B11AAF1CA2E79C00AF8B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B11AAD1CA2E79C00AF8B98 /* Main.storyboard */; };
 		38B11AB11CA2E79C00AF8B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B11AB01CA2E79C00AF8B98 /* Assets.xcassets */; };
-		38B11AB41CA2E79C00AF8B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B11AB21CA2E79C00AF8B98 /* LaunchScreen.storyboard */; };
 		38DA105E1D3FD07300172BEE /* MRXCValueObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DA105C1D3FD07300172BEE /* MRXCValueObject.h */; };
 		38DA105F1D3FD07300172BEE /* MRXCValueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DA105D1D3FD07300172BEE /* MRXCValueObject.m */; };
 		38DA10801D3FE2AB00172BEE /* MRXCHttpHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DA107E1D3FE2AA00172BEE /* MRXCHttpHelper.h */; };
 		38DA10811D3FE2AB00172BEE /* MRXCHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DA107F1D3FE2AB00172BEE /* MRXCHttpHelper.m */; };
-		38ED93071D3FC4A8007CB29C /* MRXCPanoramaLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93061D3FC4A8007CB29C /* MRXCPanoramaLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38ED930B1D3FC4A8007CB29C /* MRXCPanoramaLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */; };
 		38ED930C1D3FC4A8007CB29C /* MRXCPanoramaLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38ED93871D3FC50D007CB29C /* MRXCPanoramaTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED931A1D3FC50D007CB29C /* MRXCPanoramaTool.h */; };
 		38ED93881D3FC50D007CB29C /* MRXCPanoramaTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED931B1D3FC50D007CB29C /* MRXCPanoramaTool.m */; };
-		38ED938D1D3FC50D007CB29C /* GDPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93211D3FC50D007CB29C /* GDPanoSource.h */; };
-		38ED938E1D3FC50D007CB29C /* GDPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93221D3FC50D007CB29C /* GDPanoSource.m */; };
 		38ED938F1D3FC50D007CB29C /* LDPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93231D3FC50D007CB29C /* LDPanoSource.h */; };
 		38ED93901D3FC50D007CB29C /* LDPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93241D3FC50D007CB29C /* LDPanoSource.m */; };
 		38ED93911D3FC50D007CB29C /* MRXCPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93251D3FC50D007CB29C /* MRXCPanoSource.h */; };
@@ -57,7 +63,6 @@
 		38ED93A21D3FC50D007CB29C /* glues_quad.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93371D3FC50D007CB29C /* glues_quad.h */; };
 		38ED93A31D3FC50D007CB29C /* glues_registry.c in Sources */ = {isa = PBXBuildFile; fileRef = 38ED93381D3FC50D007CB29C /* glues_registry.c */; };
 		38ED93A41D3FC50D007CB29C /* glues_registry.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED93391D3FC50D007CB29C /* glues_registry.h */; };
-		38ED93B21D3FC50D007CB29C /* MRXCPanoramaLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED934A1D3FC50D007CB29C /* MRXCPanoramaLib.h */; };
 		38ED93B31D3FC50D007CB29C /* MrxcPanoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED934B1D3FC50D007CB29C /* MrxcPanoView.h */; };
 		38ED93B41D3FC50D007CB29C /* MrxcPanoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ED934C1D3FC50D007CB29C /* MrxcPanoView.m */; };
 		38ED93B51D3FC50D007CB29C /* MRXCPanoramaRoadLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED934E1D3FC50D007CB29C /* MRXCPanoramaRoadLink.h */; };
@@ -128,17 +133,31 @@
 
 /* Begin PBXFileReference section */
 		2E2C29108E9979F022BFC3AC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		380E6F771DA2946E009F8F38 /* MRXCTXPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCTXPanoSource.h; sourceTree = "<group>"; };
+		380E6F781DA2946E009F8F38 /* MRXCTXPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCTXPanoSource.m; sourceTree = "<group>"; };
+		380E6F7B1DA294C0009F8F38 /* GOOGLEPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOOGLEPanoSource.h; sourceTree = "<group>"; };
+		380E6F7C1DA294C0009F8F38 /* GOOGLEPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOOGLEPanoSource.m; sourceTree = "<group>"; };
+		380E6FB21DA29975009F8F38 /* MRXCAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCAboutVC.h; sourceTree = "<group>"; };
+		380E6FB31DA29975009F8F38 /* MRXCAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCAboutVC.m; sourceTree = "<group>"; };
+		380E6FB41DA29975009F8F38 /* MRXCAboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MRXCAboutVC.xib; sourceTree = "<group>"; };
+		380E6FBF1DA29F69009F8F38 /* BaseNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNC.h; sourceTree = "<group>"; };
+		380E6FC01DA29F69009F8F38 /* BaseNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNC.m; sourceTree = "<group>"; };
+		380E6FC11DA29F69009F8F38 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
+		380E6FC21DA29F69009F8F38 /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
+		380E6FC31DA29F69009F8F38 /* MRXCFuncDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCFuncDefine.h; sourceTree = "<group>"; };
+		380E6FC61DA29FB6009F8F38 /* Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toast.h; sourceTree = "<group>"; };
+		380E6FC71DA29FB6009F8F38 /* Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Toast.m; sourceTree = "<group>"; };
+		380E6FC91DA29FEF009F8F38 /* ShareColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareColor.h; sourceTree = "<group>"; };
+		380E6FCA1DA29FEF009F8F38 /* ShareColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareColor.m; sourceTree = "<group>"; };
+		380E6FCC1DA2A4BD009F8F38 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		383C00491D425BAC007086E0 /* NSObject+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Block.h"; sourceTree = "<group>"; };
 		383C004A1D425BAC007086E0 /* NSObject+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Block.m"; sourceTree = "<group>"; };
-		3843D7E71D44EEA400DF48A4 /* MRXC_IMAGE.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = MRXC_IMAGE.db; path = ../../../../../../Downloads/MRXC_IMAGE.db; sourceTree = "<group>"; };
 		385F07421D412B6A00244CF0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		385F07451D412BA200244CF0 /* MRXCDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCDBHelper.h; sourceTree = "<group>"; };
 		385F07461D412BA200244CF0 /* MRXCDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCDBHelper.m; sourceTree = "<group>"; };
 		385F07491D412BB200244CF0 /* LocalCubePanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalCubePanoSource.h; sourceTree = "<group>"; };
 		385F074A1D412BB200244CF0 /* LocalCubePanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalCubePanoSource.m; sourceTree = "<group>"; };
-		3869853F1CA773F90067D35E /* MRXCFuncDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCFuncDefine.h; sourceTree = "<group>"; };
 		3869854A1CA7797F0067D35E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		3869854B1CA7797F0067D35E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		388CB1931D40FBE600D27CD1 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		388CB1971D41024900D27CD1 /* FuncDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FuncDefine.h; sourceTree = "<group>"; };
 		38A784391CAC1C4E0058449B /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
@@ -150,7 +169,6 @@
 		38B11AAB1CA2E79C00AF8B98 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		38B11AAE1CA2E79C00AF8B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38B11AB01CA2E79C00AF8B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		38B11AB31CA2E79C00AF8B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38B11AB51CA2E79C00AF8B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38D1069A1D3D3C680095CE77 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		38D1069C1D3D3E230095CE77 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
@@ -159,12 +177,9 @@
 		38DA107E1D3FE2AA00172BEE /* MRXCHttpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCHttpHelper.h; sourceTree = "<group>"; };
 		38DA107F1D3FE2AB00172BEE /* MRXCHttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCHttpHelper.m; sourceTree = "<group>"; };
 		38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRXCPanoramaLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38ED93061D3FC4A8007CB29C /* MRXCPanoramaLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaLib.h; sourceTree = "<group>"; };
 		38ED93081D3FC4A8007CB29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38ED931A1D3FC50D007CB29C /* MRXCPanoramaTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaTool.h; sourceTree = "<group>"; };
 		38ED931B1D3FC50D007CB29C /* MRXCPanoramaTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCPanoramaTool.m; sourceTree = "<group>"; };
-		38ED93211D3FC50D007CB29C /* GDPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDPanoSource.h; sourceTree = "<group>"; };
-		38ED93221D3FC50D007CB29C /* GDPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDPanoSource.m; sourceTree = "<group>"; };
 		38ED93231D3FC50D007CB29C /* LDPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDPanoSource.h; sourceTree = "<group>"; };
 		38ED93241D3FC50D007CB29C /* LDPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDPanoSource.m; sourceTree = "<group>"; };
 		38ED93251D3FC50D007CB29C /* MRXCPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoSource.h; sourceTree = "<group>"; };
@@ -186,7 +201,6 @@
 		38ED93371D3FC50D007CB29C /* glues_quad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues_quad.h; sourceTree = "<group>"; };
 		38ED93381D3FC50D007CB29C /* glues_registry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glues_registry.c; sourceTree = "<group>"; };
 		38ED93391D3FC50D007CB29C /* glues_registry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues_registry.h; sourceTree = "<group>"; };
-		38ED934A1D3FC50D007CB29C /* MRXCPanoramaLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaLib.h; sourceTree = "<group>"; };
 		38ED934B1D3FC50D007CB29C /* MrxcPanoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MrxcPanoView.h; sourceTree = "<group>"; };
 		38ED934C1D3FC50D007CB29C /* MrxcPanoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MrxcPanoView.m; sourceTree = "<group>"; };
 		38ED934E1D3FC50D007CB29C /* MRXCPanoramaRoadLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaRoadLink.h; sourceTree = "<group>"; };
@@ -265,6 +279,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		380E6FBE1DA29F69009F8F38 /* BASE */ = {
+			isa = PBXGroup;
+			children = (
+				380E6FC91DA29FEF009F8F38 /* ShareColor.h */,
+				380E6FCA1DA29FEF009F8F38 /* ShareColor.m */,
+				380E6FC61DA29FB6009F8F38 /* Toast.h */,
+				380E6FC71DA29FB6009F8F38 /* Toast.m */,
+				380E6FBF1DA29F69009F8F38 /* BaseNC.h */,
+				380E6FC01DA29F69009F8F38 /* BaseNC.m */,
+				380E6FC11DA29F69009F8F38 /* BaseVC.h */,
+				380E6FC21DA29F69009F8F38 /* BaseVC.m */,
+				380E6FC31DA29F69009F8F38 /* MRXCFuncDefine.h */,
+			);
+			path = BASE;
+			sourceTree = "<group>";
+		};
 		38B11A981CA2E79C00AF8B98 = {
 			isa = PBXGroup;
 			children = (
@@ -288,17 +318,19 @@
 		38B11AA31CA2E79C00AF8B98 /* MRXCPanoDemo */ = {
 			isa = PBXGroup;
 			children = (
-				3843D7E71D44EEA400DF48A4 /* MRXC_IMAGE.db */,
-				3869853F1CA773F90067D35E /* MRXCFuncDefine.h */,
+				380E6FBE1DA29F69009F8F38 /* BASE */,
 				38B11AA71CA2E79C00AF8B98 /* AppDelegate.h */,
 				38B11AA81CA2E79C00AF8B98 /* AppDelegate.m */,
 				38B11AAA1CA2E79C00AF8B98 /* ViewController.h */,
 				38B11AAB1CA2E79C00AF8B98 /* ViewController.m */,
 				38B11AAD1CA2E79C00AF8B98 /* Main.storyboard */,
 				38B11AB01CA2E79C00AF8B98 /* Assets.xcassets */,
-				38B11AB21CA2E79C00AF8B98 /* LaunchScreen.storyboard */,
 				38B11AB51CA2E79C00AF8B98 /* Info.plist */,
 				38B11AA41CA2E79C00AF8B98 /* Supporting Files */,
+				380E6FB21DA29975009F8F38 /* MRXCAboutVC.h */,
+				380E6FB31DA29975009F8F38 /* MRXCAboutVC.m */,
+				380E6FB41DA29975009F8F38 /* MRXCAboutVC.xib */,
+				380E6FCC1DA2A4BD009F8F38 /* Launch Screen.storyboard */,
 			);
 			path = MRXCPanoDemo;
 			sourceTree = "<group>";
@@ -318,13 +350,11 @@
 				38ED93101D3FC50D007CB29C /* Communication */,
 				38ED93201D3FC50D007CB29C /* DataSource */,
 				38ED932D1D3FC50D007CB29C /* glues */,
-				38ED934A1D3FC50D007CB29C /* MRXCPanoramaLib.h */,
 				38ED934B1D3FC50D007CB29C /* MrxcPanoView.h */,
 				38ED934C1D3FC50D007CB29C /* MrxcPanoView.m */,
 				38ED934D1D3FC50D007CB29C /* PanoramaData */,
 				38ED93571D3FC50D007CB29C /* PanoramaLib */,
 				38ED937B1D3FC50D007CB29C /* Resource */,
-				38ED93061D3FC4A8007CB29C /* MRXCPanoramaLib.h */,
 				38ED93081D3FC4A8007CB29C /* Info.plist */,
 			);
 			path = MRXCPanoramaLib;
@@ -351,8 +381,6 @@
 			children = (
 				385F07491D412BB200244CF0 /* LocalCubePanoSource.h */,
 				385F074A1D412BB200244CF0 /* LocalCubePanoSource.m */,
-				38ED93211D3FC50D007CB29C /* GDPanoSource.h */,
-				38ED93221D3FC50D007CB29C /* GDPanoSource.m */,
 				38ED93231D3FC50D007CB29C /* LDPanoSource.h */,
 				38ED93241D3FC50D007CB29C /* LDPanoSource.m */,
 				38ED93251D3FC50D007CB29C /* MRXCPanoSource.h */,
@@ -362,6 +390,10 @@
 				38ED932A1D3FC50D007CB29C /* TXPanoSource.m */,
 				38ED932B1D3FC50D007CB29C /* ZHDPanoSource.h */,
 				38ED932C1D3FC50D007CB29C /* ZHDPanoSource.m */,
+				380E6F771DA2946E009F8F38 /* MRXCTXPanoSource.h */,
+				380E6F781DA2946E009F8F38 /* MRXCTXPanoSource.m */,
+				380E6F7B1DA294C0009F8F38 /* GOOGLEPanoSource.h */,
+				380E6F7C1DA294C0009F8F38 /* GOOGLEPanoSource.m */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -470,7 +502,6 @@
 				38ED93C01D3FC50D007CB29C /* PLCamera.h in Headers */,
 				38ED93A41D3FC50D007CB29C /* glues_registry.h in Headers */,
 				38ED93D71D3FC50D007CB29C /* PLTexture.h in Headers */,
-				38ED938D1D3FC50D007CB29C /* GDPanoSource.h in Headers */,
 				38ED93CC1D3FC50D007CB29C /* PLObject.h in Headers */,
 				38ED93D61D3FC50D007CB29C /* PLStructs.h in Headers */,
 				38ED939A1D3FC50D007CB29C /* glues.h in Headers */,
@@ -483,14 +514,14 @@
 				38DA10801D3FE2AB00172BEE /* MRXCHttpHelper.h in Headers */,
 				38ED93911D3FC50D007CB29C /* MRXCPanoSource.h in Headers */,
 				38ED93C51D3FC50D007CB29C /* PLCylinder.h in Headers */,
-				38ED93B21D3FC50D007CB29C /* MRXCPanoramaLib.h in Headers */,
 				38ED93C31D3FC50D007CB29C /* PLCube.h in Headers */,
 				38ED93A21D3FC50D007CB29C /* glues_quad.h in Headers */,
 				38ED93971D3FC50D007CB29C /* ZHDPanoSource.h in Headers */,
 				385F074B1D412BB200244CF0 /* LocalCubePanoSource.h in Headers */,
+				380E6F7D1DA294C0009F8F38 /* GOOGLEPanoSource.h in Headers */,
+				380E6F791DA2946E009F8F38 /* MRXCTXPanoSource.h in Headers */,
 				38ED93DD1D3FC50D007CB29C /* PLView.h in Headers */,
 				38ED93C71D3FC50D007CB29C /* PLEnums.h in Headers */,
-				38ED93071D3FC4A8007CB29C /* MRXCPanoramaLib.h in Headers */,
 				38ED93C21D3FC50D007CB29C /* PLConstants.h in Headers */,
 				38ED93951D3FC50D007CB29C /* TXPanoSource.h in Headers */,
 				383C004B1D425BAC007086E0 /* NSObject+Block.h in Headers */,
@@ -567,6 +598,7 @@
 				TargetAttributes = {
 					38B11AA01CA2E79C00AF8B98 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 7XV5NKQSCC;
 					};
 					38ED93031D3FC4A8007CB29C = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -596,11 +628,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38B11AB41CA2E79C00AF8B98 /* LaunchScreen.storyboard in Resources */,
 				388CB1961D40FF2100D27CD1 /* 箭头上.png in Resources */,
 				38B11AB11CA2E79C00AF8B98 /* Assets.xcassets in Resources */,
+				380E6FB61DA29975009F8F38 /* MRXCAboutVC.xib in Resources */,
+				380E6FCD1DA2A4BD009F8F38 /* Launch Screen.storyboard in Resources */,
 				38B11AAF1CA2E79C00AF8B98 /* Main.storyboard in Resources */,
-				3843D7E81D44EEA400DF48A4 /* MRXC_IMAGE.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,8 +700,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				38B11AAC1CA2E79C00AF8B98 /* ViewController.m in Sources */,
+				380E6FCB1DA29FEF009F8F38 /* ShareColor.m in Sources */,
 				38B11AA91CA2E79C00AF8B98 /* AppDelegate.m in Sources */,
+				380E6FB51DA29975009F8F38 /* MRXCAboutVC.m in Sources */,
+				380E6FC41DA29F69009F8F38 /* BaseNC.m in Sources */,
 				38B11AA61CA2E79C00AF8B98 /* main.m in Sources */,
+				380E6FC81DA29FB6009F8F38 /* Toast.m in Sources */,
+				380E6FC51DA29F69009F8F38 /* BaseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,6 +716,7 @@
 			files = (
 				38ED93D11D3FC50D007CB29C /* PLScene.m in Sources */,
 				38ED93CF1D3FC50D007CB29C /* PLRenderer.m in Sources */,
+				380E6F7A1DA2946E009F8F38 /* MRXCTXPanoSource.m in Sources */,
 				38ED93B61D3FC50D007CB29C /* MRXCPanoramaRoadLink.m in Sources */,
 				38ED93921D3FC50D007CB29C /* MRXCPanoSource.m in Sources */,
 				383C004C1D425BAC007086E0 /* NSObject+Block.m in Sources */,
@@ -695,12 +733,12 @@
 				38ED93881D3FC50D007CB29C /* MRXCPanoramaTool.m in Sources */,
 				38ED939F1D3FC50D007CB29C /* glues_project.c in Sources */,
 				38ED93E01D3FC50D007CB29C /* PLViewBase.m in Sources */,
+				380E6F7E1DA294C0009F8F38 /* GOOGLEPanoSource.m in Sources */,
 				38ED93B41D3FC50D007CB29C /* MrxcPanoView.m in Sources */,
 				385F07481D412BA200244CF0 /* MRXCDBHelper.m in Sources */,
 				38ED93DE1D3FC50D007CB29C /* PLView.m in Sources */,
 				38ED93DA1D3FC50D007CB29C /* PLUtils.m in Sources */,
 				38ED93DC1D3FC50D007CB29C /* PLView+Panorama.m in Sources */,
-				38ED938E1D3FC50D007CB29C /* GDPanoSource.m in Sources */,
 				38ED93A11D3FC50D007CB29C /* glues_quad.c in Sources */,
 				38ED93C11D3FC50D007CB29C /* PLCamera.m in Sources */,
 				38ED93C61D3FC50D007CB29C /* PLCylinder.m in Sources */,
@@ -733,15 +771,6 @@
 				3869854A1CA7797F0067D35E /* zh-Hans */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		38B11AB21CA2E79C00AF8B98 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				38B11AB31CA2E79C00AF8B98 /* Base */,
-				3869854B1CA7797F0067D35E /* zh-Hans */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -835,6 +864,7 @@
 			baseConfigurationReference = 845B58FDB374049AE9821604 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7XV5NKQSCC;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
@@ -912,7 +942,7 @@
 					"\"JavaScriptCore\"",
 					"-lxml2",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mrxc.MRXCPanoDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrxc.MRXCPano;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -922,6 +952,7 @@
 			baseConfigurationReference = DB30F33E8335E3307022014B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7XV5NKQSCC;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
@@ -999,7 +1030,7 @@
 					"\"JavaScriptCore\"",
 					"-lxml2",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mrxc.MRXCPanoDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrxc.MRXCPano;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1020,7 +1051,7 @@
 				);
 				INFOPLIST_FILE = MRXCPanoramaLib/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1115,7 +1146,7 @@
 				);
 				INFOPLIST_FILE = MRXCPanoramaLib/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

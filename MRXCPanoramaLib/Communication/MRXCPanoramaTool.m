@@ -125,7 +125,7 @@
     double dLon=endLon-startLon;
     double dLat=endLat-startLat;
     double dmin=0.00001;
-    if (abs(dLon)<dmin) {
+    if (fabs(dLon)<dmin) {
         if (dLat>dmin) {
             yaw=0;
         }else  if (dLat<dmin)
@@ -134,7 +134,7 @@
         }
         return yaw;
     }
-    if (abs(dLat)<dmin) {
+    if (fabs(dLat)<dmin) {
         if (dLon>dmin) {
             yaw=90;
         }else  if (dLon<dmin)

@@ -16,9 +16,12 @@
 #import "AFURLSessionManager.h"
 #import "MBProgressHUD.h"
 #import "MRXCPanoSource.h"
+#import "MRXCTXPanoSource.h"
+#import "ShareColor.h"
 @interface ViewController ()
 @property(nonatomic,strong)   MrxcPanoView*  mrxcPanoView;
-@property(nonatomic,weak) IBOutlet  UIButton*  btnMenu;
+@property(nonatomic,weak) IBOutlet  UIButton*  btnTypeMenu;
+@property(nonatomic,weak) IBOutlet  UIButton*  btnAboutMenu;
 
 @property(nonatomic,strong) NSString *localpath;
 @end
@@ -28,23 +31,48 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.btnAboutMenu.layer.cornerRadius=5;
+    self.btnTypeMenu.layer.cornerRadius=5;
     CGRect frame = CGRectMake(0, 0, UI_CURRENT_SCREEN_WIDTH, UI_CURRENT_SCREEN_HEIGHT);
     self.mrxcPanoView=[[MrxcPanoView alloc] initWithFrame:frame];
     [self.view addSubview:self.mrxcPanoView];
-    [self.view bringSubviewToFront:self.btnMenu];
+    [self.view bringSubviewToFront:self.btnTypeMenu];
+    [self.view bringSubviewToFront:self.btnAboutMenu];
     NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     self.localpath = [cachesPath stringByAppendingPathComponent:@"MRXC_IMAGE.db"];
     
     [self localTXPano];
 }
-
-- (IBAction)btnMenuClick:(UIButton*)sender
+-(Boolean)showLeftItem
+{
+    return false;
+}
+-(Boolean)showRightItem
+{
+    return false;
+}
+-(NSString*)navtitle
+{
+    return @"铭若星晨全景";
+}
+- (IBAction)btnTypeMenuClick:(UIButton*)sender
 {
     KxMenuItem *txMenuItem=[KxMenuItem menuItem:@"腾讯全景" image:nil target:self action:@selector(localTXPano)];
     KxMenuItem *localMenuItem=[KxMenuItem menuItem:@"本地全景" image:nil target:self action:@selector(localCubePano)];
     KxMenuItem *zhdMenuItem=[KxMenuItem menuItem:@"海达全景" image:nil target:self action:@selector(localZHDPano)];
     KxMenuItem *mrxcMenuItem=[KxMenuItem menuItem:@"铭若星晨全景" image:nil target:self action:@selector(localZHDPano)];
-    NSArray* menus=@[txMenuItem,localMenuItem,zhdMenuItem,mrxcMenuItem];
+    KxMenuItem *baiduMenuItem=[KxMenuItem menuItem:@"百度全景" image:nil target:self action:@selector(localBaiduPano)];
+    KxMenuItem *mrxcTXMenuItem=[KxMenuItem menuItem:@"铭若星晨腾讯全景" image:nil target:self action:@selector(localBaiduPano)];
+    KxMenuItem *googleMenuItem=[KxMenuItem menuItem:@"GOOGLE全景" image:nil target:self action:@selector(localBaiduPano)];
+    NSArray* menus=@[txMenuItem,localMenuItem,zhdMenuItem,mrxcMenuItem,baiduMenuItem,mrxcTXMenuItem,googleMenuItem];
+    [KxMenu setTintColor:[ShareColor mainColor]];
+    [KxMenu showMenuInView:self.view fromRect:sender.frame menuItems:menus];
+}
+- (IBAction)btnAboutMenuClick:(UIButton*)sender
+{
+    KxMenuItem *aboutMenuItem=[KxMenuItem menuItem:@"关于我们" image:nil target:self action:@selector(goAboutUS)];
+    KxMenuItem *contactMenuItem=[KxMenuItem menuItem:@"联系我们" image:nil target:self action:@selector(goContactUS)];
+    NSArray* menus=@[aboutMenuItem,contactMenuItem];
     [KxMenu showMenuInView:self.view fromRect:sender.frame menuItems:menus];
 }
 
@@ -52,8 +80,7 @@
 {
     MBProgressHUD* mbProgressHUD = [[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:mbProgressHUD];
-    mbProgressHUD.labelText = @"正在下载";
-    
+    mbProgressHUD.label.text = @"正在下载";
     //设置模式为进度框形的
     mbProgressHUD.mode = MBProgressHUDModeDeterminate;
     [mbProgressHUD showAnimated:YES];
@@ -85,6 +112,10 @@
     [downloadTask resume];
     
 }
+
+/**
+ 查看本地的六面体全景数据，没有数据从服务器上下载一份测试数据
+ */
 -(void)localCubePano
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -95,6 +126,9 @@
         [self downLocalPanoData];
     }
 }
+/**
+ 查看本地的全景数据
+ */
 -(void)localExistCubePano
 {
     NSString *panoramaID=@"000000001-01-20130702033058609";
@@ -103,7 +137,9 @@
     [self.mrxcPanoView initWithDataSource:localCubePanoSource];
     [self.mrxcPanoView locPanoByPanoID:panoramaID];
 }
-
+/**
+ 查看中海达的全景数据
+ */
 -(void)localZHDPano
 {
     NSString *panoramaID=@"B101-20150506000018";
@@ -112,6 +148,9 @@
     [self.mrxcPanoView initWithDataSource:zhdPanoSource];
     [self.mrxcPanoView locPanoByPanoID:panoramaID];
 }
+/**
+ 查看腾讯的全景数据
+ */
 -(void)localTXPano
 {
     NSString *panoramaID=@"10141217150929133814400";
@@ -119,6 +158,9 @@
     [self.mrxcPanoView initWithDataSource:txPanoSource];
     [self.mrxcPanoView locPanoByPanoID:panoramaID];
 }
+/**
+ 查看本地的铭若星晨的全景数据
+ */
 -(void)localMRXCPano
 {
     NSString *panoramaID=@"000000001-01-20130702033058609";
@@ -127,36 +169,47 @@
     [self.mrxcPanoView initWithDataSource:mrxcPanoSource];
     [self.mrxcPanoView locPanoByPanoID:panoramaID];
 }
-
-
-- (IBAction)segmentChanged:(UISegmentedControl*)segmentedControl {
-    switch (segmentedControl.selectedSegmentIndex) {
-        case 0:
-        {
-            [self localCubePano];
-        }
-            break;
-    case 1:
-        {
-            [self localZHDPano];
-        }
-        break;
-    case 2:
-        {
-            [self localTXPano];
-        }
-        break;
-    case 3:
-        {
-          
-        }
-        break;
-        default:
-            break;
-    }
+/**
+ 查看本地的百度的全景数据
+ */
+-(void)localBaiduPano
+{
+    
+}
+/**
+ 查看铭若星晨使用百度数据重新发布的全景数据
+ */
+-(void)localMRXCTXPano
+{
+    NSString *panoramaID=@"000000001-01-20130702033058609";
+    MRXCTXPanoSource * mrxcPanoSource=[[MRXCTXPanoSource alloc] init];
+    mrxcPanoSource.panoramaUrl=@"http://139.196.203.199:8084/geoserver/";
+    [self.mrxcPanoView initWithDataSource:mrxcPanoSource];
+    [self.mrxcPanoView locPanoByPanoID:panoramaID];
+}
+/**
+ 查看本地的GOOGLE的全景数据
+ */
+-(void)localGooglePano
+{
     
 }
 
+/**
+关于我们
+ */
+-(void)goAboutUS
+{
+    [self preToVC:@"MRXCAboutVC" WithParam:nil];
+    
+}
+/**
+ 联系我们
+ */
+-(void)goContactUS
+{
+    [self preToVC:@"MRXCAboutVC" WithParam:nil];
+}
 - (NSString*) copyDBData
 {
     NSString * docPath = [[NSBundle mainBundle] pathForResource:@"MRXC_IMAGE" ofType:@"db"];
@@ -165,6 +218,7 @@
     NSString* dataPath= [self copyMissingFile:docPath toPath:appLib];
     return dataPath;
 }
+
 - (NSString*)copyMissingFile:(NSString *)sourcePath toPath:(NSString *)toPath
 
 {

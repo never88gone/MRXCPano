@@ -20,9 +20,9 @@
 - (void)getPanoStationByLon:(float)lon Lat:(float)lat Tolerance:(float)tolerance CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
     NSString* sqlStr=nil;
-    WEAK_SELF;
+     
     [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
-        STRONG_SELF;
+         
         FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;
         MRXCPanoramaStation* panoramaStation=[self getPanoramaDataByResponse:returnResultSet];
         if (completionBlock) {
@@ -33,9 +33,9 @@
 - (void)getPanoStationByID:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
     NSString* sqlStr=[NSString stringWithFormat:@"select * from %@ where ImageName='%@'",@"MRXC_PANO_IMAGEINFO",panoID];
-    WEAK_SELF;
+     
     [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
-        STRONG_SELF;
+         
         FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;
         MRXCPanoramaStation* panoramaStation=[self getPanoramaDataByResponse:returnResultSet];
         if (completionBlock) {
@@ -47,9 +47,9 @@
 - (void)getPanoThumbnailByID:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
     NSString* sqlStr=[NSString stringWithFormat:@"select TileData from %@ where TileID='%@-2-%d-%d-%d-%d'",@"MRXC_PANO_TILEINFO",panoID,0,0,0,0];
-    WEAK_SELF;
+     
     [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
-        STRONG_SELF;
+         
         FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;
         NSData* returnData=nil;
         while ([returnResultSet next]) {
@@ -67,9 +67,9 @@
 - (void)getPanoTileByID:(NSString *)panoID level:(int)level face:(int)face row:(int)row col:(int)col CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
     NSString* sqlStr=[NSString stringWithFormat:@"select TileData from %@ where TileID='%@-2-%d-%d-%d-%d'",@"MRXC_PANO_TILEINFO",panoID,face,level,row,col];
-    WEAK_SELF;
+     
     [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
-        STRONG_SELF;
+         
         FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;
         NSData* returnData=nil;
         while ([returnResultSet next]) {
@@ -86,19 +86,19 @@
 - (void)getLinkStationS:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
     NSString* sqlStr=[NSString stringWithFormat:@"select * from %@ where ImageName='%@'",@"MRXC_PANO_IMAGEINFO",panoID];
-    WEAK_SELF;
+     
     [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
-        STRONG_SELF;
+         
         FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;
         MRXCPanoramaStation* panoramaStation=[self getPanoramaDataByResponse:returnResultSet];
-         WEAK_SELF;
+          
         [self getLinkStationSByStation:panoramaStation CompletionBlock:^(id aResponseObject, NSError *anError) {
-             STRONG_SELF;
+              
             NSMutableArray<MRXCPanoramaRoadLink*> * panoramaDataList =  [[NSMutableArray<MRXCPanoramaRoadLink*> alloc] init];
              [panoramaDataList addObjectsFromArray:[aResponseObject copy]];
-             WEAK_SELF;
+              
             [self getLinkStationLinkByStation:panoramaStation CompletionBlock:^(id aResponseObject, NSError *anError) {
-                STRONG_SELF;
+                 
                 [panoramaDataList addObjectsFromArray:[aResponseObject copy]];
                 if (completionBlock) {
                     completionBlock(panoramaDataList,anError);
@@ -112,7 +112,7 @@
 - (void)getLinkStationSByStation:(MRXCPanoramaStation *)panoramaStation CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
     NSString* sqlStr=[NSString stringWithFormat:@"select * from %@ where SegmentID='%@' and SegmentIndex= %d or SegmentIndex= %d ",@"MRXC_PANO_IMAGEINFO",panoramaStation.SegmentID,panoramaStation.SegmentIndex.intValue-1,panoramaStation.SegmentIndex.intValue+1];
-    WEAK_SELF;
+     
     [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
         NSMutableArray<MRXCPanoramaRoadLink*> * panoramaDataList = [[ NSMutableArray<MRXCPanoramaRoadLink*>  alloc] init];
         FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;
@@ -135,7 +135,7 @@
 - (void)getLinkStationLinkByStation:(MRXCPanoramaStation *)panoramaStation CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
     NSString* sqlStr=[NSString stringWithFormat:@"select * from %@ where SrcImageName='%@' or DstImageName= '%@'",@"MRXC_PANO_LINK", panoramaStation.ImageID,panoramaStation.ImageID];
-    WEAK_SELF;
+     
     [[MRXCDBHelper sharedInstance] executeQuery:sqlStr Callback:^(id aResponseObject, NSError *anError) {
         NSMutableArray<MRXCPanoramaRoadLink*> * panoramaDataList = [[ NSMutableArray<MRXCPanoramaRoadLink*>  alloc] init];
         FMResultSet* returnResultSet=(FMResultSet*)aResponseObject;

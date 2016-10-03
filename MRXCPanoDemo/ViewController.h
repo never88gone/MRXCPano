@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseVC.h"
 //#import "MrxcPanoView.h"
-@interface ViewController : UIViewController
+@interface ViewController : BaseVC
 
 
 @end

@@ -7,16 +7,23 @@
 //
 
 #import "AppDelegate.h"
-
+#import "BaseNC.h"
+#import "BaseVC.h"
 @interface AppDelegate ()
-
+@property (strong, nonatomic) BaseNC *mainViewController;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    BaseVC* baseVC=[mainStoryboard instantiateInitialViewController];
+    self.mainViewController =[[BaseNC alloc]initWithRootViewController:baseVC] ;
+    self.window.rootViewController = self.mainViewController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

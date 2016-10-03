@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A254g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,42 +16,47 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="deP-FS-CSG">
-                                <rect key="frame" x="0.0" y="20" width="320" height="29"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDg-Tc-eE0">
+                                <color key="backgroundColor" red="0.16276091337203979" green="0.53212893009185791" blue="0.79387873411178589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="85K-9M-o14"/>
+                                    <constraint firstAttribute="height" constant="30" id="2QV-WL-SfR"/>
+                                    <constraint firstAttribute="width" constant="80" id="DBG-Jx-Hve"/>
                                 </constraints>
-                                <segments>
-                                    <segment title="本地街景"/>
-                                    <segment title="海达街景"/>
-                                    <segment title="腾讯街景"/>
-                                    <segment title="铭若星晨街景"/>
-                                </segments>
+                                <state key="normal" title="全景类型">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="s40-l6-VdE"/>
+                                    <action selector="btnTypeMenuClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iD2-8N-ULV"/>
                                 </connections>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDg-Tc-eE0">
-                                <rect key="frame" x="15" y="56" width="46" height="30"/>
-                                <state key="normal" title="菜单"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYn-1t-Mj1">
+                                <color key="backgroundColor" red="0.16276091337203979" green="0.53212893009185791" blue="0.79387873411178589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="AL1-k1-SY4"/>
+                                    <constraint firstAttribute="height" constant="30" id="HzM-2M-71J"/>
+                                </constraints>
+                                <state key="normal" title="联系我们">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="btnMenuClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="msv-IX-zQS"/>
+                                    <action selector="btnAboutMenuClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="prE-aw-786"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="deP-FS-CSG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0a0-pR-jDL"/>
-                            <constraint firstItem="deP-FS-CSG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LNw-fz-0y9"/>
-                            <constraint firstAttribute="trailing" secondItem="deP-FS-CSG" secondAttribute="trailing" id="hbk-cN-TPa"/>
+                            <constraint firstItem="KDg-Tc-eE0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="7DB-qQ-dYD"/>
+                            <constraint firstItem="uYn-1t-Mj1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="PLU-EN-uPB"/>
+                            <constraint firstItem="KDg-Tc-eE0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="uHl-qN-WrZ"/>
+                            <constraint firstItem="uYn-1t-Mj1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xYO-DN-sxS"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="btnMenu" destination="KDg-Tc-eE0" id="PUw-mP-FxL"/>
+                        <outlet property="btnAboutMenu" destination="uYn-1t-Mj1" id="f9C-K9-ceU"/>
+                        <outlet property="btnTypeMenu" destination="KDg-Tc-eE0" id="jcY-87-UgU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
