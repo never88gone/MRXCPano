@@ -864,6 +864,7 @@
 			baseConfigurationReference = 845B58FDB374049AE9821604 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7XV5NKQSCC;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
@@ -952,6 +953,7 @@
 			baseConfigurationReference = DB30F33E8335E3307022014B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7XV5NKQSCC;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (

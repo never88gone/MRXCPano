@@ -33,7 +33,7 @@
     [super viewDidLoad];
     self.btnAboutMenu.layer.cornerRadius=5;
     self.btnTypeMenu.layer.cornerRadius=5;
-    CGRect frame = CGRectMake(0, 0, UI_CURRENT_SCREEN_WIDTH, UI_CURRENT_SCREEN_HEIGHT);
+    CGRect frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     self.mrxcPanoView=[[MrxcPanoView alloc] initWithFrame:frame];
     [self.view addSubview:self.mrxcPanoView];
     [self.view bringSubviewToFront:self.btnTypeMenu];
@@ -201,7 +201,6 @@
 -(void)goAboutUS
 {
     [self preToVC:@"MRXCAboutVC" WithParam:nil];
-    
 }
 /**
  联系我们
