@@ -41,7 +41,7 @@
     NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     self.localpath = [cachesPath stringByAppendingPathComponent:@"MRXC_IMAGE.db"];
     
-    [self localTXPano];
+    [self  locationTXPano];
 }
 -(Boolean)showLeftItem
 {
@@ -57,14 +57,14 @@
 }
 - (IBAction)btnTypeMenuClick:(UIButton*)sender
 {
-    KxMenuItem *txMenuItem=[KxMenuItem menuItem:@"腾讯全景" image:nil target:self action:@selector(localTXPano)];
-    KxMenuItem *localMenuItem=[KxMenuItem menuItem:@"本地全景" image:nil target:self action:@selector(localCubePano)];
-    KxMenuItem *zhdMenuItem=[KxMenuItem menuItem:@"海达全景" image:nil target:self action:@selector(localZHDPano)];
-    KxMenuItem *mrxcMenuItem=[KxMenuItem menuItem:@"铭若星晨全景" image:nil target:self action:@selector(localZHDPano)];
-    KxMenuItem *baiduMenuItem=[KxMenuItem menuItem:@"百度全景" image:nil target:self action:@selector(localBaiduPano)];
-    KxMenuItem *mrxcTXMenuItem=[KxMenuItem menuItem:@"铭若星晨腾讯全景" image:nil target:self action:@selector(localBaiduPano)];
-    KxMenuItem *googleMenuItem=[KxMenuItem menuItem:@"GOOGLE全景" image:nil target:self action:@selector(localBaiduPano)];
-    NSArray* menus=@[txMenuItem,localMenuItem,zhdMenuItem,mrxcMenuItem,baiduMenuItem,mrxcTXMenuItem,googleMenuItem];
+    KxMenuItem *txMenuItem=[KxMenuItem menuItem:@"腾讯全景" image:nil target:self action:@selector( locationTXPano)];
+    KxMenuItem * locationMenuItem=[KxMenuItem menuItem:@"本地全景" image:nil target:self action:@selector( locationCubePano)];
+    KxMenuItem *zhdMenuItem=[KxMenuItem menuItem:@"海达全景" image:nil target:self action:@selector( locationZHDPano)];
+    KxMenuItem *mrxcMenuItem=[KxMenuItem menuItem:@"铭若星晨全景" image:nil target:self action:@selector( locationZHDPano)];
+    KxMenuItem *baiduMenuItem=[KxMenuItem menuItem:@"百度全景" image:nil target:self action:@selector( locationBaiduPano)];
+    KxMenuItem *mrxcTXMenuItem=[KxMenuItem menuItem:@"铭若星晨腾讯全景" image:nil target:self action:@selector( locationBaiduPano)];
+    KxMenuItem *googleMenuItem=[KxMenuItem menuItem:@"GOOGLE全景" image:nil target:self action:@selector( locationBaiduPano)];
+    NSArray* menus=@[txMenuItem, locationMenuItem,zhdMenuItem,mrxcMenuItem,baiduMenuItem,mrxcTXMenuItem,googleMenuItem];
     [KxMenu setTintColor:[ShareColor mainColor]];
     [KxMenu showMenuInView:self.view fromRect:sender.frame menuItems:menus];
 }
@@ -107,7 +107,7 @@
         
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         [mbProgressHUD hideAnimated:true];
-         [self localExistCubePano];
+         [self  locationExistCubePano];
     }];
     [downloadTask resume];
     
@@ -116,11 +116,11 @@
 /**
  查看本地的六面体全景数据，没有数据从服务器上下载一份测试数据
  */
--(void)localCubePano
+-(void) locationCubePano
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:self.localpath]) {
-        [self localExistCubePano];
+        [self  locationExistCubePano];
     }else
     {
         [self downLocalPanoData];
@@ -129,7 +129,7 @@
 /**
  查看本地的全景数据
  */
--(void)localExistCubePano
+-(void) locationExistCubePano
 {
     NSString *panoramaID=@"000000001-01-20130702033058609";
     LocalCubePanoSource* localCubePanoSource=[[LocalCubePanoSource alloc] init];
@@ -140,7 +140,7 @@
 /**
  查看中海达的全景数据
  */
--(void)localZHDPano
+-(void) locationZHDPano
 {
     NSString *panoramaID=@"B101-20150506000018";
     ZHDPanoSource * zhdPanoSource=[[ZHDPanoSource alloc] init];
@@ -151,7 +151,7 @@
 /**
  查看腾讯的全景数据
  */
--(void)localTXPano
+-(void) locationTXPano
 {
     NSString *panoramaID=@"10141217150929133814400";
     TXPanoSource* txPanoSource=[[TXPanoSource alloc] init];
@@ -161,7 +161,7 @@
 /**
  查看本地的铭若星晨的全景数据
  */
--(void)localMRXCPano
+-(void) locationMRXCPano
 {
     NSString *panoramaID=@"000000001-01-20130702033058609";
     MRXCPanoSource * mrxcPanoSource=[[MRXCPanoSource alloc] init];
@@ -172,14 +172,14 @@
 /**
  查看本地的百度的全景数据
  */
--(void)localBaiduPano
+-(void) locationBaiduPano
 {
     
 }
 /**
  查看铭若星晨使用百度数据重新发布的全景数据
  */
--(void)localMRXCTXPano
+-(void) locationMRXCTXPano
 {
     NSString *panoramaID=@"000000001-01-20130702033058609";
     MRXCTXPanoSource * mrxcPanoSource=[[MRXCTXPanoSource alloc] init];
@@ -190,7 +190,7 @@
 /**
  查看本地的GOOGLE的全景数据
  */
--(void)localGooglePano
+-(void) locationGooglePano
 {
     
 }

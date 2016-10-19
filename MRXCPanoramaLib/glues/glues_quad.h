@@ -103,6 +103,9 @@ GLAPI void APIENTRY gluPartialDisk(GLUquadric* qobj, GLfloat innerRadius,
                                    GLfloat outerRadius, GLint slices,
                                    GLint loops, GLfloat startAngle,
                                    GLfloat sweepAngle);
+       
+GLAPI void APIENTRY gluSphereCurve(GLUquadric* qobj, GLfloat radius,GLfloat left,GLfloat right,GLfloat top,GLfloat bottom, GLint slices, GLint stacks);
+       
 GLAPI void APIENTRY gluSphere(GLUquadric* qobj, GLfloat radius, GLint slices,
                               GLint stacks);
 

@@ -68,6 +68,21 @@
             }
             [self requestPanoTileByID:i];
         }
+    }else
+    {
+        for (int row=0; row<=4; row++) {
+            for (int col=0; col<=8; col++) {
+                [self.dataSource getPanoTileByID:self.panoramaID level:0 face:0 row:row col:col CompletionBlock:^(id aResponseObject, NSError *anError) {
+                    if (!anError) {
+                        NSData* data =(NSData*)aResponseObject;
+                        PLTexture *texture = [PLTexture textureWithImage:[UIImage imageWithData:data]];
+                        [texture setTexturePlace:0 row:row col:col face:0];
+                        [self.plView addTexture:texture];
+                        [self.plView drawView];
+                    }
+                }];
+            }
+        }
     }
 }
 -(void) getRoadLinkStationS
@@ -191,6 +206,13 @@
 
             }else if ([self.dataSource getPanoramaType]==PanoramaEnumPhere)
             {
+                PLSphere *phere = (PLSphere *)self.plView.sceneElement;
+                if(self.ptype == ParnoramaTemp){
+                    phere.panoYaw = [self.panoramaData.Yaw doubleValue] + 90.0f;
+                }
+                else{
+                    phere.panoYaw = [self.panoramaData.Yaw doubleValue] + self.handPanoYaw;
+                }
                 texture = [PLTexture textureWithImage:image];
                 [self.plView addTexture:texture];
             }
@@ -265,7 +287,6 @@
                    [self.plView drawView];
                }
             }];
-
         }
     }
 }
