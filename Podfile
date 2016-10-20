@@ -4,6 +4,7 @@
 # use_frameworks!
 
 platform:ios ,’8.0’
+xcodeproj 'MRXCPanoDemo.xcodeproj'
 
 pod 'AFNetworking'#,'3.1.0'
 pod 'JSONModel'#,'1.2.0'
@@ -34,9 +35,8 @@ pod 'FMDB'
 
 target 'MRXCPanoDemo' do
 
-end
 
-target 'MRXCPanoramaLib' do
 
 end
+
 

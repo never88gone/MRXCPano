@@ -59,11 +59,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MRXCPanoramaLib.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -143,11 +138,6 @@
 			<true/>
 		</dict>
 		<key>E421B7471C420C1C227C435C434E45A9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E74E5C9FFB4602CF2A7B9929C4218DD3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

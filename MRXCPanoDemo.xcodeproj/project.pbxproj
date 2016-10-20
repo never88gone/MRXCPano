@@ -21,6 +21,9 @@
 		380E6FCD1DA2A4BD009F8F38 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380E6FCC1DA2A4BD009F8F38 /* Launch Screen.storyboard */; };
 		383C004B1D425BAC007086E0 /* NSObject+Block.h in Headers */ = {isa = PBXBuildFile; fileRef = 383C00491D425BAC007086E0 /* NSObject+Block.h */; };
 		383C004C1D425BAC007086E0 /* NSObject+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 383C004A1D425BAC007086E0 /* NSObject+Block.m */; };
+		383FF6B71DB9170400D7277D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383FF6B61DB9170400D7277D /* SystemConfiguration.framework */; };
+		383FF6B91DB9170E00D7277D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383FF6B81DB9170E00D7277D /* MobileCoreServices.framework */; };
+		383FF6BC1DB91D5400D7277D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383FF6BB1DB91D5400D7277D /* Security.framework */; };
 		385F07431D412B6A00244CF0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 385F07421D412B6A00244CF0 /* libsqlite3.0.tbd */; };
 		385F07441D412B8000244CF0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 385F07421D412B6A00244CF0 /* libsqlite3.0.tbd */; };
 		385F07471D412BA200244CF0 /* MRXCDBHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 385F07451D412BA200244CF0 /* MRXCDBHelper.h */; };
@@ -152,6 +155,10 @@
 		380E6FCC1DA2A4BD009F8F38 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		383C00491D425BAC007086E0 /* NSObject+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Block.h"; sourceTree = "<group>"; };
 		383C004A1D425BAC007086E0 /* NSObject+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Block.m"; sourceTree = "<group>"; };
+		383FF6B61DB9170400D7277D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		383FF6B81DB9170E00D7277D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		383FF6BA1DB9174700D7277D /* MRXCPanoDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRXCPanoDemo.pch; sourceTree = "<group>"; };
+		383FF6BB1DB91D5400D7277D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		385F07421D412B6A00244CF0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		385F07451D412BA200244CF0 /* MRXCDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCDBHelper.h; sourceTree = "<group>"; };
 		385F07461D412BA200244CF0 /* MRXCDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCDBHelper.m; sourceTree = "<group>"; };
@@ -252,6 +259,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383FF6BC1DB91D5400D7277D /* Security.framework in Frameworks */,
+				383FF6B91DB9170E00D7277D /* MobileCoreServices.framework in Frameworks */,
+				383FF6B71DB9170400D7277D /* SystemConfiguration.framework in Frameworks */,
 				385F07431D412B6A00244CF0 /* libsqlite3.0.tbd in Frameworks */,
 				38ED930B1D3FC4A8007CB29C /* MRXCPanoramaLib.framework in Frameworks */,
 				00494CF9FE53135438061042 /* libPods.a in Frameworks */,
@@ -483,11 +493,15 @@
 		A7F14A982A2B19E31E775635 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				383FF6BB1DB91D5400D7277D /* Security.framework */,
+				383FF6B81DB9170E00D7277D /* MobileCoreServices.framework */,
+				383FF6B61DB9170400D7277D /* SystemConfiguration.framework */,
 				385F07421D412B6A00244CF0 /* libsqlite3.0.tbd */,
 				388CB1931D40FBE600D27CD1 /* libPods.a */,
 				38D1069C1D3D3E230095CE77 /* libPods.a */,
 				38D1069A1D3D3C680095CE77 /* libxml2.2.tbd */,
 				2E2C29108E9979F022BFC3AC /* libPods.a */,
+				383FF6BA1DB9174700D7277D /* MRXCPanoDemo.pch */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -867,6 +881,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7XV5NKQSCC;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PREFIX_HEADER = MRXCPanoDemo.pch;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"\"$(SRCROOT)/Pods/Headers\"/**",
@@ -875,10 +890,7 @@
 				INFOPLIST_FILE = MRXCPanoDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/**",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -906,10 +918,13 @@
 					"\"${PODS_ROOT}/Headers/Public/YiRefresh\"",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
+					"-l\"AFNetworking\"",
 					"-l\"GDataXML-HTML\"",
 					"-l\"JSONKit\"",
 					"-l\"JSONModel\"",
@@ -956,6 +971,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7XV5NKQSCC;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PREFIX_HEADER = MRXCPanoDemo.pch;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"\"$(SRCROOT)/Pods/Headers\"/**",
@@ -964,10 +980,7 @@
 				INFOPLIST_FILE = MRXCPanoDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/**",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -995,10 +1008,13 @@
 					"\"${PODS_ROOT}/Headers/Public/YiRefresh\"",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
+					"-l\"AFNetworking\"",
 					"-l\"GDataXML-HTML\"",
 					"-l\"JSONKit\"",
 					"-l\"JSONModel\"",
@@ -1086,10 +1102,13 @@
 					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/YiRefresh\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
+					"-l\"AFNetworking\"",
 					"-l\"GDataXML-HTML\"",
 					"-l\"JSONKit\"",
 					"-l\"JSONModel\"",
@@ -1181,10 +1200,13 @@
 					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/YiRefresh\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
+					"-l\"AFNetworking\"",
 					"-l\"GDataXML-HTML\"",
 					"-l\"JSONKit\"",
 					"-l\"JSONModel\"",

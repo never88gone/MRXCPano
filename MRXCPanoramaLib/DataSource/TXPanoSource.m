@@ -52,7 +52,7 @@
 }
 - (void)getPanoThumbnailByID:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
-    NSString *baseURL=[NSString stringWithFormat:@"%@/%@?svid=%@&x=0&y=0&level=0&size=0", self.imageURlStr,@"thumb", [MRXCPanoramaTool achieveURLCodeString:panoID]];
+    NSString *baseURL=[NSString stringWithFormat:@"%@/%@?svid=%@&x=0&y=0&level=0&size=0&mtype=mobile", self.imageURlStr,@"thumb", [MRXCPanoramaTool achieveURLCodeString:panoID]];
     [[MRXCHttpHelper sharedInstance] GetResponseDataByUrl:baseURL Callback:^(id aResponseObject, NSError *anError) {
         NSData* returnData=(NSData*)aResponseObject;
         if (completionBlock) {

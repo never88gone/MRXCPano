@@ -35,8 +35,8 @@
 - (void)initializeValues
 {
 	[super initializeValues];
-    self.m_maxRow = 5;
-    self.m_maxCol = 10;
+    self.m_maxRow = 4;
+    self.m_maxCol = 8;
     self.m_Radius =1.0f;
     self.quadratic = gluNewQuadric();
     gluQuadricNormals(self.quadratic, GLU_SMOOTH);
@@ -61,7 +61,7 @@
 	glEnable(GL_TEXTURE_2D);
     
 	glBindTexture(GL_TEXTURE_2D, ((PLTexture *)[textures objectAtIndex:0]).textureId);
-    gluSphere(quadratic, 1.0f, divs, divs);
+    gluSphere(quadratic, (GLfloat)self.m_Radius, divs, divs);
     
 	for(PLTexture *texture in textures){
         glBindTexture(GL_TEXTURE_2D,texture.textureId);

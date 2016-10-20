@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D1A907B69C6D56AF3159ED25'
+               BlueprintIdentifier = 'B01EE2BDD5A48D6FFEC377BA'
                BlueprintName = 'YiRefresh'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libYiRefresh.a'>

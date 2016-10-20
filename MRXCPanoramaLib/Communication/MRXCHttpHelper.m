@@ -9,35 +9,39 @@
 #import "MRXCHttpHelper.h"
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
+#import "AFHTTPSessionManager.h"
 
 #import "JSONKit.h"
 
+@interface MRXCHttpHelper()
+@property(nonatomic,strong) AFHTTPSessionManager* httpSessionManager;
+@end
 
 @implementation MRXCHttpHelper
 DEF_SINGLETON(MRXCHttpHelper)
+-(AFHTTPSessionManager*)httpSessionManager
+{
+    if (!_httpSessionManager) {
+        _httpSessionManager=[AFHTTPSessionManager manager];
+    }
+    return _httpSessionManager;
+}
 -(void)GetResponseDataByUrl:(NSString*)urlStr Callback:(MRXCCompletionBlock)callback;
 {
-    //通过url创建网络请求
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue new] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (connectionError) {
-                callback(nil,connectionError);
-            }else
-            {
-                NSError* error;
-                if (data==nil) {
-                    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:@"data is nil"                                                                      forKey:NSLocalizedDescriptionKey];
-                    error=[NSError errorWithDomain:CustomErrorDomain code:-1 userInfo:userInfo];
-                }
-                callback(data,error);
-            }
-        });
+    NSURL *URL = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    self.httpSessionManager.responseSerializer=[AFHTTPResponseSerializer new];;
+    NSURLSessionDataTask *dataTask = [self.httpSessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            callback(nil,error);
+        } else {
+            callback(responseObject,nil);
+        }
     }];
+    [dataTask resume];
 }
 -(void)PostResponseDataByUrl:(NSString*)urlStr Params:(NSDictionary*)params Callback:(MRXCCompletionBlock)callback
 {
-    NSLog(@"%@",urlStr);
     //通过url创建网络请求
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
     //设置请求为post的
