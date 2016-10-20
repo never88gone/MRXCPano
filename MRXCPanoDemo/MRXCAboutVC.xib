@@ -8,12 +8,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MRXCAboutVC">
             <connections>
-                <outlet property="view" destination="cg9-LT-rnI" id="vfv-tV-dSU"/>
+                <outlet property="view" destination="cg9-LT-rnI" id="UnD-K5-yha"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="cg9-LT-rnI">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="AppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qh7-Is-oJ8">
@@ -68,6 +68,7 @@
                 <constraint firstItem="qh7-Is-oJ8" firstAttribute="centerY" secondItem="cg9-LT-rnI" secondAttribute="centerY" constant="-60" id="vrA-ny-I5T"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
+            <point key="canvasLocation" x="-242" y="144"/>
         </view>
     </objects>
     <resources>

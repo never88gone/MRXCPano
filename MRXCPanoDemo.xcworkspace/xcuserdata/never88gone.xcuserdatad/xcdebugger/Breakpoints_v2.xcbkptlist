@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MRXCPanoramaLib/DataSource/TXPanoSource.m"
-            timestampString = "498671467.483074"
+            filePath = "MRXCPanoDemo/ViewController.m"
+            timestampString = "498675304.52357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "-getPanoTileByID:level:face:row:col:CompletionBlock:"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "-goContactUS"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MRXCPanoramaLib/DataSource/TXPanoSource.m"
-            timestampString = "498671482.446576"
+            filePath = "MRXCPanoDemo/MRXCAboutVC.m"
+            timestampString = "498675352.44471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "-getPanoThumbnailByID:CompletionBlock:"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,29 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MRXCPanoramaLib/DataSource/TXPanoSource.m"
-            timestampString = "498671486.190512"
+            filePath = "MRXCPanoDemo/MRXCAboutVC.m"
+            timestampString = "498675610.247564"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "-getPanoStationByID:CompletionBlock:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MRXCPanoramaLib/DataSource/TXPanoSource.m"
-            timestampString = "498671490.263993"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "-getPanoStationByID:CompletionBlock:"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "-navtitle"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
