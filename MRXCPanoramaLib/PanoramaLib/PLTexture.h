@@ -25,7 +25,6 @@
 
 @property (nonatomic, readonly) GLuint textureId;
 @property (nonatomic, readonly) int width, height;
-@property (nonatomic, readonly)	void* pixels;
 @property (assign, nonatomic) int row;
 @property (assign, nonatomic) int col;
 @property (assign, nonatomic) int level;
