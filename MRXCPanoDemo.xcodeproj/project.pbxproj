@@ -30,6 +30,8 @@
 		385F07481D412BA200244CF0 /* MRXCDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 385F07461D412BA200244CF0 /* MRXCDBHelper.m */; };
 		385F074B1D412BB200244CF0 /* LocalCubePanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 385F07491D412BB200244CF0 /* LocalCubePanoSource.h */; };
 		385F074C1D412BB200244CF0 /* LocalCubePanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 385F074A1D412BB200244CF0 /* LocalCubePanoSource.m */; };
+		386D6FF61DBA408E00575DA6 /* BDPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 386D6FF41DBA408E00575DA6 /* BDPanoSource.h */; };
+		386D6FF71DBA408E00575DA6 /* BDPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6FF51DBA408E00575DA6 /* BDPanoSource.m */; };
 		388CB1941D40FBE600D27CD1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 388CB1931D40FBE600D27CD1 /* libPods.a */; };
 		388CB1961D40FF2100D27CD1 /* 箭头上.png in Resources */ = {isa = PBXBuildFile; fileRef = 38ED937C1D3FC50D007CB29C /* 箭头上.png */; };
 		38B11AA61CA2E79C00AF8B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B11AA51CA2E79C00AF8B98 /* main.m */; };
@@ -165,6 +167,8 @@
 		385F07491D412BB200244CF0 /* LocalCubePanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalCubePanoSource.h; sourceTree = "<group>"; };
 		385F074A1D412BB200244CF0 /* LocalCubePanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalCubePanoSource.m; sourceTree = "<group>"; };
 		3869854A1CA7797F0067D35E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		386D6FF41DBA408E00575DA6 /* BDPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPanoSource.h; sourceTree = "<group>"; };
+		386D6FF51DBA408E00575DA6 /* BDPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDPanoSource.m; sourceTree = "<group>"; };
 		388CB1931D40FBE600D27CD1 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		388CB1971D41024900D27CD1 /* FuncDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FuncDefine.h; sourceTree = "<group>"; };
 		38A784391CAC1C4E0058449B /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
@@ -404,6 +408,8 @@
 				380E6F781DA2946E009F8F38 /* MRXCTXPanoSource.m */,
 				380E6F7B1DA294C0009F8F38 /* GOOGLEPanoSource.h */,
 				380E6F7C1DA294C0009F8F38 /* GOOGLEPanoSource.m */,
+				386D6FF41DBA408E00575DA6 /* BDPanoSource.h */,
+				386D6FF51DBA408E00575DA6 /* BDPanoSource.m */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -542,6 +548,7 @@
 				38ED93DF1D3FC50D007CB29C /* PLViewBase.h in Headers */,
 				38ED93D91D3FC50D007CB29C /* PLUtils.h in Headers */,
 				38ED93871D3FC50D007CB29C /* MRXCPanoramaTool.h in Headers */,
+				386D6FF61DBA408E00575DA6 /* BDPanoSource.h in Headers */,
 				38ED93DB1D3FC50D007CB29C /* PLView+Panorama.h in Headers */,
 				38ED939C1D3FC50D007CB29C /* glues_error.h in Headers */,
 				38ED93D01D3FC50D007CB29C /* PLScene.h in Headers */,
@@ -730,6 +737,7 @@
 			files = (
 				38ED93D11D3FC50D007CB29C /* PLScene.m in Sources */,
 				38ED93CF1D3FC50D007CB29C /* PLRenderer.m in Sources */,
+				386D6FF71DBA408E00575DA6 /* BDPanoSource.m in Sources */,
 				380E6F7A1DA2946E009F8F38 /* MRXCTXPanoSource.m in Sources */,
 				38ED93B61D3FC50D007CB29C /* MRXCPanoramaRoadLink.m in Sources */,
 				38ED93921D3FC50D007CB29C /* MRXCPanoSource.m in Sources */,

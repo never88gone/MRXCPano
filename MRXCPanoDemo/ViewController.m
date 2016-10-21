@@ -17,6 +17,7 @@
 #import "MBProgressHUD.h"
 #import "MRXCPanoSource.h"
 #import "MRXCTXPanoSource.h"
+#import "BDPanoSource.h"
 #import "ShareColor.h"
 @interface ViewController ()
 @property(nonatomic,strong)   MrxcPanoView*  mrxcPanoView;
@@ -174,7 +175,10 @@
  */
 -(void) locationBaiduPano
 {
-    
+    NSString *panoramaID=@"02000200001407221216223508C";
+    BDPanoSource * mrxcPanoSource=[[BDPanoSource alloc] init];
+    [self.mrxcPanoView initWithDataSource:mrxcPanoSource];
+    [self.mrxcPanoView locPanoByPanoID:panoramaID];
 }
 /**
  查看铭若星晨使用百度数据重新发布的全景数据
