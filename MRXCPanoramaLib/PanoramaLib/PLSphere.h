@@ -14,6 +14,7 @@
 }
 
 @property(nonatomic) GLint divs;
+@property(nonatomic) float panoYaw;
 
 + (id)sphere;
 + (id)sphereWithTexture:(PLTexture *)texture;

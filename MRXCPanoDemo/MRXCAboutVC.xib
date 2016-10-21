@@ -8,12 +8,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MRXCAboutVC">
             <connections>
-                <outlet property="view" destination="cg9-LT-rnI" id="vfv-tV-dSU"/>
+                <outlet property="view" destination="cg9-LT-rnI" id="W9E-Hb-Ioa"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="cg9-LT-rnI">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="AppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qh7-Is-oJ8">
@@ -62,12 +62,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Js7-gO-5pd" secondAttribute="bottom" constant="103.5" id="2uW-pB-sgX"/>
-                <constraint firstItem="qh7-Is-oJ8" firstAttribute="top" secondItem="cg9-LT-rnI" secondAttribute="top" constant="150" id="5d3-2E-Lqo"/>
-                <constraint firstAttribute="centerX" secondItem="qh7-Is-oJ8" secondAttribute="centerX" constant="5.5" id="hZ4-Le-KFq"/>
-                <constraint firstAttribute="centerX" secondItem="Js7-gO-5pd" secondAttribute="centerX" constant="-0.5" id="zJr-5P-naA"/>
+                <constraint firstItem="qh7-Is-oJ8" firstAttribute="centerX" secondItem="cg9-LT-rnI" secondAttribute="centerX" id="2ak-oc-NPf"/>
+                <constraint firstItem="Js7-gO-5pd" firstAttribute="top" secondItem="qh7-Is-oJ8" secondAttribute="bottom" constant="38" id="40f-Oe-FPx"/>
+                <constraint firstItem="Js7-gO-5pd" firstAttribute="centerX" secondItem="cg9-LT-rnI" secondAttribute="centerX" id="Rxy-dg-Eua"/>
+                <constraint firstItem="qh7-Is-oJ8" firstAttribute="centerY" secondItem="cg9-LT-rnI" secondAttribute="centerY" constant="-60" id="vrA-ny-I5T"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
+            <point key="canvasLocation" x="-242" y="144"/>
         </view>
     </objects>
     <resources>

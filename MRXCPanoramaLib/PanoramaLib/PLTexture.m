@@ -22,7 +22,6 @@
 @synthesize col=_col;
 @synthesize level=_level;
 @synthesize face=_face;
-
 #pragma mark -
 #pragma mark init methods
 
@@ -79,6 +78,9 @@
 
 - (BOOL)loadTextureWithObject:(id)object rotate:(int)angle
 {
+    if (object==nil) {
+        return  false;
+    }
 	[self deleteTexture];
 	
 	GLint saveName;
@@ -100,7 +102,7 @@
 	
 	width = plImage.width;
 	height = plImage.height;
-	
+    
 	if(width > kTextureMaxWidth || height > kTextureMaxHeight)
 		[NSException raise:@"Invalid texture size" format:@"Texture max size is %d x %d", kTextureMaxWidth, kTextureMaxHeight];
 	

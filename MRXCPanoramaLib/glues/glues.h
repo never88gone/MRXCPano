@@ -123,6 +123,8 @@ GLAPI void APIENTRY gluQuadricNormals(GLUquadric* quad, GLenum normal);
 GLAPI void APIENTRY gluQuadricOrientation(GLUquadric* quad, GLenum orientation);
 GLAPI void APIENTRY gluQuadricTexture(GLUquadric* quad, GLboolean texture);
 GLAPI void APIENTRY gluSphere(GLUquadric* quad, GLfloat radius, GLint slices, GLint stacks);
+GLAPI void APIENTRY gluSphereCurve(GLUquadric* qobj, GLfloat radius,GLfloat left,GLfloat right,GLfloat top,GLfloat bottom, GLint slices, GLint stacks);
+       
 GLAPI GLint APIENTRY gluUnProject(GLfloat winX, GLfloat winY, GLfloat winZ, const GLfloat *model, const GLfloat *proj, const GLint *view, GLfloat* objX, GLfloat* objY, GLfloat* objZ);
 GLAPI GLint APIENTRY gluUnProject4(GLfloat winX, GLfloat winY, GLfloat winZ, GLfloat clipW, const GLfloat *model, const GLfloat *proj, const GLint *view, GLfloat nearVal, GLfloat farVal, GLfloat* objX, GLfloat* objY, GLfloat* objZ, GLfloat* objW);
 GLAPI GLint APIENTRY gluScaleImage(GLenum format, GLsizei widthin,

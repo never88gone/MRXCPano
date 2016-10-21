@@ -153,11 +153,7 @@
 -(MRXCPanoramaStation*)getPanoramaByResultSet:(FMResultSet*)resultSet
 {
     MRXCPanoramaStation* panoramaData =[[MRXCPanoramaStation alloc] init];
-    panoramaData.B=@([resultSet doubleForColumn:@"B"]);
-    panoramaData.CameraNo=[resultSet stringForColumn:@"CameraNo"];
-    panoramaData.GatherTime=[resultSet stringForColumn:@"GatherTime"];
     panoramaData.ImageID=[resultSet stringForColumn:@"ImageName"];
-    panoramaData.L=@([resultSet doubleForColumn:@"L"]);
     panoramaData.Pitch=@([resultSet doubleForColumn:@"Pitch"]);
     panoramaData.Roll=@([resultSet doubleForColumn:@"Roll"]);
     panoramaData.SegmentID=[resultSet stringForColumn:@"SegmentID"];

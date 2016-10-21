@@ -12,6 +12,4 @@
 @interface MRXCHttpHelper : NSObject
 AS_SINGLETON(MRXCHttpHelper);
 -(void)GetResponseDataByUrl:(NSString*)urlStr Callback:(MRXCCompletionBlock)callback;
--(void)PostResponseDataByUrl:(NSString*)urlStr Params:(NSDictionary*)params Callback:(MRXCCompletionBlock)callback;
--(void)PostResponseDataByUrl2:(NSString*)urlStr Params:(NSString*)params Callback:(MRXCCompletionBlock)callback;
 @end

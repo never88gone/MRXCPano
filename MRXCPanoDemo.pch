@@ -1,0 +1,14 @@
+//
+//  MRXCPanoDemo.pch
+//  MRXCPanoDemo
+//
+//  Created by never88gone on 2016/10/20.
+//  Copyright © 2016年 never88gone. All rights reserved.
+//
+
+#ifndef MRXCPanoDemo_pch
+#define MRXCPanoDemo_pch
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+
+#endif /* MRXCPanoDemo_pch */

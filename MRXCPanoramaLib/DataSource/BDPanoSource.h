@@ -1,16 +1,14 @@
 //
-//  ZHDPanoSource.h
+//  BDPanoSource.h
 //  MRXCPanoDemo
 //
-//  Created by never88gone on 16/3/27.
+//  Created by never88gone on 2016/10/21.
 //  Copyright © 2016年 never88gone. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "PanoDataSourceBase.h"
-/**
- *  中海达的数据源
- */
-@interface ZHDPanoSource : NSObject  <PanoDataSourceBase>
+
+@interface BDPanoSource : NSObject  <PanoDataSourceBase>
 @property(nonatomic,strong) NSString* panoramaUrl;
 @end
