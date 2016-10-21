@@ -9,94 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MRXCPanoDemo/ViewController.m"
-            timestampString = "498755800.021847"
+            filePath = "MRXCPanoDemo/BASE/BaseVC.m"
+            timestampString = "498759526.314538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
-            landmarkName = "-goContactUS"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "-preToVC:WithParam:"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MRXCPanoDemo/MRXCAboutVC.m"
-            timestampString = "498675352.44471"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MRXCPanoDemo/MRXCAboutVC.m"
-            timestampString = "498675610.247564"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "-navtitle"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MRXCPanoramaLib/DataSource/BDPanoSource.m"
-            timestampString = "498755857.629186"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "-getPanoStationByLon:Lat:Tolerance:CompletionBlock:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BDPanoSource getPanoStationByLon:Lat:Tolerance:CompletionBlock:]"
-                  moduleName = "MRXCPanoramaLib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/never88gone/Documents/code/MRXC/MRXCPanoDemo/iOS/MRXCPanoramaLib/DataSource/BDPanoSource.m"
-                  timestampString = "498757120.859082"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "237">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__66-[BDPanoSource getPanoStationByLon:Lat:Tolerance:CompletionBlock:]_block_invoke"
-                  moduleName = "MRXCPanoramaLib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/never88gone/Documents/code/MRXC/MRXCPanoDemo/iOS/MRXCPanoramaLib/DataSource/BDPanoSource.m"
-                  timestampString = "498757120.861359"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "30">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

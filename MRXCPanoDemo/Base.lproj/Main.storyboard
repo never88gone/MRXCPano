@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,46 +17,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDg-Tc-eE0">
-                                <color key="backgroundColor" red="0.16276091337203979" green="0.53212893009185791" blue="0.79387873411178589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="2QV-WL-SfR"/>
-                                    <constraint firstAttribute="width" constant="80" id="DBG-Jx-Hve"/>
-                                </constraints>
-                                <state key="normal" title="全景类型">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnTypeMenuClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iD2-8N-ULV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYn-1t-Mj1">
-                                <color key="backgroundColor" red="0.16276091337203979" green="0.53212893009185791" blue="0.79387873411178589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="AL1-k1-SY4"/>
-                                    <constraint firstAttribute="height" constant="30" id="HzM-2M-71J"/>
-                                </constraints>
-                                <state key="normal" title="联系我们">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnAboutMenuClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="prE-aw-786"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="KDg-Tc-eE0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="7DB-qQ-dYD"/>
-                            <constraint firstItem="uYn-1t-Mj1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="PLU-EN-uPB"/>
-                            <constraint firstItem="KDg-Tc-eE0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="uHl-qN-WrZ"/>
-                            <constraint firstItem="uYn-1t-Mj1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xYO-DN-sxS"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="btnAboutMenu" destination="uYn-1t-Mj1" id="f9C-K9-ceU"/>
-                        <outlet property="btnTypeMenu" destination="KDg-Tc-eE0" id="jcY-87-UgU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

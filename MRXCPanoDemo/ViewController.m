@@ -10,7 +10,6 @@
 #import "MrxcPanoView.h"
 #import "TXPanoSource.h"
 #import "MrxcPanoView.h"
-#import "ZHDPanoSource.h"
 #import "LocalCubePanoSource.h"
 #import "KXMenu.h"
 #import "AFURLSessionManager.h"
@@ -21,8 +20,6 @@
 #import "ShareColor.h"
 @interface ViewController ()
 @property(nonatomic,strong)   MrxcPanoView*  mrxcPanoView;
-@property(nonatomic,weak) IBOutlet  UIButton*  btnTypeMenu;
-@property(nonatomic,weak) IBOutlet  UIButton*  btnAboutMenu;
 
 @property(nonatomic,strong) NSString *localpath;
 @end
@@ -32,13 +29,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.btnAboutMenu.layer.cornerRadius=5;
-    self.btnTypeMenu.layer.cornerRadius=5;
+    UIButton* leftBtn=self.navigationItem.leftBarButtonItem.customView;
+    leftBtn.frame=CGRectMake(0, 0, 40, 40);
+    [leftBtn setTitleColor:[ShareColor whiteColor] forState:UIControlStateNormal];
+    leftBtn.titleLabel.font=[UIFont systemFontOfSize:16];
+    
+    UIButton* rightBtn=self.navigationItem.rightBarButtonItem.customView;
+    rightBtn.frame=CGRectMake(0, 0, 70, 40);
+    
+    [rightBtn setTitleColor:[ShareColor whiteColor] forState:UIControlStateNormal];
+    rightBtn.titleLabel.font=[UIFont systemFontOfSize:16];
+    
+    [self setLeftItemText:@"关于"];
+    [self setRightItemText:@"类型选择"];
+    
     CGRect frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     self.mrxcPanoView=[[MrxcPanoView alloc] initWithFrame:frame];
     [self.view addSubview:self.mrxcPanoView];
-    [self.view bringSubviewToFront:self.btnTypeMenu];
-    [self.view bringSubviewToFront:self.btnAboutMenu];
+    
     NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     self.localpath = [cachesPath stringByAppendingPathComponent:@"MRXC_IMAGE.db"];
     
@@ -46,36 +54,37 @@
 }
 -(Boolean)showLeftItem
 {
-    return false;
+    return true;
 }
 -(Boolean)showRightItem
 {
-    return false;
+    return true;
 }
 -(NSString*)navtitle
 {
-    return @"铭若星晨全景";
+    return @"铭若星晨";
 }
-- (IBAction)btnTypeMenuClick:(UIButton*)sender
+
+- (void)leftBtnClicked:(UIButton*)sender
+{
+    [self preToVC:@"MRXCAboutVC" WithParam:nil];
+}
+- (void)rightBtnClicked:(UIButton*)sender
 {
     KxMenuItem *txMenuItem=[KxMenuItem menuItem:@"腾讯全景" image:nil target:self action:@selector( locationTXPano)];
-    KxMenuItem * locationMenuItem=[KxMenuItem menuItem:@"本地全景" image:nil target:self action:@selector( locationCubePano)];
-    KxMenuItem *zhdMenuItem=[KxMenuItem menuItem:@"海达全景" image:nil target:self action:@selector( locationZHDPano)];
-    KxMenuItem *mrxcMenuItem=[KxMenuItem menuItem:@"铭若星晨全景" image:nil target:self action:@selector( locationZHDPano)];
     KxMenuItem *baiduMenuItem=[KxMenuItem menuItem:@"百度全景" image:nil target:self action:@selector( locationBaiduPano)];
+    
+    KxMenuItem * locationMenuItem=[KxMenuItem menuItem:@"本地全景" image:nil target:self action:@selector( locationCubePano)];
+    KxMenuItem *mrxcMenuItem=[KxMenuItem menuItem:@"铭若星晨全景" image:nil target:self action:@selector( locationMRXCPano)];
+    
     KxMenuItem *mrxcTXMenuItem=[KxMenuItem menuItem:@"铭若星晨腾讯全景" image:nil target:self action:@selector( locationBaiduPano)];
     KxMenuItem *googleMenuItem=[KxMenuItem menuItem:@"GOOGLE全景" image:nil target:self action:@selector( locationBaiduPano)];
-    NSArray* menus=@[txMenuItem, locationMenuItem,zhdMenuItem,mrxcMenuItem,baiduMenuItem,mrxcTXMenuItem,googleMenuItem];
+    NSArray* menus=@[txMenuItem, locationMenuItem,mrxcMenuItem,baiduMenuItem,mrxcTXMenuItem,googleMenuItem];
     [KxMenu setTintColor:[ShareColor mainColor]];
-    [KxMenu showMenuInView:self.view fromRect:sender.frame menuItems:menus];
+    CGRect bottomRect= CGRectMake(sender.frame.origin.x, sender.frame.origin.y+sender.frame.size.height, sender.frame.size.width, sender.frame.size.height);
+    [KxMenu showMenuInView:self.view fromRect:bottomRect menuItems:menus];
 }
-- (IBAction)btnAboutMenuClick:(UIButton*)sender
-{
-    KxMenuItem *aboutMenuItem=[KxMenuItem menuItem:@"关于我们" image:nil target:self action:@selector(goAboutUS)];
-    KxMenuItem *contactMenuItem=[KxMenuItem menuItem:@"联系我们" image:nil target:self action:@selector(goContactUS)];
-    NSArray* menus=@[aboutMenuItem,contactMenuItem];
-    [KxMenu showMenuInView:self.view fromRect:sender.frame menuItems:menus];
-}
+
 
 -(void)downLocalPanoData
 {
@@ -139,17 +148,6 @@
     [self.mrxcPanoView locPanoByPanoID:panoramaID];
 }
 /**
- 查看中海达的全景数据
- */
--(void) locationZHDPano
-{
-    NSString *panoramaID=@"B101-20150506000018";
-    ZHDPanoSource * zhdPanoSource=[[ZHDPanoSource alloc] init];
-    zhdPanoSource.panoramaUrl=@"http://www.szmuseum.com/0pano/DigitalMusBaseServices";
-    [self.mrxcPanoView initWithDataSource:zhdPanoSource];
-    [self.mrxcPanoView locPanoByPanoID:panoramaID];
-}
-/**
  查看腾讯的全景数据
  */
 -(void) locationTXPano
@@ -199,20 +197,7 @@
     
 }
 
-/**
-关于我们
- */
--(void)goAboutUS
-{
-    [self preToVC:@"MRXCAboutVC" WithParam:nil];
-}
-/**
- 联系我们
- */
--(void)goContactUS
-{
-    [self preToVC:@"MRXCAboutVC" WithParam:nil];
-}
+
 - (NSString*) copyDBData
 {
     NSString * docPath = [[NSBundle mainBundle] pathForResource:@"MRXC_IMAGE" ofType:@"db"];

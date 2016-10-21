@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MRXCAboutVC">
             <connections>
-                <outlet property="view" destination="cg9-LT-rnI" id="UnD-K5-yha"/>
+                <outlet property="view" destination="cg9-LT-rnI" id="W9E-Hb-Ioa"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
