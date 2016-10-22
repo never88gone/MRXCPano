@@ -18,10 +18,12 @@ typedef NS_ENUM(NSInteger, PanoramaCubeOrPhere){
 };
 
 @protocol PanoDataSourceBase <NSObject>
+@optional
 - (void)getPanoStationByLon:(float)lon Lat:(float)lat Tolerance:(float)tolerance CompletionBlock:(MRXCCompletionBlock)completionBlock;
 - (void)getPanoStationByID:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock;
 - (void)getPanoThumbnailByID:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock;
 - (void)getPanoTileByID:(NSString *)panoID level:(int)level face:(int)face row:(int)row col:(int)col CompletionBlock:(MRXCCompletionBlock)completionBlock;
 - (void)getLinkStationS:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock;
 -(PanoramaCubeOrPhere)getPanoramaType;
+- (int)cubeFaceIndex:(int)tileIndex;
 @end

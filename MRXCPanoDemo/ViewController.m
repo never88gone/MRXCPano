@@ -18,6 +18,7 @@
 #import "MRXCTXPanoSource.h"
 #import "BDPanoSource.h"
 #import "ShareColor.h"
+#import "LocalMNPanoSource.h"
 @interface ViewController ()
 @property(nonatomic,strong)   MrxcPanoView*  mrxcPanoView;
 
@@ -50,7 +51,7 @@
     NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     self.localpath = [cachesPath stringByAppendingPathComponent:@"MRXC_IMAGE.db"];
     
-    [self  locationTXPano];
+    [self  locationMNPano];
 }
 -(Boolean)showLeftItem
 {
@@ -71,6 +72,7 @@
 }
 - (void)rightBtnClicked:(UIButton*)sender
 {
+    KxMenuItem *mnMenuItem=[KxMenuItem menuItem:@"美女全景" image:nil target:self action:@selector( locationMNPano)];
     KxMenuItem *txMenuItem=[KxMenuItem menuItem:@"腾讯全景" image:nil target:self action:@selector( locationTXPano)];
     KxMenuItem *baiduMenuItem=[KxMenuItem menuItem:@"百度全景" image:nil target:self action:@selector( locationBaiduPano)];
     
@@ -79,7 +81,7 @@
     
     KxMenuItem *mrxcTXMenuItem=[KxMenuItem menuItem:@"铭若星晨腾讯全景" image:nil target:self action:@selector( locationBaiduPano)];
     KxMenuItem *googleMenuItem=[KxMenuItem menuItem:@"GOOGLE全景" image:nil target:self action:@selector( locationBaiduPano)];
-    NSArray* menus=@[txMenuItem, locationMenuItem,mrxcMenuItem,baiduMenuItem,mrxcTXMenuItem,googleMenuItem];
+    NSArray* menus=@[mnMenuItem,txMenuItem, locationMenuItem,mrxcMenuItem,baiduMenuItem,mrxcTXMenuItem,googleMenuItem];
     [KxMenu setTintColor:[ShareColor mainColor]];
     CGRect bottomRect= CGRectMake(sender.frame.origin.x, sender.frame.origin.y+sender.frame.size.height, sender.frame.size.width, sender.frame.size.height);
     [KxMenu showMenuInView:self.view fromRect:bottomRect menuItems:menus];
@@ -122,7 +124,16 @@
     [downloadTask resume];
     
 }
-
+/**
+ 查看美女的全景图
+ */
+-(void) locationMNPano
+{
+    NSString *panoramaID=@"xxxxx";
+    LocalMNPanoSource* txPanoSource=[[LocalMNPanoSource alloc] init];
+    [self.mrxcPanoView initWithDataSource:txPanoSource];
+    [self.mrxcPanoView locPanoByPanoID:panoramaID];
+}
 /**
  查看本地的六面体全景数据，没有数据从服务器上下载一份测试数据
  */
@@ -147,6 +158,8 @@
     [self.mrxcPanoView initWithDataSource:localCubePanoSource];
     [self.mrxcPanoView locPanoByPanoID:panoramaID];
 }
+
+
 /**
  查看腾讯的全景数据
  */

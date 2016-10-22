@@ -43,6 +43,9 @@
 		38DA105F1D3FD07300172BEE /* MRXCValueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DA105D1D3FD07300172BEE /* MRXCValueObject.m */; };
 		38DA10801D3FE2AB00172BEE /* MRXCHttpHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DA107E1D3FE2AA00172BEE /* MRXCHttpHelper.h */; };
 		38DA10811D3FE2AB00172BEE /* MRXCHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DA107F1D3FE2AB00172BEE /* MRXCHttpHelper.m */; };
+		38E822551DBB043000F5C7FC /* LocalMNPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E822541DBB043000F5C7FC /* LocalMNPanoSource.m */; };
+		38E822581DBB1D6A00F5C7FC /* UIImage+Sacle.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E822561DBB1D6A00F5C7FC /* UIImage+Sacle.h */; };
+		38E822591DBB1D6A00F5C7FC /* UIImage+Sacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E822571DBB1D6A00F5C7FC /* UIImage+Sacle.m */; };
 		38ED930B1D3FC4A8007CB29C /* MRXCPanoramaLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */; };
 		38ED930C1D3FC4A8007CB29C /* MRXCPanoramaLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38ED93871D3FC50D007CB29C /* MRXCPanoramaTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ED931A1D3FC50D007CB29C /* MRXCPanoramaTool.h */; };
@@ -183,6 +186,10 @@
 		38DA105D1D3FD07300172BEE /* MRXCValueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCValueObject.m; sourceTree = "<group>"; };
 		38DA107E1D3FE2AA00172BEE /* MRXCHttpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCHttpHelper.h; sourceTree = "<group>"; };
 		38DA107F1D3FE2AB00172BEE /* MRXCHttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCHttpHelper.m; sourceTree = "<group>"; };
+		38E822531DBB043000F5C7FC /* LocalMNPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalMNPanoSource.h; sourceTree = "<group>"; };
+		38E822541DBB043000F5C7FC /* LocalMNPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalMNPanoSource.m; sourceTree = "<group>"; };
+		38E822561DBB1D6A00F5C7FC /* UIImage+Sacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Sacle.h"; sourceTree = "<group>"; };
+		38E822571DBB1D6A00F5C7FC /* UIImage+Sacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Sacle.m"; sourceTree = "<group>"; };
 		38ED93041D3FC4A8007CB29C /* MRXCPanoramaLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRXCPanoramaLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38ED93081D3FC4A8007CB29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38ED931A1D3FC50D007CB29C /* MRXCPanoramaTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCPanoramaTool.h; sourceTree = "<group>"; };
@@ -337,6 +344,8 @@
 				380E6FB31DA29975009F8F38 /* MRXCAboutVC.m */,
 				380E6FB41DA29975009F8F38 /* MRXCAboutVC.xib */,
 				380E6FCC1DA2A4BD009F8F38 /* Launch Screen.storyboard */,
+				38E822531DBB043000F5C7FC /* LocalMNPanoSource.h */,
+				38E822541DBB043000F5C7FC /* LocalMNPanoSource.m */,
 			);
 			path = MRXCPanoDemo;
 			sourceTree = "<group>";
@@ -378,6 +387,8 @@
 				388CB1971D41024900D27CD1 /* FuncDefine.h */,
 				383C00491D425BAC007086E0 /* NSObject+Block.h */,
 				383C004A1D425BAC007086E0 /* NSObject+Block.m */,
+				38E822561DBB1D6A00F5C7FC /* UIImage+Sacle.h */,
+				38E822571DBB1D6A00F5C7FC /* UIImage+Sacle.m */,
 			);
 			path = Communication;
 			sourceTree = "<group>";
@@ -514,6 +525,7 @@
 				38ED93D61D3FC50D007CB29C /* PLStructs.h in Headers */,
 				38ED939A1D3FC50D007CB29C /* glues.h in Headers */,
 				38ED93CE1D3FC50D007CB29C /* PLRenderer.h in Headers */,
+				38E822581DBB1D6A00F5C7FC /* UIImage+Sacle.h in Headers */,
 				38ED93D21D3FC50D007CB29C /* PLSceneElement.h in Headers */,
 				38ED93B51D3FC50D007CB29C /* MRXCPanoramaRoadLink.h in Headers */,
 				38ED93BE1D3FC50D007CB29C /* PLArrow.h in Headers */,
@@ -711,6 +723,7 @@
 				38B11AA91CA2E79C00AF8B98 /* AppDelegate.m in Sources */,
 				380E6FB51DA29975009F8F38 /* MRXCAboutVC.m in Sources */,
 				380E6FC41DA29F69009F8F38 /* BaseNC.m in Sources */,
+				38E822551DBB043000F5C7FC /* LocalMNPanoSource.m in Sources */,
 				38B11AA61CA2E79C00AF8B98 /* main.m in Sources */,
 				380E6FC81DA29FB6009F8F38 /* Toast.m in Sources */,
 				380E6FC51DA29F69009F8F38 /* BaseVC.m in Sources */,
@@ -743,6 +756,7 @@
 				380E6F7E1DA294C0009F8F38 /* GOOGLEPanoSource.m in Sources */,
 				38ED93B41D3FC50D007CB29C /* MrxcPanoView.m in Sources */,
 				385F07481D412BA200244CF0 /* MRXCDBHelper.m in Sources */,
+				38E822591DBB1D6A00F5C7FC /* UIImage+Sacle.m in Sources */,
 				38ED93DE1D3FC50D007CB29C /* PLView.m in Sources */,
 				38ED93DA1D3FC50D007CB29C /* PLUtils.m in Sources */,
 				38ED93DC1D3FC50D007CB29C /* PLView+Panorama.m in Sources */,
