@@ -24,6 +24,12 @@
 		383FF6B71DB9170400D7277D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383FF6B61DB9170400D7277D /* SystemConfiguration.framework */; };
 		383FF6B91DB9170E00D7277D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383FF6B81DB9170E00D7277D /* MobileCoreServices.framework */; };
 		383FF6BC1DB91D5400D7277D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383FF6BB1DB91D5400D7277D /* Security.framework */; };
+		384D19ED1DC48D3100BAD217 /* b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 384D19EC1DC48D3100BAD217 /* b.jpg */; };
+		384D19EF1DC48D3500BAD217 /* d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 384D19EE1DC48D3500BAD217 /* d.jpg */; };
+		384D19F11DC48D3A00BAD217 /* f.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 384D19F01DC48D3A00BAD217 /* f.jpg */; };
+		384D19F31DC48D3F00BAD217 /* l.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 384D19F21DC48D3F00BAD217 /* l.jpg */; };
+		384D19F51DC48D4700BAD217 /* r.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 384D19F41DC48D4700BAD217 /* r.jpg */; };
+		384D19F71DC48D4B00BAD217 /* u.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 384D19F61DC48D4B00BAD217 /* u.jpg */; };
 		385F07431D412B6A00244CF0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 385F07421D412B6A00244CF0 /* libsqlite3.0.tbd */; };
 		385F07441D412B8000244CF0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 385F07421D412B6A00244CF0 /* libsqlite3.0.tbd */; };
 		385F07471D412BA200244CF0 /* MRXCDBHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 385F07451D412BA200244CF0 /* MRXCDBHelper.h */; };
@@ -160,6 +166,12 @@
 		383FF6B81DB9170E00D7277D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		383FF6BA1DB9174700D7277D /* MRXCPanoDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRXCPanoDemo.pch; sourceTree = "<group>"; };
 		383FF6BB1DB91D5400D7277D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		384D19EC1DC48D3100BAD217 /* b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b.jpg; sourceTree = "<group>"; };
+		384D19EE1DC48D3500BAD217 /* d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = d.jpg; sourceTree = "<group>"; };
+		384D19F01DC48D3A00BAD217 /* f.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = f.jpg; sourceTree = "<group>"; };
+		384D19F21DC48D3F00BAD217 /* l.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = l.jpg; sourceTree = "<group>"; };
+		384D19F41DC48D4700BAD217 /* r.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = r.jpg; sourceTree = "<group>"; };
+		384D19F61DC48D4B00BAD217 /* u.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = u.jpg; sourceTree = "<group>"; };
 		385F07421D412B6A00244CF0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		385F07451D412BA200244CF0 /* MRXCDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXCDBHelper.h; sourceTree = "<group>"; };
 		385F07461D412BA200244CF0 /* MRXCDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXCDBHelper.m; sourceTree = "<group>"; };
@@ -308,6 +320,19 @@
 			path = BASE;
 			sourceTree = "<group>";
 		};
+		384D19EB1DC48D2900BAD217 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				384D19F61DC48D4B00BAD217 /* u.jpg */,
+				384D19F41DC48D4700BAD217 /* r.jpg */,
+				384D19F21DC48D3F00BAD217 /* l.jpg */,
+				384D19F01DC48D3A00BAD217 /* f.jpg */,
+				384D19EE1DC48D3500BAD217 /* d.jpg */,
+				384D19EC1DC48D3100BAD217 /* b.jpg */,
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
 		38B11A981CA2E79C00AF8B98 = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +356,7 @@
 		38B11AA31CA2E79C00AF8B98 /* MRXCPanoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				384D19EB1DC48D2900BAD217 /* Res */,
 				380E6FBE1DA29F69009F8F38 /* BASE */,
 				38B11AA71CA2E79C00AF8B98 /* AppDelegate.h */,
 				38B11AA81CA2E79C00AF8B98 /* AppDelegate.m */,
@@ -647,10 +673,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				384D19F71DC48D4B00BAD217 /* u.jpg in Resources */,
+				384D19F31DC48D3F00BAD217 /* l.jpg in Resources */,
+				384D19ED1DC48D3100BAD217 /* b.jpg in Resources */,
 				388CB1961D40FF2100D27CD1 /* 箭头上.png in Resources */,
+				384D19F11DC48D3A00BAD217 /* f.jpg in Resources */,
+				384D19F51DC48D4700BAD217 /* r.jpg in Resources */,
 				38B11AB11CA2E79C00AF8B98 /* Assets.xcassets in Resources */,
 				380E6FB61DA29975009F8F38 /* MRXCAboutVC.xib in Resources */,
 				380E6FCD1DA2A4BD009F8F38 /* Launch Screen.storyboard in Resources */,
+				384D19EF1DC48D3500BAD217 /* d.jpg in Resources */,
 				38B11AAF1CA2E79C00AF8B98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

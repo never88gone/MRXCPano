@@ -105,7 +105,6 @@ static GLfloat normal3f[] = {
 	glCullFace(GL_FRONT);
 	glShadeModel(GL_SMOOTH);
     for(PLTexture *texture in textures){
-        //NSLog(@"CUBE [%d][%d]internalRender....", textures.count, i++);
         GLfloat *vertex = &(cube[texture.face*3*4]);
         if(texture.level != 0){
             GLfloat subVertex[12];
@@ -127,9 +126,7 @@ static GLfloat normal3f[] = {
         
         glDisableClientState(GL_VERTEX_ARRAY);
         glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-        //NSLog(@"CUBE END internalRender....");
     }
-	
 	glFlush ();
 }
 - (void)calculateVertexPointer:(PLTexture *)texture vertex:(GLfloat *)vertex{
