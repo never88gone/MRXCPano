@@ -33,6 +33,15 @@ pod 'JSONKit'
 
 pod 'FMDB'
 
+# 增加一些分享
+pod ‘UMengUShare/UI’
+
+# 集成微信
+pod ‘UMengUShare/Social/WeChat'
+
+# 集成QQ
+pod ‘UMengUShare/Social/QQ'
+
 target 'MRXCPanoDemo' do
 
 

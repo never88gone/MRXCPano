@@ -69,6 +69,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UMengUShare.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YiRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,12 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C34428A7CDE4A2321FD954F6FBE2209</key>
+		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<key>5F0F695574D442F21B784C53ACCC7E2D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8B739EA053C0A6C1938BA93779768906</key>
+		<key>7BFCF4AB02DCE5189898B0AB48F475A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,12 +117,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9EC59A3EA0600C4FD532031105DAEC86</key>
+		<key>9B1D0DD78E08F2C7BAF271C0DE607489</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B88AD198A7E6DE71B10DE9FB837D3B60</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -142,12 +152,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E74E5C9FFB4602CF2A7B9929C4218DD3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E9BBE622976ADE1EC0B1ECF55EECE957</key>
+		<key>E8C7D929704E28FBB751EF9A28BFC1EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -20,6 +20,8 @@
 #import "ShareColor.h"
 #import "LocalMNPanoSource.h"
 #import "PhotoPanoSource.h"
+#import "UMSocialUIManager.h"
+#import "ShareTool.h"
 @interface ViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property(nonatomic,strong)   MrxcPanoView*  mrxcPanoView;
 
@@ -69,7 +71,12 @@
 
 - (void)leftBtnClicked:(UIButton*)sender
 {
-    [self preToVC:@"MRXCAboutVC" WithParam:nil];
+//    [self preToVC:@"MRXCAboutVC" WithParam:nil];
+    
+    [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMShareMenuSelectionView *shareSelectionView, UMSocialPlatformType platformType) {
+        [[ShareTool sharedInstance] shareToPlatformType:platformType withTitle:@"铭若星晨全景" WithContent:@"铭若星晨全景"  WithImage:[UIImage imageNamed:@"AppIcon"] WithUrl:@"http://www.baidu.com"];
+    }];
+
 }
 - (void)rightBtnClicked:(UIButton*)sender
 {

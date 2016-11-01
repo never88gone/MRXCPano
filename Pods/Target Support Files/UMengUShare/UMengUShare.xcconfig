@@ -1,0 +1,7 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK" "${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK" "${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/QQ"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/UMengUShare" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/FMDB" "${PODS_ROOT}/Headers/Public/GDataXML-HTML" "${PODS_ROOT}/Headers/Public/JSONKit" "${PODS_ROOT}/Headers/Public/JSONModel" "${PODS_ROOT}/Headers/Public/KxMenu" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/MagicalRecord" "${PODS_ROOT}/Headers/Public/Masonry" "${PODS_ROOT}/Headers/Public/NSData+Base64" "${PODS_ROOT}/Headers/Public/SDWebImage" "${PODS_ROOT}/Headers/Public/UMengUShare" "${PODS_ROOT}/Headers/Public/YiRefresh"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/QQ" $(inherited) "${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/WeChat" $(inherited) "${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/WeChat"
+OTHER_LDFLAGS = -l"SocialQQ" -l"SocialWeChat" -l"WeChatSDK" -l"c++" -l"sqlite3" -l"z" -framework "CoreTelephony" -framework "SystemConfiguration" -framework "TencentOpenAPI" -framework "UMSocialCore" -framework "UMSocialNetwork"
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

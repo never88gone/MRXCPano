@@ -30,6 +30,15 @@ PODS:
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
+  - UMengUShare/Core (6.0.1):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.0.1)
+  - UMengUShare/Social/QQ (6.0.1):
+    - UMengUShare/Core
+  - UMengUShare/Social/WeChat (6.0.1):
+    - UMengUShare/Core
+  - UMengUShare/UI (6.0.1):
+    - UMengUShare/Core
   - YiRefresh (0.9.5)
 
 DEPENDENCIES:
@@ -44,6 +53,9 @@ DEPENDENCIES:
   - MBProgressHUD
   - NSData+Base64
   - SDWebImage
+  - UMengUShare/Social/QQ
+  - UMengUShare/Social/WeChat
+  - UMengUShare/UI
   - YiRefresh
 
 SPEC CHECKSUMS:
@@ -58,6 +70,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  UMengUShare: 418c2eaf7d8ba939916111d622bf5ea86c86285a
   YiRefresh: 80c8e4113d720be8e133a5b8f499ccad27dde760
 
 COCOAPODS: 0.39.0
