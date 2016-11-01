@@ -20,8 +20,8 @@
 #pragma mark -
 #pragma mark texture consts
 
-#define kTextureMaxWidth	2048
-#define kTextureMaxHeight	1024
+#define kTextureMaxWidth	4096
+#define kTextureMaxHeight	4096
 
 #pragma mark -
 #pragma mark cube consts

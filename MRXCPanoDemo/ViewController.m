@@ -19,7 +19,8 @@
 #import "BDPanoSource.h"
 #import "ShareColor.h"
 #import "LocalMNPanoSource.h"
-@interface ViewController ()
+#import "PhotoPanoSource.h"
+@interface ViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property(nonatomic,strong)   MrxcPanoView*  mrxcPanoView;
 
 @property(nonatomic,strong) NSString *localpath;
@@ -27,7 +28,7 @@
 
 @implementation ViewController
 
-
+#pragma mark 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIButton* leftBtn=self.navigationItem.leftBarButtonItem.customView;
@@ -72,22 +73,23 @@
 }
 - (void)rightBtnClicked:(UIButton*)sender
 {
-    KxMenuItem *mnMenuItem=[KxMenuItem menuItem:@"美女全景" image:nil target:self action:@selector( locationMNPano)];
-    KxMenuItem *txMenuItem=[KxMenuItem menuItem:@"腾讯全景" image:nil target:self action:@selector( locationTXPano)];
-    KxMenuItem *baiduMenuItem=[KxMenuItem menuItem:@"百度全景" image:nil target:self action:@selector( locationBaiduPano)];
+    KxMenuItem *mnMenuItem=[KxMenuItem menuItem:@"美女全景" image:nil target:self action:@selector(locationMNPano)];
+    KxMenuItem *photoMenuItem=[KxMenuItem menuItem:@"相册全景" image:nil target:self action:@selector(locationPhotoPano)];
+    KxMenuItem *txMenuItem=[KxMenuItem menuItem:@"腾讯全景" image:nil target:self action:@selector(locationTXPano)];
+    KxMenuItem *baiduMenuItem=[KxMenuItem menuItem:@"百度全景" image:nil target:self action:@selector(locationBaiduPano)];
     
-    KxMenuItem * locationMenuItem=[KxMenuItem menuItem:@"本地全景" image:nil target:self action:@selector( locationCubePano)];
-    KxMenuItem *mrxcMenuItem=[KxMenuItem menuItem:@"铭若星晨全景" image:nil target:self action:@selector( locationMRXCPano)];
+    KxMenuItem * locationMenuItem=[KxMenuItem menuItem:@"本地全景" image:nil target:self action:@selector(locationCubePano)];
+    KxMenuItem *mrxcMenuItem=[KxMenuItem menuItem:@"铭若星晨全景" image:nil target:self action:@selector(locationMRXCPano)];
     
-    KxMenuItem *mrxcTXMenuItem=[KxMenuItem menuItem:@"铭若星晨腾讯全景" image:nil target:self action:@selector( locationBaiduPano)];
-    KxMenuItem *googleMenuItem=[KxMenuItem menuItem:@"GOOGLE全景" image:nil target:self action:@selector( locationBaiduPano)];
-    NSArray* menus=@[mnMenuItem,txMenuItem, locationMenuItem,mrxcMenuItem,baiduMenuItem,mrxcTXMenuItem,googleMenuItem];
+    KxMenuItem *mrxcTXMenuItem=[KxMenuItem menuItem:@"铭若星晨腾讯全景" image:nil target:self action:@selector(locationBaiduPano)];
+    KxMenuItem *googleMenuItem=[KxMenuItem menuItem:@"GOOGLE全景" image:nil target:self action:@selector(locationBaiduPano)];
+    NSArray* menus=@[photoMenuItem,mnMenuItem,txMenuItem, locationMenuItem,mrxcMenuItem,baiduMenuItem,mrxcTXMenuItem,googleMenuItem];
     [KxMenu setTintColor:[ShareColor mainColor]];
     CGRect bottomRect= CGRectMake(sender.frame.origin.x, sender.frame.origin.y+sender.frame.size.height, sender.frame.size.width, sender.frame.size.height);
     [KxMenu showMenuInView:self.view fromRect:bottomRect menuItems:menus];
 }
 
-
+#pragma mark 方法
 -(void)downLocalPanoData
 {
     MBProgressHUD* mbProgressHUD = [[MBProgressHUD alloc] initWithView:self.view];
@@ -133,6 +135,11 @@
     LocalMNPanoSource* txPanoSource=[[LocalMNPanoSource alloc] init];
     [self.mrxcPanoView initWithDataSource:txPanoSource];
     [self.mrxcPanoView locPanoByPanoID:panoramaID];
+}
+
+-(void) locationPhotoPano
+{
+    [self openPhotoPickerController];
 }
 /**
  查看本地的六面体全景数据，没有数据从服务器上下载一份测试数据
@@ -234,5 +241,48 @@
     }else{
         return nil;
     }
+}
+
+- (void)openPhotoPickerController
+{
+    // 1.判断相册是否可以打开
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) return;
+    // 2. 创建图片选择控制器
+    UIImagePickerController *ipc = [[UIImagePickerController alloc] init];
+    /**
+     typedef NS_ENUM(NSInteger, UIImagePickerControllerSourceType) {
+     UIImagePickerControllerSourceTypePhotoLibrary, // 相册
+     UIImagePickerControllerSourceTypeCamera, // 用相机拍摄获取
+     UIImagePickerControllerSourceTypeSavedPhotosAlbum // 相簿
+     }
+     */
+    // 3. 设置打开照片相册类型(显示所有相簿)
+    ipc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    // ipc.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    // 照相机
+    // ipc.sourceType = UIImagePickerControllerSourceTypeCamera;
+    // 4.设置代理
+    ipc.delegate = self;
+    // 5.modal出这个控制器
+    [self presentViewController:ipc animated:YES completion:nil];
+}
+
+#pragma mark -- 相册选择完后的回调
+// 获取图片后的操作
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    // 销毁控制器
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    if ([info[UIImagePickerControllerMediaType] isEqualToString:@"public.image" ]) {
+        UIImage* selectImage=info[UIImagePickerControllerOriginalImage];
+        PhotoPanoSource* photoPanoSource=[[PhotoPanoSource alloc] init];
+        photoPanoSource.panoImage=selectImage;
+        [self.mrxcPanoView setDataSource:photoPanoSource];
+        [self.mrxcPanoView locPanoByPanoID:@""];
+    }else {
+        [self showToastMessage:@"请选择全景图片" View:self.view];
+    }
+    // 设置图片
+//    self.imageView.image = info[UIImagePickerControllerOriginalImage];
 }
 @end

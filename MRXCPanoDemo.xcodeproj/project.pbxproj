@@ -19,6 +19,8 @@
 		380E6FC81DA29FB6009F8F38 /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 380E6FC71DA29FB6009F8F38 /* Toast.m */; };
 		380E6FCB1DA29FEF009F8F38 /* ShareColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 380E6FCA1DA29FEF009F8F38 /* ShareColor.m */; };
 		380E6FCD1DA2A4BD009F8F38 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380E6FCC1DA2A4BD009F8F38 /* Launch Screen.storyboard */; };
+		382F323B1DC8B79000BD0A26 /* PhotoPanoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 382F32391DC8B79000BD0A26 /* PhotoPanoSource.h */; };
+		382F323C1DC8B79000BD0A26 /* PhotoPanoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 382F323A1DC8B79000BD0A26 /* PhotoPanoSource.m */; };
 		383C004B1D425BAC007086E0 /* NSObject+Block.h in Headers */ = {isa = PBXBuildFile; fileRef = 383C00491D425BAC007086E0 /* NSObject+Block.h */; };
 		383C004C1D425BAC007086E0 /* NSObject+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 383C004A1D425BAC007086E0 /* NSObject+Block.m */; };
 		383FF6B71DB9170400D7277D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383FF6B61DB9170400D7277D /* SystemConfiguration.framework */; };
@@ -160,6 +162,8 @@
 		380E6FC91DA29FEF009F8F38 /* ShareColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareColor.h; sourceTree = "<group>"; };
 		380E6FCA1DA29FEF009F8F38 /* ShareColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareColor.m; sourceTree = "<group>"; };
 		380E6FCC1DA2A4BD009F8F38 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		382F32391DC8B79000BD0A26 /* PhotoPanoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPanoSource.h; sourceTree = "<group>"; };
+		382F323A1DC8B79000BD0A26 /* PhotoPanoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPanoSource.m; sourceTree = "<group>"; };
 		383C00491D425BAC007086E0 /* NSObject+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Block.h"; sourceTree = "<group>"; };
 		383C004A1D425BAC007086E0 /* NSObject+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Block.m"; sourceTree = "<group>"; };
 		383FF6B61DB9170400D7277D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -435,6 +439,8 @@
 				380E6F7C1DA294C0009F8F38 /* GOOGLEPanoSource.m */,
 				386D6FF41DBA408E00575DA6 /* BDPanoSource.h */,
 				386D6FF51DBA408E00575DA6 /* BDPanoSource.m */,
+				382F32391DC8B79000BD0A26 /* PhotoPanoSource.h */,
+				382F323A1DC8B79000BD0A26 /* PhotoPanoSource.m */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -546,6 +552,7 @@
 			files = (
 				38ED93C01D3FC50D007CB29C /* PLCamera.h in Headers */,
 				38ED93A41D3FC50D007CB29C /* glues_registry.h in Headers */,
+				382F323B1DC8B79000BD0A26 /* PhotoPanoSource.h in Headers */,
 				38ED93D71D3FC50D007CB29C /* PLTexture.h in Headers */,
 				38ED93CC1D3FC50D007CB29C /* PLObject.h in Headers */,
 				38ED93D61D3FC50D007CB29C /* PLStructs.h in Headers */,
@@ -790,6 +797,7 @@
 				385F07481D412BA200244CF0 /* MRXCDBHelper.m in Sources */,
 				38E822591DBB1D6A00F5C7FC /* UIImage+Sacle.m in Sources */,
 				38ED93DE1D3FC50D007CB29C /* PLView.m in Sources */,
+				382F323C1DC8B79000BD0A26 /* PhotoPanoSource.m in Sources */,
 				38ED93DA1D3FC50D007CB29C /* PLUtils.m in Sources */,
 				38ED93DC1D3FC50D007CB29C /* PLView+Panorama.m in Sources */,
 				38ED93A11D3FC50D007CB29C /* glues_quad.c in Sources */,
