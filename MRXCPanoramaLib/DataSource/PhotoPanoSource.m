@@ -40,10 +40,12 @@
         completionBlock(imageArray,nil);
     }
 }
+
 -(PanoramaCubeOrPhere)getPanoramaType
 {
     return PanoramaEnumCube;
 }
+
 - (int)cubeFaceIndex:(int)tileIndex{
     switch (tileIndex) {
         case 1:

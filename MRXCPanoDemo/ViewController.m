@@ -69,12 +69,13 @@
     return @"铭若星晨";
 }
 
+
 - (void)leftBtnClicked:(UIButton*)sender
 {
 //    [self preToVC:@"MRXCAboutVC" WithParam:nil];
     
     [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMShareMenuSelectionView *shareSelectionView, UMSocialPlatformType platformType) {
-        [[ShareTool sharedInstance] shareToPlatformType:platformType withTitle:@"铭若星晨全景" WithContent:@"铭若星晨全景"  WithImage:[UIImage imageNamed:@"AppIcon"] WithUrl:@"http://www.baidu.com"];
+        [[ShareTool sharedInstance] shareToPlatformType:platformType withTitle:@"铭若星晨全景" WithContent:@"铭若星晨全景"  WithImage:[UIImage imageNamed:@"AppIcon"] WithUrl:@"https://itunes.apple.com/us/app/ming-ruo-xing-chen-quan-jing/id1171732946"];
     }];
 
 }
