@@ -524,4 +524,5 @@
 	[self deactiveOrientation];
 	[self deactiveAccelerometer];
 }
+
 @end

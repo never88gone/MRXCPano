@@ -131,4 +131,8 @@
 		camera.rotation = PLRotationMake(self.sceneElement.pitch, self.sceneElement.yaw, self.sceneElement.roll);
 	}
 }
+-(UIImage *)getImageFromView
+{
+    return  [renderer getImageFromView];
+}
 @end

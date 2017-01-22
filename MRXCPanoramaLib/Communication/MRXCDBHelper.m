@@ -18,14 +18,11 @@ DEF_SINGLETON(MRXCDBHelper)
 {
     self.queue = [FMDatabaseQueue databaseQueueWithPath:dataPath];
 }
--(void)executeQuery:(NSString*)sqlStr Callback:(MRXCCompletionBlock)callback;
+-(void)executeQuery:(NSString*)sqlStr Callback:(MRXCCompletionBlock)callback
 {
-    WEAK_SELF;
+    __weak typeof(self) weakSelf = self;
     [self.queue inDatabase:^(FMDatabase *db) {
-        STRONG_SELF;
-        WEAK_SELF;
-        [self performInMainThreadBlock:^{
-            STRONG_SELF;
+        [weakSelf performInMainThreadBlock:^{
             FMResultSet *rs = [db executeQuery:sqlStr];
             if(callback)
             {
@@ -35,7 +32,5 @@ DEF_SINGLETON(MRXCDBHelper)
 
     }];  
 }
-
-
 
 @end

@@ -42,5 +42,5 @@
 - (void)removeTexture:(PLTexture *)texture;
 - (void)removeTextureAtIndex:(NSUInteger)index;
 - (void)removeAllTextures;
-
+-(UIImage *)getImageFromView;
 @end

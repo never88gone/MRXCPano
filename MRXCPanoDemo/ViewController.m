@@ -201,7 +201,7 @@
  */
 -(void) locationBaiduPano
 {
-    NSString *panoramaID=@"02000200001407221216223508C";
+    NSString *panoramaID=@"09000200011604111641283658Z";
     BDPanoSource * mrxcPanoSource=[[BDPanoSource alloc] init];
     [self.mrxcPanoView initWithDataSource:mrxcPanoSource];
     [self.mrxcPanoView locPanoByPanoID:panoramaID];

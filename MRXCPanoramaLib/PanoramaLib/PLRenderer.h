@@ -46,5 +46,5 @@
 - (void)renderNTimes:(NSUInteger)times;
 - (void)renderWithDeviceOrientation:(UIDeviceOrientation)deviceOrientation;
 - (void)renderNTimesWithDeviceOrientation:(UIDeviceOrientation)deviceOrientation times:(NSUInteger)times;
-
+-(UIImage *)getImageFromView;
 @end

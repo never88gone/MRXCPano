@@ -15,16 +15,27 @@
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if(self != nil){
-        _plView = [[PLView alloc]initWithFrame:frame];
-        _plView.translatesAutoresizingMaskIntoConstraints = NO;
-        _plView.isDeviceOrientationEnabled = NO;
-        _plView.isAccelerometerEnabled = NO;
-        _plView.isScrollingEnabled = NO;
-        _plView.isInertiaEnabled = NO;
-        _plView.delegate = self;
-        [self addSubview:_plView];
+        [self initUIWithFrame:frame];
     }
     return self;
+}
+
+-(void)initUIWithFrame:(CGRect)frame
+{
+    self.plView = [[PLView alloc]initWithFrame:frame];
+    self.plView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.plView.isDeviceOrientationEnabled = NO;
+    self.plView.isAccelerometerEnabled = NO;
+    self.plView.isScrollingEnabled = NO;
+    self.plView.isInertiaEnabled = NO;
+    self.plView.delegate = self;
+    [self addSubview:self.plView];
+    
+    self.curImageView= [[UIImageView alloc]initWithFrame:frame];
+    self.curImageView.backgroundColor=[UIColor redColor];
+    [self addSubview:self.curImageView];
+    self.curImageView.hidden=true;
+    [self bringSubviewToFront:self.curImageView];
 }
 -(void)initWithDataSource:(id<PanoDataSourceBase> )dataSourcebase
 {
@@ -232,8 +243,25 @@
 }
 -(void)locPanoByPanoID:(NSString*)panoID
 {
+    [self locPanoByPanoID:panoID withAnimate:NO];
+}
+
+-(void)locPanoByPanoID:(NSString*)panoID withAnimate:(bool)animate
+{
     self.panoramaID=panoID;
     self.panoramaData.ImageID=panoID;
+    if (animate) {
+        self.curImageView.hidden=false;
+        UIImage* curImage=[self.plView getImageFromView];
+        [self.curImageView setImage:curImage];
+        [UIView animateWithDuration:1.0  animations:^{
+            self.curImageView.transform = CGAffineTransformMakeScale(2, 2);
+        } completion:^(BOOL finished) {
+            self.curImageView.transform = CGAffineTransformMakeScale(1, 1);
+            self.curImageView.hidden=true;
+            self.curImageView.image=nil;
+        }];
+    }
     if ([self.dataSource respondsToSelector:@selector(getPanoStationByID:CompletionBlock:)]){
         WEAK_SELF;
         [self.dataSource getPanoStationByID:panoID CompletionBlock:^(id aResponseObject, NSError *anError) {
@@ -245,6 +273,7 @@
             }
         }];
     }
+
 }
 
 -(void)locPanoByLon:(float)lon Lat:(float)lat Tolerance:(float)tolerance
@@ -333,7 +362,7 @@
         }
     }
     self.panoramaID = arrow.imageID;
-    [self locPanoByPanoID:self.panoramaID];
+    [self locPanoByPanoID:self.panoramaID withAnimate:YES];
     self.isAdjacentStatus = true;
     [self.plView panoramaSwitchBegan];
     @synchronized(self){

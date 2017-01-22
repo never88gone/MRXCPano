@@ -23,6 +23,7 @@
 
 - (void)getPanoStationByLon:(float)lon Lat:(float)lat Tolerance:(float)tolerance CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
+    [[MRXCHttpHelper sharedInstance] cancelAllOperations];
     NSString *baseURL=[NSString stringWithFormat:@"%@?qt=qsdata&action=1&type=all&r=1000&x=%f&y==%f", self.panoramaUrl,lon*10e5,lat*10e5];
     
     [[MRXCHttpHelper sharedInstance] GetResponseDataByUrl:baseURL Callback:^(id aResponseObject, NSError *anError) {
@@ -37,8 +38,9 @@
 }
 - (void)getPanoStationByID:(NSString *)panoID CompletionBlock:(MRXCCompletionBlock)completionBlock
 {
+    [[MRXCHttpHelper sharedInstance] cancelAllOperations];
     NSString *baseURL=[NSString stringWithFormat:@"%@/?qt=sdata&sid=%@", self.panoramaUrl,panoID ];
-    
+
     [[MRXCHttpHelper sharedInstance] GetResponseDataByUrl:baseURL Callback:^(id aResponseObject, NSError *anError) {
         
         NSData* returnData=(NSData*)aResponseObject;

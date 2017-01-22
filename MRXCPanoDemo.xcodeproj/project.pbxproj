@@ -440,11 +440,11 @@
 		38ED93201D3FC50D007CB29C /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				38ED93271D3FC50D007CB29C /* PanoDataSourceBase.h */,
 				385F07491D412BB200244CF0 /* LocalCubePanoSource.h */,
 				385F074A1D412BB200244CF0 /* LocalCubePanoSource.m */,
 				38ED93251D3FC50D007CB29C /* MRXCPanoSource.h */,
 				38ED93261D3FC50D007CB29C /* MRXCPanoSource.m */,
-				38ED93271D3FC50D007CB29C /* PanoDataSourceBase.h */,
 				38ED93291D3FC50D007CB29C /* TXPanoSource.h */,
 				38ED932A1D3FC50D007CB29C /* TXPanoSource.m */,
 				380E6F771DA2946E009F8F38 /* MRXCTXPanoSource.h */,

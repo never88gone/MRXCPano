@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger, ParnoramaType){
 @property(strong, nonatomic) id<PanoDataSourceBase> dataSource;
 @property(strong, nonatomic)NSString *panoramaID;
 @property(strong, nonatomic)PLView *plView;
+@property(strong, nonatomic)UIImageView *curImageView;
 @property(strong, nonatomic)MRXCPanoramaStation *panoramaData;
 @property(strong, nonatomic)NSArray<MRXCPanoramaRoadLink*> *adjacentPano;
 @property(assign, nonatomic)BOOL isAdjacentStatus;

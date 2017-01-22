@@ -40,4 +40,8 @@ DEF_SINGLETON(MRXCHttpHelper)
     }];
     [dataTask resume];
 }
+-(void)cancelAllOperations
+{
+    [self.httpSessionManager.operationQueue cancelAllOperations];
+}
 @end
