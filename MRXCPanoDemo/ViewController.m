@@ -50,11 +50,7 @@
     CGRect frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     self.mrxcPanoView=[[MrxcPanoView alloc] initWithFrame:frame];
     [self.view addSubview:self.mrxcPanoView];
-    
-    NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-    self.localpath = [cachesPath stringByAppendingPathComponent:@"MRXC_IMAGE.db"];
-    
-    [self  locationMNPano];
+    [self  locationBaiduPano];
 }
 -(Boolean)showLeftItem
 {
@@ -129,10 +125,9 @@
         
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         [mbProgressHUD hideAnimated:true];
-         [self  locationExistCubePano];
+        [self  locationExistCubePano];
     }];
     [downloadTask resume];
-    
 }
 /**
  查看美女的全景图
@@ -147,13 +142,26 @@
 
 -(void) locationPhotoPano
 {
+
     [self openPhotoPickerController];
 }
+-(NSString*)localpath
+{
+    if (_localpath==nil) {
+        NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+        _localpath = [cachesPath stringByAppendingPathComponent:@"MRXC_IMAGE.db"];
+    }
+    return _localpath;
+}
+
+
+
 /**
  查看本地的六面体全景数据，没有数据从服务器上下载一份测试数据
  */
 -(void) locationCubePano
 {
+
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:self.localpath]) {
         [self  locationExistCubePano];
@@ -201,7 +209,7 @@
  */
 -(void) locationBaiduPano
 {
-    NSString *panoramaID=@"09000200011604111641283658Z";
+    NSString *panoramaID=@"09000200011604121415084162H";
     BDPanoSource * mrxcPanoSource=[[BDPanoSource alloc] init];
     [self.mrxcPanoView initWithDataSource:mrxcPanoSource];
     [self.mrxcPanoView locPanoByPanoID:panoramaID];
@@ -290,7 +298,5 @@
     }else {
         [self showToastMessage:@"请选择全景图片" View:self.view];
     }
-    // 设置图片
-//    self.imageView.image = info[UIImagePickerControllerOriginalImage];
 }
 @end

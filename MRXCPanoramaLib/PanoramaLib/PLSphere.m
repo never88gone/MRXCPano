@@ -50,7 +50,7 @@
 
 - (void)internalRender
 {
-//    glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+    glRotatef(self.panoYaw,0.0f, 0.0f, 1.0f);
 //    glRotatef(self.panoYaw, 0.0f, 1.0f, 0.0f);
     glClearDepthf(1.0f);
     

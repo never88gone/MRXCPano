@@ -39,8 +39,7 @@
 		1.0f, 1.0f
 	};
 	glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
-    //glTranslatef(0.0f, 0.0f, 0.25f);
-    CGFloat angle = self.angle*180.0/3.14f + self.deviation;//-90.0f;
+    CGFloat angle = self.angle;
     if(angle > 360.0){
         angle = angle - 360.0;
     }

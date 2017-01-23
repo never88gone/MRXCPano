@@ -13,10 +13,6 @@
 #import "MRXCPanoramaStation.h"
 #import "PanoDataSourceBase.h"
 #define  _PANORAMA_THUMBNAIL_SIZE_  128.0
-typedef NS_ENUM(NSInteger, ParnoramaType){
-    ParnoramaStreet,
-    ParnoramaTemp
-};
 @interface MrxcPanoView : UIView<PLViewBaseTouchEventProtocol>
 /**
  *  全景的数据源
@@ -28,7 +24,6 @@ typedef NS_ENUM(NSInteger, ParnoramaType){
 @property(strong, nonatomic)MRXCPanoramaStation *panoramaData;
 @property(strong, nonatomic)NSArray<MRXCPanoramaRoadLink*> *adjacentPano;
 @property(assign, nonatomic)BOOL isAdjacentStatus;
-@property(assign, nonatomic) ParnoramaType ptype;
 @property(assign, nonatomic)double handPanoYaw;
 
 -(void)initWithDataSource:(id<PanoDataSourceBase> )panoramaDataSourceProtocol;

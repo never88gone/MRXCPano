@@ -109,13 +109,7 @@
                 for(int i = 0; i < self.adjacentPano.count; i++){
                     MRXCPanoramaRoadLink *pano = [self.adjacentPano objectAtIndex:i];
                     PLArrow *arrow = [[PLArrow alloc]init];
-                    if(self.ptype == ParnoramaTemp){
-                        arrow.deviation = 0.0;
-                    }
-                    else if(self.ptype == ParnoramaStreet){
-                        //arrow.deviation = -90.0f + self.handPanoYaw;
-                        arrow.deviation = -90.0f + self.handPanoYaw;
-                    }
+                    arrow.deviation = self.handPanoYaw;
                     arrow.angle = [pano.Angle floatValue];
                     arrow.isDelete = false;
                     arrow.imageID = pano.DstImageID;
@@ -131,12 +125,11 @@
             }
         }];
     }
-    
 }
+
 -(void) getPanoThumbnailDataAndRefresh
 {
-    if ([self.dataSource respondsToSelector:@selector(getPanoThumbnailByID:CompletionBlock:)])
-    {
+    if ([self.dataSource respondsToSelector:@selector(getPanoThumbnailByID:CompletionBlock:)]){
         WEAK_SELF;
         [self.dataSource  getPanoThumbnailByID:self.panoramaID CompletionBlock:^(id aResponseObject, NSError *anError) {
             STRONG_SELF;
@@ -191,7 +184,7 @@
                     UIImage *  bottomRectImage =  [MRXCPanoramaTool imageInRect:image x:256 y:128 width:_PANORAMA_THUMBNAIL_SIZE_ height:_PANORAMA_THUMBNAIL_SIZE_];;
                      [imageArray addObject:bottomRectImage];
                 }else if ([aResponseObject isKindOfClass:[NSArray class]]){
-                    imageArray=(NSArray*)aResponseObject;
+                    imageArray=(NSMutableArray*)aResponseObject;
                 }
                 for (int i=0; i<imageArray.count; i++) {
                     UIImage* oneImage=imageArray[i];
@@ -200,37 +193,27 @@
                     [self.plView addTexture:texture];
                 }
                 PLTexture *texture = nil;
+//                double panoYaw=-90+[self.panoramaData.Yaw doubleValue] + self.handPanoYaw;
+//                if(panoYaw> 360.0){
+//                    panoYaw= panoYaw - 360.0;
+//                }
+//                if(panoYaw < 0.0){
+//                    panoYaw = panoYaw + 360.0;
+//                }
+//                if(panoYaw> 180.0f){
+//                    panoYaw = 360.0f - panoYaw;
+//                }
+//                else{
+//                    panoYaw = (-1)*panoYaw;
+//                }
+                double panoYaw=90+ self.handPanoYaw;
                 if ([self.dataSource getPanoramaType]==PanoramaEnumCube) {
                     PLCube *cube = (PLCube *)self.plView.sceneElement;
-                    if(self.ptype == ParnoramaTemp){
-                        cube.panoYaw = [self.panoramaData.Yaw doubleValue] + 90.0f;
-                    }
-                    else{
-                        cube.panoYaw = [self.panoramaData.Yaw doubleValue] + self.handPanoYaw;
-                    }
-                    if(cube.panoYaw > 360.0){
-                        cube.panoYaw = cube.panoYaw - 360.0;
-                    }
-                    if(cube.panoYaw < 0.0){
-                        cube.panoYaw = cube.panoYaw + 360.0;
-                    }
-                    if(cube.panoYaw > 180.0f){
-                        cube.panoYaw = 360.0f - cube.panoYaw;
-                    }
-                    else{
-                        cube.panoYaw = (-1)*cube.panoYaw;
-                    }
-                    
-                    
+                    cube.panoYaw = panoYaw;
                 }else if ([self.dataSource getPanoramaType]==PanoramaEnumPhere)
                 {
                     PLSphere *phere = (PLSphere *)self.plView.sceneElement;
-                    if(self.ptype == ParnoramaTemp){
-                        phere.panoYaw = [self.panoramaData.Yaw doubleValue] + 90.0f;
-                    }
-                    else{
-                        phere.panoYaw = [self.panoramaData.Yaw doubleValue] + self.handPanoYaw;
-                    }
+                    phere.panoYaw = panoYaw;
                     texture = [PLTexture textureWithImage:image];
                     [self.plView addTexture:texture];
                 }
