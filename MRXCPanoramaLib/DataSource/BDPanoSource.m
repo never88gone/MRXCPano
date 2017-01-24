@@ -112,62 +112,46 @@
         NSArray* contentArray=jsonDic[@"content"];
         if (contentArray.count>0) {
             NSDictionary* oneConentDic=contentArray[0];
+            NSNumber* northDir=oneConentDic[@"NorthDir"];
+            NSNumber* moveDir=oneConentDic[@"MoveDir"];
             NSNumber* heading=oneConentDic[@"Heading"];
+            
             NSString* srcPID=oneConentDic[@"ID"];
             NSArray* roadsDic=oneConentDic[@"Roads"];
             for (int i=0; i<roadsDic.count; i++) {
                 NSDictionary* oneRoadDic=roadsDic[i];
                 NSArray* panoArray=oneRoadDic[@"Panos"];
-                int selectIndex=-1;
-                for (int i=0; i<panoArray.count; i++)  {
-                    NSDictionary* onePanoDic=panoArray[i];
+                NSInteger selectIndex=-1;
+                for (int j=0; j<panoArray.count; j++)  {
+                    NSDictionary* onePanoDic=panoArray[j];
                     NSString* onePID=onePanoDic[@"PID"];
                     if ([onePID isEqualToString:srcPID]) {
-                        selectIndex=i;
+                        selectIndex=[onePanoDic[@"Order"] integerValue];
                         break;
                     }
                 }
-                if (selectIndex==0&&selectIndex!=panoArray.count-1) {
-                    NSDictionary* nextLinkDic=panoArray[selectIndex+1];
+                
+            for (int j=0; j<panoArray.count; j++)  {
+                NSDictionary* nextLinkDic=panoArray[j];
+                NSInteger curIndex=[nextLinkDic[@"Order"] integerValue];
+                if (curIndex==selectIndex-1||curIndex==selectIndex+1) {
                     MRXCPanoramaRoadLink* nextPanoramaRoadLink=[[MRXCPanoramaRoadLink alloc] init];
                     nextPanoramaRoadLink.SrcImageID=oneConentDic[@"ID"];
                     nextPanoramaRoadLink.DstImageID=nextLinkDic[@"PID"];
-                    double nextAngle=[MRXCPanoramaTool getYawByStartLon:[oneConentDic[@"X"] floatValue] StartLat:[oneConentDic[@"Y"] floatValue] EndLon:[nextLinkDic[@"X"] floatValue] EndLat:[nextLinkDic[@"Y"] floatValue]]-[heading floatValue];
-                    nextPanoramaRoadLink.Angle=@(nextAngle);
-                    [panoramaDataList addObject:nextPanoramaRoadLink];
-                }else if (selectIndex==panoArray.count-1&&selectIndex!=0){
-                    NSDictionary* preLinkDic=panoArray[selectIndex-1];
-                    MRXCPanoramaRoadLink* prePanoramaRoadLink=[[MRXCPanoramaRoadLink alloc] init];
-                    prePanoramaRoadLink.SrcImageID=oneConentDic[@"ID"];
-                    prePanoramaRoadLink.DstImageID=preLinkDic[@"PID"];
-                    double preAngle=[MRXCPanoramaTool getYawByStartLon:[oneConentDic[@"X"] floatValue] StartLat:[oneConentDic[@"Y"] floatValue] EndLon:[preLinkDic[@"X"] floatValue] EndLat:[preLinkDic[@"Y"] floatValue]]-[heading floatValue];
-                    prePanoramaRoadLink.Angle=@(preAngle);
-                    [panoramaDataList addObject:prePanoramaRoadLink];
-                }else if (selectIndex!=panoArray.count-1&&selectIndex!=0){
-                    NSDictionary* preLinkDic=panoArray[selectIndex-1];
-                    MRXCPanoramaRoadLink* prePanoramaRoadLink=[[MRXCPanoramaRoadLink alloc] init];
-                    prePanoramaRoadLink.SrcImageID=oneConentDic[@"ID"];
-                    prePanoramaRoadLink.DstImageID=preLinkDic[@"PID"];
-                    double preAngle=[MRXCPanoramaTool getYawByStartLon:[oneConentDic[@"X"] floatValue] StartLat:[oneConentDic[@"Y"] floatValue] EndLon:[preLinkDic[@"X"] floatValue] EndLat:[preLinkDic[@"Y"] floatValue]]-[heading floatValue];
-                    prePanoramaRoadLink.Angle=@(preAngle);
-                    [panoramaDataList addObject:prePanoramaRoadLink];
-                    
-                    NSDictionary* nextLinkDic=panoArray[selectIndex+1];
-                    MRXCPanoramaRoadLink* nextPanoramaRoadLink=[[MRXCPanoramaRoadLink alloc] init];
-                    nextPanoramaRoadLink.SrcImageID=oneConentDic[@"ID"];
-                    nextPanoramaRoadLink.DstImageID=nextLinkDic[@"PID"];
-                    double nextAngle=[MRXCPanoramaTool getYawByStartLon:[oneConentDic[@"X"] floatValue] StartLat:[oneConentDic[@"Y"] floatValue] EndLon:[nextLinkDic[@"X"] floatValue] EndLat:[nextLinkDic[@"Y"] floatValue]]-[heading floatValue];
+                    double nextAngle= 360 -([MRXCPanoramaTool getYawByStartLon:[oneConentDic[@"X"] doubleValue] StartLat:[oneConentDic[@"Y"] doubleValue] EndLon:[nextLinkDic[@"X"] doubleValue] EndLat:[nextLinkDic[@"Y"] doubleValue]] -[northDir doubleValue]-[moveDir doubleValue]-[heading doubleValue]);
                     nextPanoramaRoadLink.Angle=@(nextAngle);
                     [panoramaDataList addObject:nextPanoramaRoadLink];
                 }
+              }
             }
+
             NSArray* linksArray=oneConentDic[@"Links"];
             for (int i=0; i<linksArray.count; i++) {
                 NSDictionary* oneLinkDic=linksArray[i];
                 MRXCPanoramaRoadLink* panoramaRoadLink=[[MRXCPanoramaRoadLink alloc] init];
                 panoramaRoadLink.SrcImageID=oneConentDic[@"ID"];
                 panoramaRoadLink.DstImageID=oneLinkDic[@"PID"];
-                double angle=[MRXCPanoramaTool getYawByStartLon:[oneConentDic[@"X"] floatValue] StartLat:[oneConentDic[@"Y"] floatValue] EndLon:[oneLinkDic[@"X"] floatValue] EndLat:[oneLinkDic[@"Y"] floatValue]]-[heading floatValue];
+                double angle=360 -([MRXCPanoramaTool getYawByStartLon:[oneConentDic[@"X"] doubleValue] StartLat:[oneConentDic[@"Y"] doubleValue] EndLon:[oneLinkDic[@"X"] doubleValue] EndLat:[oneLinkDic[@"Y"] doubleValue]] -[northDir doubleValue]-[moveDir doubleValue]-[heading doubleValue]);
                 panoramaRoadLink.Angle=@(angle);
                 [panoramaDataList addObject:panoramaRoadLink];
             }

@@ -122,7 +122,7 @@
     NSString *urlString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)string, NULL,(CFStringRef)@":/?=,!$&'()*+;[]@#",kCFStringEncodingUTF8));
     return urlString ;
 }
-+(double)getYawByStartLon:(float)startLon StartLat:(float)startLat EndLon:(float)endLon EndLat:(float)endLat
++(double)getYawByStartLon:(double)startLon StartLat:(double)startLat EndLon:(double)endLon EndLat:(double)endLat
 {
     double yaw=0;
     double dLon=endLon-startLon;

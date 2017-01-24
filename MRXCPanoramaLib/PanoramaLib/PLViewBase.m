@@ -258,8 +258,6 @@
             startPoint = endPoint = location;
         }
     }
-    
-    [self drawViewInBack ];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -281,7 +279,7 @@
         UITouch *touch = [[event allTouches] anyObject];
         CGPoint location = [touch locationInView:touch.view];
         if([self.delegate singleTouchEventPoint:location] == true){
-            //return;
+            return;
         }
         if(self.panoramaTimer != nil){
             return;
@@ -322,7 +320,6 @@
             }
         }
     }
-    [self drawViewInBack ];
 }
 
 #pragma mark -

@@ -45,6 +45,7 @@
 	[super reset];
 }
 
+
 #pragma mark -
 #pragma mark fov methods
 

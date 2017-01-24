@@ -109,8 +109,8 @@
                 for(int i = 0; i < self.adjacentPano.count; i++){
                     MRXCPanoramaRoadLink *pano = [self.adjacentPano objectAtIndex:i];
                     PLArrow *arrow = [[PLArrow alloc]init];
-                    arrow.deviation = self.handPanoYaw;
-                    arrow.angle = [pano.Angle floatValue];
+                    arrow.deviation = [pano.Angle floatValue]+90;
+                    arrow.angle =0 ;
                     arrow.isDelete = false;
                     arrow.imageID = pano.DstImageID;
                     UIImage *image = [UIImage imageNamed:@"箭头上.png"];
@@ -144,17 +144,18 @@
                 
                 @try {
                     for(PLSceneElement *element in self.plView.scene.elements){
-                        if(![element isKindOfClass:[PLArrow class]]){
-                            continue;
+                        if([element isKindOfClass:[PLArrow class]]){
+                            for(PLTexture *texture in element.textures){
+                                [texture deleteTexture];
+                                 [element.textures removeAllObjects];
+                            }
+                            
+                            PLArrow *arrow = (PLArrow *)element;
+                            arrow.minPoint = CGPointMake(0.0, 0.0);
+                            arrow.maxPoint = CGPointMake(0.0, 0.0);
+                            arrow.isDelete = true;
                         }
-                        if(element.textures.count == 1){
-                            [[element.textures objectAtIndex:0] deleteTexture];
-                            [element.textures removeAllObjects];
-                        }
-                        PLArrow *arrow = (PLArrow *)element;
-                        arrow.minPoint = CGPointMake(0.0, 0.0);
-                        arrow.maxPoint = CGPointMake(0.0, 0.0);
-                        arrow.isDelete = true;
+
                     }
                 }
                 @catch (NSException *exception) {
@@ -193,20 +194,20 @@
                     [self.plView addTexture:texture];
                 }
                 PLTexture *texture = nil;
-//                double panoYaw=-90+[self.panoramaData.Yaw doubleValue] + self.handPanoYaw;
-//                if(panoYaw> 360.0){
-//                    panoYaw= panoYaw - 360.0;
-//                }
-//                if(panoYaw < 0.0){
-//                    panoYaw = panoYaw + 360.0;
-//                }
+                double panoYaw=90;
+                if(panoYaw> 360.0){
+                    panoYaw= panoYaw - 360.0;
+                }
+                if(panoYaw < 0.0){
+                    panoYaw = panoYaw + 360.0;
+                }
 //                if(panoYaw> 180.0f){
 //                    panoYaw = 360.0f - panoYaw;
 //                }
 //                else{
 //                    panoYaw = (-1)*panoYaw;
 //                }
-                double panoYaw=90+ self.handPanoYaw;
+               
                 if ([self.dataSource getPanoramaType]==PanoramaEnumCube) {
                     PLCube *cube = (PLCube *)self.plView.sceneElement;
                     cube.panoYaw = panoYaw;
@@ -231,6 +232,7 @@
 
 -(void)locPanoByPanoID:(NSString*)panoID withAnimate:(bool)animate
 {
+    self.handPanoYaw=self.plView.sceneElement.yaw;
     self.panoramaID=panoID;
     self.panoramaData.ImageID=panoID;
     if (animate) {
@@ -238,7 +240,7 @@
         UIImage* curImage=[self.plView getImageFromView];
         [self.curImageView setImage:curImage];
         [UIView animateWithDuration:1.0  animations:^{
-            self.curImageView.transform = CGAffineTransformMakeScale(2, 2);
+            self.curImageView.transform = CGAffineTransformMakeScale(1.4, 1.4);
         } completion:^(BOOL finished) {
             self.curImageView.transform = CGAffineTransformMakeScale(1, 1);
             self.curImageView.hidden=true;

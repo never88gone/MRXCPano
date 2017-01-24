@@ -45,7 +45,6 @@
 
 - (void)initializeValues;
 - (void)reset;
-
 - (float)getX;
 - (void)setX:(float)value;
 - (float)getY;

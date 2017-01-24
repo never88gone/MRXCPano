@@ -68,9 +68,6 @@
     }
     //NSLog(@"PLView drawView!render。。。。。。。");
 	[renderer render];
-//    for(PLSceneElement *element in self.scene.elements){
-//        camera.rotation = PLRotationMake(element.pitch, element.yaw, element.roll);
-//    }
 	camera.rotation = PLRotationMake(self.sceneElement.pitch, self.sceneElement.yaw, self.sceneElement.roll);
     //NSLog(@"PLView END drawView!render。。。。。。。");
 }

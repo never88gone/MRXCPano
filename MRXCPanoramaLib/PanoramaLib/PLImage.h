@@ -65,5 +65,5 @@
 
 - (BOOL)save:(NSString *)path;
 - (BOOL)save:(NSString *)path quality:(int)quality;
-
+-(void) deleteImage;
 @end

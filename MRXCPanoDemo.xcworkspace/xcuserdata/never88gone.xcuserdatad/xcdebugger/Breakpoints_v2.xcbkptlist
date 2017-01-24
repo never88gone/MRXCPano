@@ -6,16 +6,112 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MRXCPanoramaLib/MrxcPanoView.m"
-            timestampString = "506833285.446901"
+            filePath = "MRXCPanoramaLib/PanoramaLib/PLView.m"
+            timestampString = "506916681.063367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
-            landmarkName = "-getPanoThumbnailDataAndRefresh"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "@implementation PLView"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MRXCPanoramaLib/PanoramaLib/PLScene.m"
+            timestampString = "506853924.012774"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "-setCameraIndex:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MRXCPanoramaLib/PanoramaLib/PLView+Panorama.m"
+            timestampString = "506854150.96944"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-panoramaCalculateFov:point2:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PLView(Panorama) panoramaCalculateFov:point2:]"
+                  moduleName = "MRXCPanoramaLib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/never88gone/Documents/code/MRXC/MRXCPanoDemo/iOS/MRXCPanoramaLib/PanoramaLib/PLView+Panorama.m"
+                  timestampString = "506935138.347612"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PLView(Panorama) panoramaCalculateFov:point2:]"
+                  moduleName = "MRXCPanoramaLib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/never88gone/Documents/code/MRXC/MRXCPanoDemo/iOS/MRXCPanoramaLib/PanoramaLib/PLView+Panorama.m"
+                  timestampString = "506935138.349421"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MRXCPanoramaLib/DataSource/MRXCTXPanoSource.m"
+            timestampString = "506918279.027481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "-getPanoStationByLon:Lat:Tolerance:CompletionBlock:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MRXCPanoramaLib/DataSource/MRXCTXPanoSource.m"
+            timestampString = "506918280.078556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "-getPanoStationByID:CompletionBlock:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

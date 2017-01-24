@@ -122,11 +122,14 @@
 	
 	if(angle != 0)
 		[plImage rotate:angle];
-	
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width , height, 0, GL_RGBA, GL_UNSIGNED_BYTE, plImage.bits);
+    
+    unsigned char * bits =plImage.bits;
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width , height, 0, GL_RGBA, GL_UNSIGNED_BYTE, bits);
 	
 	glBindTexture(GL_TEXTURE_2D, saveName);
-	
+    
+    [plImage deleteImage];
+    free(bits);
 	GLenum errGL = glGetError();
 	
 	

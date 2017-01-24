@@ -23,7 +23,7 @@
 @synthesize isDelete=_isDelete;
 
 - (void)evaluateIfElementIsValid{
-	isValid = ([textures count] >= 1);
+    isValid = ([textures count] >= 1);
 }
 - (void)internalRender{
     GLfloat arrow[] = {
@@ -35,44 +35,45 @@
     GLfloat textureCoords[] ={
         0.0f, 0.0f,
         1.0f, 0.0f,
-		0.0f, 1.0f,
-		1.0f, 1.0f
-	};
-	glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
-    CGFloat angle = self.angle;
+        0.0f, 1.0f,
+        1.0f, 1.0f
+    };
+    glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+    //glTranslatef(0.0f, 0.0f, 0.25f);
+    CGFloat angle = self.angle*180.0/3.14f + self.deviation;//-90.0f;
     if(angle > 360.0){
         angle = angle - 360.0;
     }
     if(angle < 0.0){
         angle = angle + 360.0;
     }
-    if(angle > 180.0){
-        angle = 360.0-angle;
-    }
-    else{
-        angle = -1*angle;
-    }
+   // if(angle > 180.0){
+    //    angle = 360.0-angle;
+   // }
+   // else{
+   //     angle = -1*angle;
+   // }
     if(self.isDelete == true){
         return;
     }
     //NSLog(@"[%f]angle %f---[%f]--[%f]", self.angle,angle,self.angle*180.0/3.14f + self.deviation,self.deviation);
     glRotatef(angle, 0.0f, 1.0f, 0.0f);
-	glClearDepthf(1.0f);
-	glEnable(GL_TEXTURE_2D);
-	glEnable(GL_CULL_FACE);
+    glClearDepthf(1.0f);
+    glEnable(GL_TEXTURE_2D);
+    glEnable(GL_CULL_FACE);
     glEnable(GL_ALPHA_TEST);
-	glCullFace(GL_FRONT);
-	glShadeModel(GL_SMOOTH);
-	
+    glCullFace(GL_FRONT);
+    glShadeModel(GL_SMOOTH);
+    
     glVertexPointer(3, GL_FLOAT, 0, arrow);
-	glTexCoordPointer(2, GL_FLOAT, 0, textureCoords);
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+    glTexCoordPointer(2, GL_FLOAT, 0, textureCoords);
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
     
     glAlphaFunc(GL_GREATER, 0.7f);
     glBindTexture(GL_TEXTURE_2D, ((PLTexture *)[textures objectAtIndex:0]).textureId);
-	glNormal3f(0.0f, -1.0f, 0.0f);
-	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+    glNormal3f(0.0f, -1.0f, 0.0f);
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
     
     glDisableClientState(GL_VERTEX_ARRAY);
     glDisableClientState(GL_TEXTURE_COORD_ARRAY);
@@ -85,9 +86,9 @@
     GLfloat projection[16];
     GLfloat winX, winY, winZ;
     glGetIntegerv(GL_VIEWPORT, viewport);
-//    GLint temp = viewport[2];
-//    viewport[2] = viewport[3];
-//    viewport[3] = temp;
+    //    GLint temp = viewport[2];
+    //    viewport[2] = viewport[3];
+    //    viewport[3] = temp;
     glGetFloatv(GL_MODELVIEW_MATRIX, modelview);
     glGetFloatv(GL_PROJECTION_MATRIX, projection);
     GLfloat minx,maxx,miny,maxy,x,y,z;
@@ -117,7 +118,7 @@
     winZ = 0.31;
     gluProject(winX, winY, winZ, modelview, projection, viewport, &x, &y, &z);
     [self calculatePoint:&minx miny:&miny maxx:&maxx maxy:&maxy x:x y:viewport[3]-y];
-
+    
     self.minPoint = CGPointMake(minx, miny);
     self.maxPoint = CGPointMake(maxx, maxy);
 }

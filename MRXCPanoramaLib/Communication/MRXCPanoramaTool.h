@@ -24,6 +24,6 @@
 
 + (NSString *)achieveURLString:(NSString *)string;
 + (NSString *)achieveURLCodeString:(NSString *)string;
-+(double)getYawByStartLon:(float)startLon StartLat:(float)startLat EndLon:(float)endLon EndLat:(float)endLat;
++(double)getYawByStartLon:(double)startLon StartLat:(double)startLat EndLon:(double)endLon EndLat:(double)endLat;
 
 @end
