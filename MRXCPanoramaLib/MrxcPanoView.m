@@ -80,8 +80,7 @@
             }
             [self requestPanoTileByID:i];
         }
-    }else
-    {
+    }else{
         for (int row=0; row<=4; row++) {
             for (int col=0; col<=8; col++) {
                 [self.dataSource getPanoTileByID:self.panoramaID level:0 face:0 row:row col:col CompletionBlock:^(id aResponseObject, NSError *anError) {
@@ -166,7 +165,7 @@
                 
                 if ([aResponseObject isKindOfClass:[NSData class]]) {
                     NSData* thumbnailData=(NSData*)aResponseObject;
-                    UIImage *image = [UIImage imageWithData:thumbnailData];
+                    image = [UIImage imageWithData:thumbnailData];
                     UIImage *  leftRectImage = [MRXCPanoramaTool imageInRect:image x:0 y:128 width:_PANORAMA_THUMBNAIL_SIZE_ height:_PANORAMA_THUMBNAIL_SIZE_];
                     [imageArray addObject:leftRectImage];
                     
@@ -187,12 +186,7 @@
                 }else if ([aResponseObject isKindOfClass:[NSArray class]]){
                     imageArray=(NSMutableArray*)aResponseObject;
                 }
-                for (int i=0; i<imageArray.count; i++) {
-                    UIImage* oneImage=imageArray[i];
-                    PLTexture* texture = [PLTexture textureWithImage:oneImage];
-                    [texture setTexturePlace:0 row:0 col:0 face:i];
-                    [self.plView addTexture:texture];
-                }
+
                 PLTexture *texture = nil;
                 double panoYaw=90;
                 if(panoYaw> 360.0){
@@ -201,16 +195,16 @@
                 if(panoYaw < 0.0){
                     panoYaw = panoYaw + 360.0;
                 }
-//                if(panoYaw> 180.0f){
-//                    panoYaw = 360.0f - panoYaw;
-//                }
-//                else{
-//                    panoYaw = (-1)*panoYaw;
-//                }
-               
+                
                 if ([self.dataSource getPanoramaType]==PanoramaEnumCube) {
                     PLCube *cube = (PLCube *)self.plView.sceneElement;
                     cube.panoYaw = panoYaw;
+                    for (int i=0; i<imageArray.count; i++) {
+                        UIImage* oneImage=imageArray[i];
+                        PLTexture* texture = [PLTexture textureWithImage:oneImage];
+                        [texture setTexturePlace:0 row:0 col:0 face:i];
+                        [self.plView addTexture:texture];
+                    }
                 }else if ([self.dataSource getPanoramaType]==PanoramaEnumPhere)
                 {
                     PLSphere *phere = (PLSphere *)self.plView.sceneElement;

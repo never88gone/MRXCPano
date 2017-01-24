@@ -51,9 +51,7 @@
 - (void)internalRender
 {
     glRotatef(self.panoYaw,0.0f, 0.0f, 1.0f);
-//    glRotatef(self.panoYaw, 0.0f, 1.0f, 0.0f);
     glClearDepthf(1.0f);
-    
 	GLUquadric *quadratic = gluNewQuadric();
 	gluQuadricNormals(quadratic, GLU_SMOOTH);
 	gluQuadricTexture(quadratic, true);
@@ -63,6 +61,7 @@
 	glBindTexture(GL_TEXTURE_2D, ((PLTexture *)[textures objectAtIndex:0]).textureId);
     gluSphere(quadratic, (GLfloat)self.m_Radius, divs, divs);
     
+
 	for(PLTexture *texture in textures){
         glBindTexture(GL_TEXTURE_2D,texture.textureId);
         int rowIdx = texture.row;
